@@ -1,4 +1,5 @@
 backup = "29c2ce"
+fullSetup_guid = "8d2074"
 
 decks = {}
 decks["Player Curse"] = {pos = {51.60, 1.86, 23.65}, rot = {0.00, 180.00, 0.00}}
@@ -35,6 +36,21 @@ function onLoad(save_state)
     self.createButton(buttonParameter)
     count = count + 1
   end
+
+   buttonParameter = {
+      function_owner = self,
+      width = 900,
+      height = 250,
+      position = {2.84, 0.1, - 1.4},
+      color = {0.1, 0.1, 0.1},
+      font_color = {0.6, 0.6, 0.6},
+      rotation = {0, 0, 0},
+      font_size = 100,
+      label = "Random Dungeon",
+      tooltip = "Draw for random dungeon",
+      click_function = "randomDeckDraw"
+   }
+   self.createButton(buttonParameter)
 end
 
 function getDeck(deck)
@@ -67,4 +83,83 @@ end
 
 function rotateDeck(param)
   param[1].setRotation(decks["Player Reference"].rot)
+end
+
+function randomDeckDraw()
+   generateRandomDungeonRoom({roomNumber = 1})
+end
+
+function generateRandomDungeonRoom(params)
+   local locationDeck = checkForDeck(self.positionToWorld({-2.125, 0.1, 0.0}))
+   local monsterDeck = checkForDeck(self.positionToWorld({-3.555, 0.1, 0.0}))
+   local location = drawLocation(locationDeck, params.roomNumber, params.entranceType, params.locationsAllowed, params.locationsBlocked)
+   local monster = drawMonster(monsterDeck, params.roomNumber, params.monstersAllowed)
+
+   Global.call("createMap", {777, {roomNumber = params.roomNumber, location = location, monster = monster, exitPositionX = params.exitPositionX, exitPositionZ = params.exitPositionZ, exitDirection = params.exitDirection, entranceType = params.entranceType, locationsAllowed = params.locationsAllowed, monstersAllowed = params.monstersAllowed, doorGuid = params.doorGuid, locationsBlocked = params.locationsBlocked}})
+end
+
+-- Gets the top appropriate Random Location from the deck, given the entrance type and an optional list of allowed cards
+function drawLocation(deck, roomNum, entranceType, allowList, blockList)
+   local deckObjects = deck.getObjects()
+
+   for i, card in pairs(deckObjects) do
+      print(entranceType, card.description, JSON.encode(allowList, card.name, JSON.encode(blockList)))
+      if (entranceType == nil or entranceType == "" or string.match(card.description, entranceType)) and (allowList == nil or inArray(allowList, card.name)) and (blockList == nil or not inArray(blockList, card.name)) then
+         -- TODO: This should put all passed cards on the bottom
+         deck.takeObject({
+            position = {16.0 + 5.9 * roomNum, 1.7, 28.8},
+            rotation = {0.00, 180.00, 0.00},
+            index = i - 1
+         })
+         return card.name
+      end
+   end
+   return nil
+end
+
+-- Gets the top appropriate Random Monster from the deck, given an optional list of allowed cards
+function drawMonster(deck, roomNum, allowList)
+   local deckObjects = deck.getObjects()
+   for i, card in pairs(deckObjects) do
+      if allowList == nil or inArray(allowList, card.name) then
+         -- TODO: This should put all passed cards on the bottom
+         deck.takeObject({
+            position = {13.5 + 5.9 * roomNum, 1.7, 28.8},
+            rotation = {0.00, 180.00, 0.00},
+            index = i - 1
+         })
+         return card.name
+      end
+   end
+   return nil
+end
+
+-- Utility functions copied from elsewhere
+function checkForDeck(pos)
+   local hitlist = Physics.cast({
+      origin = pos,
+      direction = {0, 1, 0},
+      type = 2,
+      size = {1, 1, 1},
+      max_distance = 0,
+      debug = false
+   }) -- returns {{Vector point, Vector normal, float distance, Object hit_object}, ...}
+
+   for i, j in pairs(hitlist) do
+      if j.hit_object.tag == "Deck" then
+         return j.hit_object
+      end
+   end
+
+   return false
+end
+
+function inArray(tab, val)
+    for index, value in ipairs(tab) do
+        if value == val then
+            return true
+        end
+    end
+
+    return false
 end

@@ -4,6 +4,7 @@ Unlockable_guid = "346ed5"
 Scripts_guid = "75ab50"
 treasureDeck_guid = "bfef03"
 Board_guid = "7ef9dd"
+DeckMat_guid = "a75fcd"
 
 infiniteBagsGUIDs = {
    MapTiles = "4895cd",
@@ -44,6 +45,9 @@ tilesGUIDsFromBag = {
 }
 
 scenarioPageList = {3, 4, 5, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 35, 37, 38, 39, 40, 41, 43, 44, 45, 46, 47, 49, 50, 51, 53, 54, 56, 57, 58, 60, 61, 62, 63, 64, 65, 66, 68, 69, 71, 72, 73, 74, 75, 76, 77, 78, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 94, 95, 96, 97, 99, 100, 101, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 116, 117, 118, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
+
+lastRandomDungeonExit = {}
+randomDungeonDoors = {} -- Track doors so they can be removed when another is clicked
 
 function getBagContent(bag, name)
    if bag == nil then return end
@@ -453,7 +457,10 @@ function setOverlayScript(scriptFunction, obj, NumScenario, MonsterStandee, NumC
 end
 
 
-function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters)
+function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters, params)
+   if typ == "RandomDungeonDoor" then
+      table.insert(randomDungeonDoors, obj.guid)
+   end
    local ScriptConstruct = ""
    if info ~= nil then
       ScriptConstruct = ScriptConstruct .. "\ninfo = '" .. info .. "'"
@@ -469,7 +476,7 @@ function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters)
    if info ~= nil then
       ScriptConstruct = ScriptConstruct .. "\n		,label			= '" .. info .. "'"
    end
-   if typ == "Door" then
+   if typ == "Door" or typ == "RandomDungeonDoor" then
       ScriptConstruct = ScriptConstruct
       .. "\n		,label			= 'Open'"
       .. "\n		,color			= {0.408,0.525,0.910}"
@@ -508,7 +515,7 @@ function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters)
    end
    ScriptConstruct = ScriptConstruct
    .. "\n	}"
-   if typ == "Door" then
+   if typ == "Door" or typ == "RandomDungeonDoor" then
       ScriptConstruct = ScriptConstruct
       .. "\n	if"
       .. "\n		self.getName() == 'Stone Door Horizontal'"
@@ -540,6 +547,34 @@ function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters)
       .. "\n			,NumScenario = " .. NumScenario
       .. "\n	}"
       .. "\n	if info ~= '' then getObjectFromGUID('" .. self.getGUID() .. "').call('revealRoom',params) end"
+      .. "\n	self.unlock()"
+      .. "\n	self.flip()"
+      .. "\n	Wait.condition(function() self.lock() end, function() return self.resting end, 10)"
+   elseif typ == "RandomDungeonDoor" then
+      ScriptConstruct = ScriptConstruct
+      .. "\n	if not open then open = true self.editButton({index=0, label='Open?'}) Wait.time(function() open = false self.editButton({index=0, label='Open'}) end, 2) return end"
+      .. "\n	local params = {"
+      .. "\n		    doorGuid = self.guid"
+      .. "\n		   ,exitPositionX = " .. params.position.x
+      .. "\n			,exitPositionZ = " .. params.position.z
+      .. "\n			,exitDirection = " .. params.direction
+      .. "\n			,entranceType = \"" .. params.doorType .. "\""
+      .. "\n			,roomNumber = " .. params.roomNumber
+      if params.locationsAllowed ~= nil then
+         ScriptConstruct = ScriptConstruct
+         .. "\n			,locationsAllowed = {\"" .. table.concat(params.locationsAllowed, "\", \"") .. "\"}"
+      end
+      if params.monstersAllowed ~= nil then
+         ScriptConstruct = ScriptConstruct
+         .. "\n			,monstersAllowed = {\"" .. table.concat(params.monstersAllowed, "\", \"") .. "\"}"
+      end
+      if params.locationsBlocked ~= nil then
+         ScriptConstruct = ScriptConstruct
+         .. "\n			,locationsBlocked = {\"" .. table.concat(params.locationsBlocked, "\", \"") .. "\"}"
+      end
+      ScriptConstruct = ScriptConstruct
+      .. "\n	}"
+      .. "\n	getObjectFromGUID('" .. DeckMat_guid .. "').call('generateRandomDungeonRoom',params)"
       .. "\n	self.unlock()"
       .. "\n	self.flip()"
       .. "\n	Wait.condition(function() self.lock() end, function() return self.resting end, 10)"
@@ -693,7 +728,11 @@ function placeDoor(doorsToSpawn, NumScenario, MonsterStandee, NumCharacters)
       if not door then
          door = doorTiles.takeObject({position = v[1].position, rotation = v[1].rotation, smooth = false, guid = tilesGUIDsFromBag.Doors[k]})
          Wait.condition(function() door.setPosition(v[1].position) door.lock() end, function() return checkLoaded(door) end)
-         Wait.condition(function() setScript(door, "Door", v[1].adjacentTile, NumScenario, MonsterStandee, NumCharacters) end, function() return checkLoaded(door) end)
+         if v[1].direction ~= nil and v[1].doorType ~= nil then
+            Wait.condition(function() setScript(door, "RandomDungeonDoor", v[1].adjacentTile, NumScenario, MonsterStandee, NumCharacters, v[1]) end, function() return checkLoaded(door) end)
+         else
+            Wait.condition(function() setScript(door, "Door", v[1].adjacentTile, NumScenario, MonsterStandee, NumCharacters) end, function() return checkLoaded(door) end)
+         end
       else
          local obj = getObjectFromGUID(door)
          local info = obj.getVar("info")
@@ -718,7 +757,11 @@ function placeDoor(doorsToSpawn, NumScenario, MonsterStandee, NumCharacters)
                   obj.setPosition(l.position)
                   obj.setRotation(l.rotation)
                   obj.lock()
-                  setScript(obj, "Door", l.adjacentTile, NumScenario, MonsterStandee, NumCharacters)
+                  if l.direction ~= nil and l.doorType ~= nil then
+                     setScript(obj, "RandomDungeonDoor", l.adjacentTile, NumScenario, MonsterStandee, NumCharacters, l)
+                  else
+                     setScript(obj, "Door", l.adjacentTile, NumScenario, MonsterStandee, NumCharacters)
+                  end
                else
                   Wait.frames(
                      function()
@@ -912,4 +955,295 @@ function checkLoaded(obj)
    end
 
    return false
+end
+
+function createRandomDungeon(params)
+   -- Clean up any excess doors
+   if #randomDungeonDoors > 1 then
+      for _, doorGuid in pairs(randomDungeonDoors) do
+         if doorGuid ~= params.doorGuid then
+            getObjectFromGUID(doorGuid).destruct()
+         end
+      end
+   end
+   randomDungeonDoors = {}
+
+   params.locationsBlocked = params.locationsBlocked or {}
+
+   local locationInformation = deepCopy(getObjectFromGUID(fullSetup_guid).getTable("RandomLocationInformation_All")[params.location])
+   local monsterInformation = deepCopy(getObjectFromGUID(fullSetup_guid).getTable("RandomMonsterInformation_All")[params.monster])
+
+   -- TODO: Make random dungeon button require double click
+
+   -- TODO: Remove these notes when done adding data
+   -- 0 is up, 270 is left, 180 is down, 90 is right
+   -- Positive X is right, positive Z is up
+   local offset = {x=0.0, z=0.0, rot=0.0}
+
+   -- Set grid (first tile only)
+   if params.roomNumber == 1 then
+      Grid.type = locationInformation.gridType + 1
+      if locationInformation.startingOffset ~= nil then
+         offset = locationInformation.startingOffset
+      end
+   end
+
+   -- Treasure chests and coins rotate independent of tiles
+   local treasureChestRotation = {x=0.0, y=0.0, z=0.0}
+   local treasureChestName = "Treasure Chest Vertical"
+   if Grid.type == 3 then
+      treasureChestRotation = {x=0.0, y=90.0, z=0.0}
+      treasureChestName = "Treasure Chest Horizontal"
+   end
+   local coinRotation = {x=0.0, y=180.0, z=0.0}
+
+   -- Place Map Tiles
+   local mapTiles = getBagFromInfinite(infiniteBagsGUIDs.MapTiles)
+   getBagContent(mapTiles, "MapTiles")
+
+   -- Set the middle of the first tile as the rotation point for offsets
+   offset.originX = locationInformation.mapTiles[1].position.x
+   offset.originZ = locationInformation.mapTiles[1].position.z
+
+   -- Align next room to the previously used exit
+   if params.roomNumber > 1 then
+      local entrance = locationInformation.entrances[params.entranceType]
+      -- First, rotate the tile to align the entrance and exit
+      offset.rot = (params.exitDirection - entrance.direction + 360) % 360
+      processOffset(entrance.position, nil, offset)
+      -- Now position the doors to match up
+      offset.x = params.exitPositionX - entrance.position.x
+      offset.z = params.exitPositionZ - entrance.position.z
+   end
+
+   if locationInformation.locationsBlocked ~= nil then
+      for _, name in pairs(locationInformation.locationsBlocked) do
+         table.insert(params.locationsBlocked, name)
+      end
+   end
+
+   for i, tile in pairs(locationInformation.mapTiles) do
+      if not checkPosForName(tile.position, tile.tile) then
+         processOffset(tile.position, tile.rotation, offset)
+         mapTiles.takeObject({position = tile.position, rotation = tile.rotation, smooth = false, guid = tilesGUIDsFromBag.MapTiles[tile.tile]}).lock()
+      end
+      tile.overlayTiles = tile.overlayTiles or {}
+      local monsters = {}
+      -- Process numbered tiles, creating other fields for tile creation
+      for j, position in pairs(tile.numberTiles) do
+         local number = monsterInformation[j]
+         if number ~= nil then
+            if number.type == "coin" then
+               table.insert(tile.overlayTiles, {
+                  type = {
+                     {
+                        name = "Coin 1",
+                        tiles = {
+                           {
+                              position = position,
+                              rotation = deepCopy(coinRotation),
+                           },
+                        },
+                     },
+                  },
+               })
+            elseif number.type == "monster" then
+               table.insert(monsters, {
+                  name = number.name,
+                  tiles = {
+                     {
+                        numCharacters = number.numCharacters,
+                        position = position,
+                     },
+                  },
+               })
+            elseif number.type == "treasure" then
+               table.insert(tile.overlayTiles, {
+                  bag = getObjectFromGUID(fullSetup_guid).getVar("Constant_TypeOverlay_TreasureChests"),
+                  type = {
+                     {
+                        name = treasureChestName,
+                        replaceName = "Treasure: " .. number.contents,
+                        tiles = {
+                           {
+                              position = position,
+                              rotation = deepCopy(treasureChestRotation),
+                           },
+                        },
+                     },
+                  },
+               })
+            elseif number.type == "trap" then
+               table.insert(tile.overlayTiles, {
+                  bag = getObjectFromGUID(fullSetup_guid).getVar("Constant_TypeOverlay_Traps"),
+                  type = {
+                     {
+                        name = number.name,
+                        trapEffects = number.trapEffects,
+                        tiles = {
+                           {
+                              position = position,
+                              rotation = deepCopy(tile.numberTileRotation),
+                           },
+                        },
+                     },
+                  },
+               })
+            elseif number.type == "overlay" then
+               table.insert(tile.overlayTiles, {
+                  bag = number.bag,
+                  type = {
+                     {
+                        name = number.name,
+                        tiles = {
+                           {
+                              position = position,
+                              rotation = deepCopy(tile.numberTileRotation),
+                           },
+                        },
+                     },
+                  },
+               })
+            else
+               broadcastToAll("Invalid Random Monster type \"" .. hex.type .. "\" for number " .. i, "Red")
+            end
+         end
+      end
+      --Add starting tiles on empty numbers
+      if tile.numberStartTiles ~= nil then
+         for _, num in pairs(tile.numberStartTiles) do
+            if monsterInformation[num] == nil then
+               table.insert(tile.startTiles.tiles, {
+                  position = tile.numberTiles[num],
+                  rotation = tile.startTiles.tiles[1].rotation,
+               })
+            end
+         end
+      end
+      --Monster
+      for _, v in pairs(monsters) do
+         for _, t in ipairs(v.tiles) do
+            if t.numCharacters[params.NumCharacters] ~= nil then
+               local parameter = {}
+               --Set Parameters
+               parameter.monsterName = v.name
+               if params.MonsterStandee then
+                  parameter.monsterType = "Standee"
+               else
+                  if locationInformation.gridType == 1 then
+                     parameter.monsterType = "Horizontal"
+                  elseif locationInformation.gridType == 2 then
+                     parameter.monsterType = "Vertical"
+                  end
+               end
+               if t.numCharacters[params.NumCharacters] == 1 then
+                  parameter.monsterDifficulty = "normal"
+               elseif t.numCharacters[params.NumCharacters] == 2 then
+                  parameter.monsterDifficulty = "elite"
+               end
+               processOffset(t.position, nil, offset)
+               parameter.monsterPosition = t.position
+               --Call Spawn Monster
+               getObjectFromGUID(Scripts_guid).call("spawnMonster", parameter)
+            end
+         end
+      end
+      --Overlay Tiles
+      -- First, process offsets for overlay tiles
+      for _, overlayGroup in pairs(tile.overlayTiles) do
+         for _, overlayType in pairs(overlayGroup.type) do
+            for _, tile in pairs(overlayType.tiles) do
+               processOffset(tile.position, tile.rotation, offset)
+               if overlayType.name == "Coin 1" then
+                  tile.rotation = deepCopy(coinRotation) -- Never rotate coins
+               elseif string.match(overlayType.name, "Treasure") then
+                  tile.rotation = deepCopy(treasureChestRotation) -- Never rotate coins
+               end
+            end
+         end
+      end
+      placeOverlay(tile.overlayTiles, tile.tile, params.NumScenario, params.MonsterStandee, params.NumCharacters, spawn3D)
+      --Start Tiles
+      if params.roomNumber == 1 and tile.startTiles ~= nil then
+         -- First, process offsets for start tiles
+         for _, tile in pairs(tile.startTiles.tiles) do
+            processOffset(tile.position, tile.rotation, offset)
+         end
+         placeStartTiles(tile.startTiles)
+      end
+   end
+   mapTiles.destruct()
+
+   --Doors
+   local doorsToSpawn = {}
+   local offsetDoor
+   if locationInformation.doorTiles ~= nil and params.roomNumber < 3 then
+      for _, doorType in pairs(locationInformation.doorTiles) do
+         for _, doorTile in pairs(doorType.tiles) do
+            if doorsToSpawn[doorType.name] == nil then
+               doorsToSpawn[doorType.name] = {}
+            end
+            processOffset(doorTile.position, doorTile.rotation, offset)
+            doorType.direction = (doorType.direction + offset.rot + 360) % 360 -- Update door direction for next tile
+            table.insert(doorsToSpawn[doorType.name], {position = doorTile.position, rotation = doorTile.rotation, adjacentTile = adjacentTiles, direction = doorType.direction, doorType = doorType.type, roomNumber = params.roomNumber + 1, locationsAllowed = params.locationsAllowed, monstersAllowed = params.monstersAllowed, locationsBlocked = params.locationsBlocked})
+         end
+      end
+   end
+
+   placeDoor(doorsToSpawn, params.NumScenario, params.MonsterStandee, params.NumCharacters)
+
+   local roomText = params.monster .. " " .. params.location .. " revealed."
+   if params.roomNumber == 2 then
+      roomText = roomText .. " Minor Penalty: " .. locationInformation.penalties.minor
+   elseif params.roomNumber == 3 then
+      roomText = roomText .. " Major Penalty: " .. locationInformation.penalties.major
+   end
+   broadcastToAll(roomText, {0.1, 0.5, 1})
+
+   if params.roomNumber == 1 then
+      local entrances = 0
+      for _, _ in pairs(locationInformation.entrances) do
+         entrances = entrances + 1
+      end
+      if entrances > 1 then
+         broadcastToAll("The " .. params.location .. " has two entrances. Players must choose which to start at, and place all figures within two hexes of that entrance. Consult the " .. params.location .. " card for entrance locations.", {1, 1, 1})
+      end
+   end
+end
+
+function processOffset(position, rotation, offset)
+   if offset.rot ~= nil then
+      if rotation ~= nil then
+         rotation.y = (rotation.y + offset.rot) % 360
+      end
+
+      local dx = position.x - offset.originX
+      local dz = position.z - offset.originZ
+      local rotRad = math.rad(offset.rot)
+      position.x = math.cos(rotRad) * dx + math.sin(rotRad) * dz + offset.originX
+      position.z = math.cos(rotRad) * dz - math.sin(rotRad) * dx + offset.originZ
+   end
+
+   if offset.x ~= nil then
+      position.x = position.x + offset.x
+   end
+   if offset.z ~= nil then
+      position.z = position.z + offset.z
+   end
+end
+
+--Table Deep Copy
+function deepCopy(orig)
+	local orig_type = type(orig)
+	local copy
+	if orig_type == 'table' then
+		copy = {}
+		for orig_key, orig_value in next, orig, nil do
+			copy[deepCopy(orig_key)] = deepCopy(orig_value)
+		end
+		setmetatable(copy, deepCopy(getmetatable(orig)))
+	else -- number, string, boolean, etc
+		copy = orig
+	end
+	return copy
 end

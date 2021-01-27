@@ -920,6 +920,7 @@ end
 
 function createMap(params)
    -- local spawner = getObjectFromGUID("8d2074")
+   local dealBattleGoals = true
    local spawner = nil
    for _, obj in pairs(getAllObjects()) do
       if obj.getName() == "Gloomhaven Scenario Full Setup" then
@@ -973,7 +974,15 @@ function createMap(params)
       if t.title == "Options" then tab = t.body end
    end
 
-   if tab:match("setup tool:(%a*)") == "new" then
+   if params[1] == 777 then -- 777 indicates random dungeon
+      params[2]["NumScenario"] = params[1];
+      params[2]["NumCharacters"] = #playerCount < 2 and 2 or (#playerCount > 4 and 4 or #playerCount)
+      params[2]["MonsterStandee"] = (self.UI.getAttribute("typeDropdownScenario", "selected") == "Standee") and true or false
+      if params[2].roomNumber > 1 then
+         dealBattleGoals = false
+      end
+      getObjectFromGUID(autoSetup_guid).call("createRandomDungeon", params[2])
+   elseif tab:match("setup tool:(%a*)") == "new" then
       getObjectFromGUID(autoSetup_guid).call("createMap", {NumScenario = params[1], NumCharacters = #playerCount < 2 and 2 or (#playerCount > 4 and 4 or #playerCount), HiddenRooms = ((self.UI.getAttribute("HiddenRooms1Image", "image") == "Radio Button Selected") and true or false), MonsterStandee = ((self.UI.getAttribute("typeDropdownScenario", "selected") == "Standee") and true or false)})
    elseif tab:match("setup tool:(%a%a%a)") == "old" then
       spawner.call("createMap")
@@ -1017,7 +1026,7 @@ function createMap(params)
    end
 
    -- muss als letztes
-   if tab:match("deal battle goals:(%a*)") == "yes" then
+   if dealBattleGoals and tab:match("deal battle goals:(%a*)") == "yes" then
       local battleGoals = nil
       local hitlist = Physics.cast({
          origin = {51.60, 1.90, - 16.31},
