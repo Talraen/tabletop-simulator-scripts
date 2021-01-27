@@ -59951,6 +59951,14 @@ ScenarioInformation_All = {
 										position	= {3.79, 1.88, 6.56}
 										,rotation	= {0.00, 270.00, 0.00}
 									}
+									,{
+										position	= {-3.79, 1.88, 3.94}
+										,rotation	= {0.00, 90.00, 0.00}
+									}
+									,{
+										position	= {3.79, 1.88, 3.94}
+										,rotation	= {0.00, 90.00, 0.00}
+									}
 								}
 							}
 							,{
@@ -60007,14 +60015,6 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-4.55, 1.88, 2.63}
-										,rotation	= {0.00, 90.00, 0.00}
-									}
-									,{
-										position	= {-3.79, 1.88, 3.94}
-										,rotation	= {0.00, 90.00, 0.00}
-									}
-									,{
-										position	= {3.79, 1.88, 3.94}
 										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
