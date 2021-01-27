@@ -207,6 +207,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-0.437501, y=1.931061, z=6.819950}
@@ -521,6 +522,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=-1.507942, y=1.933787, z=9.646281}
@@ -1384,6 +1386,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-1.312527, y=1.927470, z=8.335502}
@@ -1552,6 +1555,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-2.625000, y=1.927985, z=4.546633}
@@ -1630,6 +1634,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=5.249995, y=1.931166, z=0.000002}
@@ -1806,6 +1811,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=6.562499, y=1.931749, z=8.335479}
@@ -1990,6 +1996,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-0.757772, y=1.931369, z=10.062551}
@@ -2516,6 +2523,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-0.000006, y=1.934241, z=-6.125006}
@@ -2665,6 +2673,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=0.757419, y=1.934335, z=18.812653}
@@ -3343,6 +3352,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "STUN"}
 								,tiles	= {
 									{
 										position	= {x=5.304405, y=1.931762, z=1.312500}
@@ -3453,6 +3463,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "STUN"}
 								,tiles	= {
 									{
 										position	= {x=4.546633, y=1.930691, z=15.750000}
@@ -3699,6 +3710,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=0.000021, y=1.933799, z=-2.625031}
@@ -3867,6 +3879,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=2.273299, y=1.933943, z=1.312508}
@@ -4130,6 +4143,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=-1.512855, y=1.933496, z=6.127678}
@@ -4454,6 +4468,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=4.812499, y=1.931138, z=5.304397}
@@ -5240,6 +5255,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=-1.754212, y=1.932470, z=15.138352}
@@ -5703,6 +5719,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=2.187500, y=1.934627, z=-2.273324}
@@ -6268,6 +6285,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"MUDDLE", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=1.312500, y=1.933969, z=11.366583}
@@ -6647,6 +6665,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=7.000000, y=1.934022, z=16.670988}
@@ -7177,6 +7196,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=3.500000, y=1.934160, z=-6.062178}
@@ -7190,6 +7210,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Spike Trap"
+                        ,trapEffects = {"WOUND", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=8.750002, y=1.931440, z=-3.031088}
@@ -7286,6 +7307,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=3.500115, y=1.934207, z=18.186680}
@@ -7299,6 +7321,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Spike Trap"
+                        ,trapEffects = {"WOUND", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=8.750004, y=1.931243, z=15.155448}
@@ -7625,6 +7648,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-6.562501, y=1.934225, z=5.304389}
@@ -7868,6 +7892,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-6.063589, y=1.930707, z=-3.484425}
@@ -8714,6 +8739,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=-8.749999, y=1.931525, z=-6.062178}
@@ -8992,6 +9018,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-2.273320, y=1.931025, z=4.812492}
@@ -9547,6 +9574,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=2.273309, y=1.934558, z=15.312508}
@@ -9657,6 +9685,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=6.062297, y=1.936554, z=3.499883}
@@ -10671,6 +10700,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-0.000570, y=1.937077, z=9.092657}
@@ -11026,6 +11056,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	={
 									{
 										position	= {x=-0.437500, y=1.931341, z=11.366583}
@@ -11102,6 +11133,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	={
 									{
 										position	= {x=4.812500, y=1.931177, z=-3.788861}
@@ -11346,6 +11378,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	={
 									{
 										position	= {x=-0.437500, y=1.931681, z=2.273318}
@@ -11723,6 +11756,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"STUN", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=5.304406, y=1.931166, z=0.437499}
@@ -12067,6 +12101,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=-7.577997, y=1.930578, z=3.500016}
@@ -13502,6 +13537,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"IMMOBILIZE", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-1.312500, y=1.933915, z=15.913215}
@@ -13754,6 +13790,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"CURSE", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=5.687561, y=1.930570, z=17.428734}
@@ -13863,6 +13900,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"CURSE", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=3.062508, y=1.931745, z=5.304394}
@@ -14145,6 +14183,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"WOUND", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=1.515538, y=1.931113, z=0.875005}
@@ -14304,6 +14343,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-6.819949, y=1.930985, z=4.812498}
@@ -14321,6 +14361,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Spike Trap"
+                        ,trapEffects = {"WOUND", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-7.577723, y=1.931257, z=8.750000}
@@ -15033,6 +15074,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-2.273482, y=1.934454, z=16.189045}
@@ -15617,6 +15659,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-4.546629, y=1.932686, z=3.499999}
@@ -16113,6 +16156,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-4.546629, y=1.932686, z=3.499999}
@@ -16469,6 +16513,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"IMMOBILIZE", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=4.546991, y=1.931800, z=4.374992}
@@ -16890,6 +16935,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=2.624939, y=1.934133, z=-4.546641}
@@ -17008,6 +17054,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=2.625000, y=1.934453, z=3.031086}
@@ -17219,6 +17266,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"IMMOBILIZE", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=2.273296, y=1.931111, z=3.937508}
@@ -17548,6 +17596,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "STUN"}
 								,tiles	= {
 									{
 										position	= {x=-2.273320, y=1.931620, z=10.062502}
@@ -17711,6 +17760,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-8.335496, y=1.931007, z=-0.437501}
@@ -17928,6 +17978,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-1.515567, y=1.933388, z=-4.375008}
@@ -18362,6 +18413,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=0.000000, y=1.931063, z=7.577723}
@@ -19204,6 +19256,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=0.000000, y=1.931043, z=12.124355}
@@ -19404,6 +19457,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"IMMOBILIZE", "POISON"}
 								,tiles	= {
 									{
 										position	= {x=3.788857, y=1.934564, z=7.437503}
@@ -20017,6 +20071,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-5.304406, y=1.931474, z=-4.812499}
@@ -20266,6 +20321,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-6.062185, y=1.931536, z=1.750006}
@@ -20462,6 +20518,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=-8.335494, y=1.931787, z=4.812500}
@@ -20651,6 +20708,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=0.757792, y=1.934171, z=7.437480}
@@ -21857,6 +21915,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"DISARM", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-3.062499, y=1.933351, z=5.304407}
@@ -22517,6 +22576,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-6.562501, y=1.931798, z=2.273318}
@@ -22636,6 +22696,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=6.562499, y=1.931824, z=8.335494}
@@ -22768,6 +22829,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=3.937500, y=1.933639, z=-0.757775}
@@ -22909,6 +22971,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-9.187502, y=1.934013, z=14.397669}
@@ -23128,6 +23191,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"IMMOBILIZE", "POISON"}
 								,tiles	= {
 									{
 										position	= {x=-2.273317, y=1.931600, z=6.562500}
@@ -23529,6 +23593,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"IMMOBILIZE", "POISON"}
 								,tiles	= {
 									{
 										position	= {x=-9.092690, y=2.056779, z=5.250002}
@@ -23674,6 +23739,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"IMMOBILIZE", "POISON"}
 								,tiles	= {
 									{
 										position	= {x=9.089283, y=1.931803, z=5.250344}
@@ -23888,6 +23954,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-1.312500, y=1.931029, z=11.366583}
@@ -23905,6 +23972,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Spike Trap"
+                        ,trapEffects = {"IMMOBILIZE", "DISARM"}
 								,tiles	= {
 									{
 										position	= {x=1.312500, y=1.931058, z=12.882128}
@@ -24011,6 +24079,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-2.625000, y=1.931054, z=1.515543}
@@ -24028,6 +24097,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Spike Trap"
+                        ,trapEffects = {"IMMOBILIZE", "DISARM"}
 								,tiles	= {
 									{
 										position	= {x=-3.937502, y=1.931054, z=-2.273317}
@@ -24761,6 +24831,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=0.757760, y=1.933613, z=1.312498}
@@ -25363,6 +25434,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=0.000000, y=1.931076, z=4.546633}
@@ -25753,6 +25825,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"IMMOBILIZE", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=1.312475, y=1.931447, z=-2.273331}
@@ -26466,6 +26539,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"IMMOBILIZE", "MUDDLE"}
 								,tiles	= {
 									{
 										position	= {x=-9.093273, y=1.933828, z=-2.625000}
@@ -26811,6 +26885,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-2.273319, y=1.934254, z=3.937500}
@@ -26918,6 +26993,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=0.000000, y=1.934228, z=15.750001}
@@ -27285,6 +27361,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-0.757776, y=1.931069, z=3.937497}
@@ -27915,6 +27992,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-6.819950, y=1.931495, z=1.312500}
@@ -28824,6 +28902,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-1.515538, y=1.933430, z=17.499998}
@@ -29454,6 +29533,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=3.499995, y=1.934551, z=9.093265}
@@ -29568,6 +29648,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-3.062487, y=1.934065, z=-0.757795}
@@ -29940,6 +30021,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-8.335489, y=1.934339, z=-3.937505}
@@ -30953,6 +31035,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-3.062503, y=1.934551, z=2.273314}
@@ -31309,6 +31392,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-4.546650, y=1.931278, z=10.500018}
@@ -31429,6 +31513,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=3.031087, y=1.931363, z=13.125003}
@@ -31513,6 +31598,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-9.851048, y=1.927712, z=9.187500}
@@ -31737,6 +31823,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-0.437493, y=1.931048, z=6.819939}
@@ -32599,6 +32686,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"STUN", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-3.031089, y=1.930634, z=-2.625000}
@@ -33685,6 +33773,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=-4.546637, y=1.931042, z=-0.874997}
@@ -34179,6 +34268,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=0.437499, y=1.931098, z=-2.273316}
@@ -34260,6 +34350,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=-4.812504, y=1.927895, z=6.819950}
@@ -34370,6 +34461,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=7.000006, y=1.931164, z=-0.000003}
@@ -34493,6 +34585,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {x=0.437494, y=1.931517, z=8.335496}
@@ -34658,6 +34751,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-2.273306, y=1.934545, z=6.562500}
@@ -35526,6 +35620,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-7.577501, y=1.933470, z=-0.874980}
@@ -35691,6 +35786,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "IMMOBILIZE"}
 								,tiles	= {
 									{
 										position	= {x=0.758703, y=1.931642, z=13.585122}
@@ -35864,6 +35960,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"IMMOBILIZE", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-7.577967, y=1.934520, z=0.875648}
@@ -36141,6 +36238,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"IMMOBILIZE", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=3.756960, y=1.934616, z=10.066353}
@@ -36251,6 +36349,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"IMMOBILIZE", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-4.545401, y=1.933100, z=11.375811}
@@ -36472,6 +36571,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "IMMOBILIZE"}
 								,tiles	= {
 									{
 										position	= {x=-5.687500, y=1.931571, z=11.366583}
@@ -36726,6 +36826,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "IMMOBILIZE"}
 								,tiles	= {
 									{
 										position	= {x=-7.000002, y=1.931583, z=4.546634}
@@ -36940,6 +37041,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"WOUND", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-2.273317, y=1.934316, z=-2.187500}
@@ -37182,6 +37284,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"WOUND", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-3.788863, y=1.931020, z=5.687503}
@@ -37758,6 +37861,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-2.625004, y=1.931081, z=-4.546633}
@@ -38504,6 +38608,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=3.788861, y=1.933622, z=7.437500}
@@ -38605,6 +38710,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-4.546637, y=1.933914, z=6.124976}
@@ -39323,6 +39429,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "IMMOBILIZE"}
 								,tiles	= {
 									{
 										position	= {x=1.749997, y=1.931106, z=3.031089}
@@ -39712,6 +39819,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"MUDDLE", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-3.031090, y=1.931041, z=3.500000}
@@ -39961,6 +40069,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-6.062180, y=1.934315, z=0.875002}
@@ -40133,6 +40242,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON"}
 								,tiles	= {
 									{
 										position	= {x=-11.366583, y=1.930900, z=-0.437500}
@@ -40340,6 +40450,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON"}
 								,tiles	= {
 									{
 										position	= {x=6.819960, y=1.931041, z=4.812498}
@@ -40686,6 +40797,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-0.438382, y=1.931558, z=-3.811675}
@@ -40996,6 +41108,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"WOUND", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=1.312500, y=1.933982, z=2.273316}
@@ -41162,6 +41275,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"WOUND", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=5.249999, y=1.934667, z=1.515547}
@@ -41377,6 +41491,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-0.000002, y=1.933998, z=0.874998}
@@ -41936,6 +42051,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"STUN", "Damage"}
 								,tiles	= {
 									{
 										position	= {x=-1.515550, y=1.933316, z=-0.000001}
@@ -42190,6 +42306,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=2.624997, y=1.931200, z=3.031090}
@@ -42307,6 +42424,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-3.937500, y=1.931038, z=0.757778}
@@ -42380,6 +42498,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-6.562501, y=1.931535, z=-0.757768}
@@ -42577,6 +42696,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=0.000008, y=1.931573, z=-1.515552}
@@ -42985,6 +43105,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"STUN", "POISON"}
 								,tiles	= {
 									{
 										position	= {x=5.250233, y=1.933614, z=1.516387}
@@ -43006,6 +43127,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=2.624997, y=1.933979, z=1.515552}
@@ -45770,6 +45892,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"IMMOBILIZE"}
 								,tiles	= {
 									{
 										position	= {-10.50, 1.88, 4.55}
@@ -45783,6 +45906,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-11.81, 1.88, 3.79}
@@ -45915,6 +46039,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-0.76, 1.88, 17.06}
@@ -46040,6 +46165,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"IMMOBILIZE"}
 								,tiles	= {
 									{
 										position	= {11.81, 1.88, 3.79}
@@ -46049,6 +46175,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {10.50, 1.88, 4.55}
@@ -46550,6 +46677,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-3.94, 1.88, 2.29}
@@ -48234,6 +48362,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-0.76, 1.88, 6.56}
@@ -49309,6 +49438,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-4.55, 1.89, 5.25}
@@ -51345,6 +51475,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON"}
 								,tiles	= {
 									{
 										position	= {0.01, 1.88, 5.25}
@@ -51776,6 +51907,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-9.85, 1.88, 1.31}
@@ -51789,6 +51921,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Bear Trap"
+                        ,trapEffects = {"DISARM", "CURSE"}
 								,tiles	= {
 									{
 										position	= {-11.39, 1.88, 1.33}
@@ -51956,6 +52089,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-1.52, 1.88, 5.25}
@@ -51969,6 +52103,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Bear Trap"
+                        ,trapEffects = {"DISARM", "CURSE"}
 								,tiles	= {
 									{
 										position	= {-0.76, 1.88, 3.93}
@@ -52300,6 +52435,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-7.58, 1.88, 15.75}
@@ -52313,6 +52449,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Bear Trap"
+                        ,trapEffects = {"DISARM", "CURSE"}
 								,tiles	= {
 									{
 										position	= {-6.04, 1.88, 15.76}
@@ -52648,6 +52785,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage", "IMMOBILIZE"}
 								,tiles	= {
 									{
 										position	= {-10.61, 1.89, 5.25}
@@ -52669,6 +52807,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Spike Trap"
+                        ,trapEffects = {"STUN", "POISON"}
 								,tiles	= {
 									{
 										position	= {0.76, 1.88, 9.19}
@@ -53886,6 +54025,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {8.34, 1.88, 9.19}
@@ -54366,6 +54506,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {x=-0.437501, y=1.931061, z=6.819950}
@@ -54569,6 +54710,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-0.76, 1.88, 6.56}
@@ -54977,6 +55119,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-4.55, 1.88, 13.13}
@@ -55216,6 +55359,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {4.55, 1.88, -2.63}
@@ -55667,6 +55811,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {2.63, 1.88, 3.03}
@@ -55897,6 +56042,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {-5.25, 1.88, -4.55}
@@ -55906,6 +56052,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-6.57, 1.88, -2.27}
@@ -55946,6 +56093,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"STUN"}
 								,tiles	= {
 									{
 										position	= {2.62, 1.88, -1.52}
@@ -55971,6 +56119,7 @@ ScenarioInformation_All = {
 							}
 							,{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {2.62, 1.89, -3.03}
@@ -57089,6 +57238,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {3.94, 1.88, 14.40}
@@ -57173,6 +57323,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {1.31, 1.88, 0.76}
@@ -57275,6 +57426,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-2.63, 1.88, 1.52}
@@ -58321,6 +58473,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {0.00, 1.88, 2.63}
@@ -58436,6 +58589,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Poison Gas"
+                        ,trapEffects = {"POISON", "Damage"}
 								,tiles	= {
 									{
 										position	= {-1.52, 1.88, 7.88}
@@ -59441,6 +59595,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Spike Trap"
+                        ,trapEffects = {"Damage"}
 								,tiles	= {
 									{
 										position	= {-2.26, 1.88, -1.31}
@@ -59718,6 +59873,7 @@ ScenarioInformation_All = {
 						,type	= {
 							{
 								name	= "Bear Trap"
+                        ,trapEffects = {"Damage", "IMMOBILIZE"}
 								,tiles	= {
 									{
 										position	= {-5.30, 1.88, -1.31}
