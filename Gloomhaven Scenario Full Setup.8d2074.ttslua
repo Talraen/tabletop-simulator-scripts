@@ -60319,6 +60319,3955 @@ ScenarioInformation_All = {
 	}
 }
 
+RandomLocationInformation_All = {
+   Alcove = {
+      gridType = Constant_Grid_Horizontal,
+      entrances = {
+         B = {
+            position = {x=-3.94, y=1.89, z=-2.26},
+            direction = 60.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Stone Door Vertical",
+            type = "B",
+            direction = 0.0,
+				tiles	= {
+					{
+						adjacentTiles = {"J2"},
+                  position = {x=-2.63, y=1.89, z=6.06},
+                  rotation = {x=0.0, y=0.0, z=180.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "All enemies gain Shield 1 this round.",
+         major = "All enemies gain Shield 1 permanently.",
+      },
+      startingOffset = {x=3.06, z=-3.79, rot=0.0},
+      mapTiles = {
+			{
+				tile = "J2",
+            position = {x=0.0, y=1.77, z=0.0},
+				rotation = {x=0.0, y=0.0, z=0.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position = {x=-3.94, y=1.89, z=-0.76},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-2.63, y=1.89, z=-1.51},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-2.62, y=1.89, z=-3.04},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-3.94, y=1.89, z=0.76},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-2.62, y=1.89, z=-0.01},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-1.32, y=1.89, z=-0.75},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {2},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Boulder",
+								tiles = {
+                           {
+										position = {x=-1.31, y=1.88, z=2.27},
+										rotation = {x=0.0, y=180.0, z=0.0},
+									},
+								},
+							},
+                     {
+								name = "Boulder 2",
+								tiles = {
+                           {
+										position = {x=-1.31, y=1.88, z=-3.79},
+										rotation = {x=0.0, y=60.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=-2.63, y=1.88, z=1.51},
+               [2] = {x=-1.34, y=1.88, z=-2.26},
+               [3] = {x=-0.01, y=1.88, z=-1.51},
+               [4] = {x=1.31, y=1.88, z=-2.28},
+               [5] = {x=2.63, y=1.88, z=-3.03},
+               [6] = {x=-3.94, y=1.88, z=2.27},
+               [7] = {x=-2.63, y=1.88, z=3.04},
+               [8] = {x=-3.94, y=1.88, z=3.79},
+               [9] = {x=-1.32, y=1.88, z=3.79},
+               [10] = {x=1.31, y=1.88, z=-3.79},
+               [11] = {x=2.63, y=1.88, z=-4.55},
+               [12] = {x=-0.01, y=1.88, z=-4.541},
+				},
+            numberTileRotation = {x=0.0, y=0.0, z=0.0},
+         },
+      },
+   },
+   Altar = {
+      gridType = Constant_Grid_Vertical,
+      entrances = {
+         B = {
+            position = {x=-3.03, y=1.77, z=0.0},
+            direction = 90.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Stone Door Vertical",
+            type = "B",
+            direction = 90.0,
+				tiles	= {
+					{
+						adjacentTiles = {"L2"},
+                  position = {x=4.55, y=1.77, z=0.0},
+                  rotation = {x=0.0, y=90.0, z=180.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "Add 3 BLESS cards to the monster attack modifier deck.",
+         major = "Add 7 BLESS cards to the monster attack modifier deck.",
+      },
+      startingOffset = {x=-12.88, z=0.44, rot=0.0},
+      mapTiles = {
+			{
+				tile = "L2",
+            position = {x=0.0, y=7.24, z=0.0},
+				rotation = {x=0.0, y=90.0, z=180.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position = {x=-2.28, y=1.88, z=1.31},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-1.51, y=1.88, z=0.0},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-2.28, y=1.88, z=-1.31},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {5, 6, 8, 9},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Stone Pillar",
+								tiles = {
+                           {
+										position = {x=0.76, y=1.88, z=1.31},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+                           {
+										position = {x=0.76, y=1.88, z=-1.31},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+								},
+							},
+                     {
+								name = "Altar Horizontal",
+								tiles = {
+                           {
+										position = {x=0.0, y=1.88, z=-0.01},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+                           {
+										position = {x=1.52, y=1.88, z=0.0},
+										rotation = {x=0.0, y=270.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=3.78, y=1.88, z=1.31},
+               [2] = {x=3.03, y=1.88, z=0.01},
+               [3] = {x=3.80, y=1.88, z=-1.31},
+               [4] = {x=0.0, y=1.88, z=-2.63},
+               [5] = {x=-1.51, y=1.88, z=-2.63},
+               [6] = {x=-0.76, y=1.88, z=-1.32},
+               [7] = {x=-2.28, y=2.00, z=3.94},
+               [8] = {x=-1.51, y=1.88, z=2.62},
+               [9] = {x=-0.76, y=1.88, z=1.32},
+               [10] = {x=0.76, y=1.88, z=-3.93},
+               [11] = {x=2.28, y=1.88, z=-3.94},
+               [12] = {x=3.79, y=1.88, z=-3.94},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         },
+      },
+   },
+   Armory = {
+      gridType = Constant_Grid_Horizontal,
+      entrances = {
+         A = {
+            position = {x=2.63, y=1.89, z=-1.52},
+            direction = 270.0,
+         },
+         B = {
+            position = {x=1.31, y=1.77, z=-3.79},
+            direction = 0.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Stone Door Vertical",
+            type = "B",
+            direction = 0.0,
+				tiles	= {
+					{
+						adjacentTiles = {"B2"},
+                  position = {x=1.31, y=1.77, z=9.85},
+                  rotation = {x=0.0, y=0.0, z=180.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "POISON all characters.",
+         major = "All enemies add +1 Attack to all of their attacks.",
+      },
+      startingOffset = {x=0.0, z=-7.58, rot=0.0},
+      locationsBlocked = {"Hovel"}, -- Both use tile B2
+      mapTiles = {
+			{
+				tile = "A3",
+            position = {x=0.0, y=1.71, z=0.0},
+				rotation = {x=0.0, y=0.0, z=180.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position = {x=0.0, y=1.88, z=-3.03},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=1.31, y=1.88, z=-2.26},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=1.30, y=1.88, z=-0.74},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=0.0, y=1.88, z=-1.50},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-0.01, y=1.94, z=0.0},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {5},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_Corridors,
+						type = {
+                     {
+								name = "Man Stone Corridor 1",
+								tiles = {
+                           {
+										position = {x=1.31, y=1.88, z=3.79},
+										rotation = {x=0.0, y=0.0, z=0.0},
+									},
+								},
+							},
+                     {
+								name = "Man Stone Corridor 2",
+								tiles = {
+                           {
+										position = {x=0.0, y=1.88, z=3.03},
+										rotation = {x=0.0, y=0.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=1.32, y=2.0, z=3.79},
+               [4] = {x=0.0, y=1.88, z=1.51},
+               [5] = {x=1.32, y=1.88, z=0.75},
+               [6] = {x=1.31, y=1.88, z=2.26},
+				},
+            numberTileRotation = {x=0.0, y=0.0, z=0.0},
+         },
+         {
+            tile = "B2",
+            position = {x=1.31, y=1.71, z=6.83},
+            rotation = {x=0.0, y=0.0, z=180.0},
+            overlayTiles = {
+               {
+                  bag = Constant_TypeOverlay_Obstacles,
+                  type = {
+                     {
+                        name = "Shelf",
+                        tiles = {
+                           {
+                              position = {x=0.0, y=1.88, z=7.58},
+                              rotation = {x=0.0, y=0.0, z=0.0},
+                           },
+                           {
+                              position = {x=2.62, y=1.88, z=7.58},
+                              rotation = {x=0.0, y=0.0, z=0.0},
+                           },
+                        },
+                     },
+                  },
+               },
+            },
+            numberTiles	= {
+               [2] = {x=-0.01, y=2.0, z=4.55},
+               [3] = {x=2.62, y=1.88, z=4.54},
+               [7] = {x=0.0, y=1.88, z=6.07},
+               [8] = {x=1.32, y=1.88, z=5.30},
+               [9] = {x=1.31, y=1.88, z=6.82},
+               [10] = {x=-1.31, y=1.88, z=5.30},
+               [11] = {x=-1.32, y=1.88, z=6.81},
+               [12] = {x=-1.31, y=1.88, z=8.34},
+            },
+            numberTileRotation = {x=0.0, y=0.0, z=0.0},
+         },
+      },
+   },
+   Burrow = {
+      gridType = Constant_Grid_Horizontal,
+      entrances = {
+         B = {
+            position = {x=-1.31, y=1.88, z=-3.79},
+            direction = 0.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Stone Door Vertical",
+            type = "B",
+            direction = 0.0,
+				tiles	= {
+					{
+						adjacentTiles = {"A2"},
+                  position = {x=-1.31, y=1.88, z=11.36},
+                  rotation = {x=0.0, y=0.0, z=180.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "STUN the character who opened the door.",
+         major = "MUDDLE, POISON, and WOUND all characters.",
+      },
+      startingOffset = {x=0.0, z=-7.58, rot=0.0},
+      mapTiles = {
+			{
+				tile = "A1",
+            position = {x=0.0, y=1.71, z=0.0},
+				rotation = {x=0.0, y=0.0, z=0.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position = {x=0.0, y=1.88, z=-3.03},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-1.31, y=1.88, z=-2.28},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=0.0, y=1.88, z=-1.51},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-1.31, y=1.88, z=-0.76},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+					},
+				},
+            overlayTiles = {
+					{
+                  bag = Constant_TypeOverlay_Corridors,
+						type = {
+                     {
+								name = "Man Stone Corridor 1",
+								tiles = {
+                           {
+										position = {x=-1.31, y=1.88, z=3.79},
+										rotation = {x=0.0, y=0.0, z=0.0},
+									},
+								},
+							},
+                     {
+								name = "Man Stone Corridor 2",
+								tiles = {
+                           {
+										position = {x=-0.01, y=1.88, z=3.03},
+										rotation = {x=0.0, y=0.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=0.01, y=2.0, z=4.55},
+               [2] = {x=-1.31, y=2.0, z=3.79},
+               [3] = {x=0.0, y=2.0, z=3.03},
+               [4] = {x=-1.31, y=1.88, z=2.28},
+               [8] = {x=-0.03, y=1.88, z=-0.09},
+               [9] = {x=-1.31, y=1.88, z=0.74},
+				},
+            numberTileRotation = {x=0.0, y=0.0, z=0.0},
+         },
+         {
+            tile = "A2",
+            position = {x=0.0, y=1.71, z=7.57},
+            rotation = {x=0.0, y=0.0, z=0.0},
+            overlayTiles = {
+               {
+                  bag = Constant_TypeOverlay_Obstacles,
+                  type = {
+                     {
+                        name = "Boulder",
+                        tiles = {
+                           {
+                              position = {x=-1.31, y=1.88, z=8.34},
+                              rotation = {x=0.0, y=180.0, z=0.0},
+                           },
+                        },
+                     },
+                  },
+               },
+            },
+            numberTiles	= {
+               [5] = {x=0.0, y=1.88, z=6.07},
+               [6] = {x=-1.32, y=1.88, z=6.80},
+               [7] = {x=0.02, y=1.88, z=7.58},
+               [10] = {x=0.01, y=1.88, z=9.08},
+               [11] = {x=-1.32, y=1.88, z=9.85},
+               [12] = {x=0.0, y=1.88, z=10.62},
+            },
+            numberTileRotation = {x=0.0, y=0.0, z=0.0},
+         },
+      },
+   },
+   Cabin = {
+      gridType = Constant_Grid_Horizontal,
+      entrances = {
+         A = {
+            position = {x=-3.9, y=1.9, z=-0.8},
+            direction = 90.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Wooden Door Horizontal",
+            type = "A",
+            direction = 90.0,
+				tiles	= {
+					{
+						adjacentTiles = {"I2"},
+                  position = {x=3.9, y=1.9, z=-0.8},
+                  rotation = {x=0.0, y=0.0, z=180.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "The character who opened the door loses a card.",
+         major = "The character who opened the door loses 2 cards.",
+      },
+      startingOffset = {x=-13.1, z=4.5, rot=0.0},
+      mapTiles = {
+			{
+				tile = "I2",
+            position = {x=0.0, y=1.7, z=0.0},
+				rotation = {x=0.0, y=0.0, z=180.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+                  {
+                     position	= {x=-2.6, y=1.9, z=0.0},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+                     position	= {x=-2.6, y=1.9, z=-1.5},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+                     position	= {x=-2.6, y=1.9, z=-3.0},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+                     position	= {x=-1.3, y=1.9, z=0.8},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+					}
+				},
+            numberStartTiles = {2, 7, 8},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+							{
+								name = "Table",
+								tiles = {
+									{
+										position	= {x=1.3, y=1.9, z=-2.3},
+										rotation = {x=0.0, y=0.0, z=0.0},
+									},
+								},
+							},
+                     {
+                        name = "Cabinet",
+                        tiles = {
+                           {
+                              position	= {x=0.0, y=1.9, z=-3.0},
+                              rotation = {x=0.0, y=180.0, z=0.0},
+                           },
+									{
+                              position	= {x=0.0, y=1.9, z=3.0},
+                              rotation = {x=0.0, y=180.0, z=0.0},
+									}
+								}
+							},
+                     {
+                        name = "Barrel",
+                        tiles = {
+                           {
+                              position	= {x=-1.3, y=1.9, z=2.3},
+                              rotation = {x=0.0, y=0.0, z=0.0},
+                           },
+                        },
+                     },
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=0.0, y=1.9, z=1.5},
+               [2] = {x=-2.6, y=1.9, z=1.5},
+               [3] = {x=-2.6, y=1.9, z=3.0},
+               [4] = {x=2.6, y=1.9, z=-1.5},
+               [5] = {x=2.6, y=1.9, z=0.0},
+               [6] = {x=0.0, y=1.9, z=-1.5},
+               [7] = {x=-1.3, y=1.9, z=-0.8},
+               [8] = {x=-1.3, y=1.9, z=-2.3},
+               [9] = {x=-1.3, y=1.9, z=-3.8},
+               [10] = {x=2.6, y=1.9, z=1.5},
+               [11] = {x=1.3, y=1.9, z=2.3},
+               [12] = {x=2.6, y=1.9, z=3.0}
+				},
+            numberTileRotation = {x=0.0, y=0.0, z=0.0},
+         },
+      },
+   },
+   Cave = {
+      gridType = Constant_Grid_Vertical,
+      entrances = {
+         A = {
+            position = {x=-1.52, y=1.88, z=-5.23},
+            direction = 0.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Dark Fog",
+            type = "B",
+            direction = 90.0,
+				tiles	= {
+					{
+						adjacentTiles = {"E1"},
+                  position = {x=3.79, y=1.88, z=-1.31},
+                  rotation = {x=0.0, y=90.0, z=0.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "The character who opened the door suffers 6 damage.",
+         major = "The character who opened the door suffers 6 damage and gains STUN.",
+      },
+      startingOffset = {x=-14.40, z=6.56, rot=0.0},
+      mapTiles = {
+			{
+				tile = "E1",
+            position = {x=0.01, y=1.71, z=0.08},
+				rotation = {x=0.0, y=180.0, z=180.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position = {x=-2.28, y=1.88, z=-3.94},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-0.74, y=1.97, z=-3.93},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=0.75, y=1.88, z=-3.94},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-3.04, y=1.88, z=-2.64},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {3, 7},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Rock Column",
+								tiles = {
+                           {
+										position = {x=1.52, y=1.88, z=-2.62},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+                           {
+										position = {x=0.76, y=1.88, z=1.31},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+                           {
+										position = {x=-2.27, y=1.88, z=-1.31},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=-1.51, y=1.88, z=-0.01},
+               [2] = {x=3.04, y=1.88, z=-2.63},
+               [3] = {x=-1.51, y=1.88, z=-2.62},
+               [4] = {x=-3.03, y=1.88, z=0.0},
+               [5] = {x=2.27, y=1.88, z=-1.31},
+               [6] = {x=1.53, y=1.88, z=0.0},
+               [7] = {x=0.0, y=1.88, z=-2.63},
+               [8] = {x=0.0, y=1.88, z=0.0},
+               [9] = {x=-0.77, y=1.88, z=1.35},
+               [10] = {x=2.27, y=1.88, z=1.32},
+               [11] = {x=-2.27, y=1.88, z=1.31},
+               [12] = {x=2.28, y=1.88, z=-3.94},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         },
+      },
+   },
+   Clearing = {
+      gridType = Constant_Grid_Vertical,
+      entrances = {
+         B = {
+            position = {x=-3.03, y=1.88, z=0.0},
+            direction = 90.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "LIght Fog",
+            type = "B",
+            direction = 90.0,
+				tiles	= {
+					{
+						adjacentTiles = {"L3"},
+                  position = {x=4.55, y=1.88, z=0.0},
+                  rotation = {x=0.0, y=270.0, z=0.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "All elements become ineert.",
+         major = "Characters can no longer consume elements.",
+      },
+      startingOffset = {x=-12.69, z=5.30, rot=0.0},
+      mapTiles = {
+			{
+				tile = "L3",
+            position = {x=1.51, y=7.24, z=0.0},
+				rotation = {x=0.0, y=270.0, z=180.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+                  {
+							position = {x=-2.28, y=1.88, z=1.31},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-1.51, y=1.88, z=-0.01},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-2.27, y=1.88, z=-1.31},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-1.52, y=1.88, z=2.63},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-0.76, y=1.88, z=1.32},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=0.01, y=1.88, z=0.0},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-0.76, y=1.88, z=-1.31},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-1.50, y=1.88, z=-2.63},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=0.76, y=1.88, z=-3.93},
+               [2] = {x=-0.76, y=1.88, z=-3.94},
+               [3] = {x=0.76, y=1.88, z=-1.31},
+               [4] = {x=0.76, y=1.88, z=3.94},
+               [5] = {x=-0.76, y=1.88, z=3.94},
+               [6] = {x=0.76, y=1.88, z=1.31},
+               [7] = {x=3.79, y=1.88, z=-1.32},
+               [8] = {x=3.04, y=1.88, z=-2.62},
+               [9] = {x=2.27, y=1.88, z=-3.94},
+               [10] = {x=3.79, y=1.88, z=1.32},
+               [11] = {x=3.04, y=1.88, z=2.62},
+               [12] = {x=2.28, y=1.88, z=3.94},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         },
+      },
+   },
+   Corridor = {
+      gridType = Constant_Grid_Vertical,
+      entrances = {
+         A = {
+            position = {x=0.76, y=1.88, z=-6.56},
+            direction = 0.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Stone Door Vertical",
+            type = "B",
+            direction = 270.0,
+				tiles	= {
+					{
+						adjacentTiles = {"F1"},
+                  position = {x=-2.27, y=1.88, z=3.94},
+                  rotation = {x=0.0, y=270.0, z=180.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "IMMOBILIZE all characters.",
+         major = "STUN all characters.",
+      },
+      startingOffset = {x=13.13, z=-1.52, rot=0.0},
+      locationsBlocked = {"Trail"}, -- Both use tile F1
+      mapTiles = {
+			{
+				tile = "F1",
+            position = {x=0.0, y=1.71, z=0.0},
+				rotation = {x=0.0, y=0.0, z=180.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position = {x=1.53, y=1.94, z=-5.25},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=0.03, y=1.88, z=-5.25},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-1.52, y=1.88, z=-5.25},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=0.74, y=1.88, z=-3.92},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-0.76, y=1.88, z=-3.94},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+					},
+				},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Altar Horizontal",
+								tiles = {
+                           {
+										position = {x=1.52, y=1.88, z=-2.63},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+                           {
+										position = {x=-1.52, y=1.88, z=0.0},
+										rotation = {x=0.0, y=270.0, z=0.0},
+									},
+                           {
+										position = {x=1.52, y=1.88, z=2.63},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=0.75, y=1.88, z=1.31},
+               [2] = {x=-0.75, y=1.88, z=1.34},
+               [3] = {x=0.75, y=1.88, z=-1.32},
+               [4] = {x=-0.75, y=1.88, z=-1.31},
+               [5] = {x=0.0, y=1.88, z=-2.62},
+               [6] = {x=-1.51, y=1.88, z=-2.62},
+               [7] = {x=0.0, y=1.88, z=2.64},
+               [8] = {x=-1.53, y=1.88, z=2.62},
+               [9] = {x=-0.76, y=1.88, z=3.93},
+               [10] = {x=0.75, y=1.88, z=3.94},
+               [11] = {x=0.01, y=1.88, z=5.25},
+               [12] = {x=1.51, y=1.88, z=5.26},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         },
+      },
+   },
+   Crossroads = {
+      gridType = Constant_Grid_Vertical,
+      entrances = {
+         B = {
+            position = {x=6.1, y=1.9, z=3.5},
+            direction = 270.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "LIght Fog",
+            type = "B",
+            direction = 270.0,
+				tiles	= {
+					{
+						adjacentTiles = {"H2"},
+                  position = {x=-4.6, y=1.9, z=3.5},
+                  rotation = {x=0.0, y=90.0, z=0.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "All characters discard 2 cards.",
+         major = "All characters lose a card.",
+      },
+      startingOffset = {x=12.1, z=2.6, rot=0.0},
+      mapTiles = {
+			{
+				tile = "H2",
+            position = {x=0.0, y=1.7, z=0.9},
+            rotation = {x=0.0, y=90.0, z=0.0},
+            startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+                  {
+                     position	= {x=5.3, y=1.9, z=2.2},
+							rotation = {x=0.0, y=90.0, z=0.0}
+						},
+						{
+							position	= {x=4.5, y=1.9, z=3.5},
+							rotation = {x=0.0, y=90.0, z=0.0}
+						},
+						{
+                     position	= {x=3.8, y=1.9, z=2.2},
+							rotation = {x=0.0, y=90.0, z=0.0}
+						},
+						{
+                     position	= {x=3.0, y=1.9, z=3.5},
+							rotation = {x=0.0, y=90.0, z=0.0}
+						},
+					},
+				},
+            overlayTiles = {
+               {
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+							{
+								name = "Totem",
+								tiles = {
+									{
+										position	= {x=0.0, y=1.9, z=0.9},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=0.8, y=1.9, z=-3.1},
+               [2] = {x=1.5, y=1.9, z=-4.4},
+               [3] = {x=1.5, y=1.9, z=0.9},
+               [4] = {x=2.3, y=1.9, z=2.2},
+               [5] = {x=0.8, y=1.9, z=2.2},
+               [6] = {x=-3.8, y=1.9, z=2.2},
+               [7] = {x=-3.0, y=1.9, z=3.5},
+               [8] = {x=-2.3, y=1.9, z=2.2},
+               [9] = {x=0.0, y=1.9, z=3.5},
+               [10] = {x=0.0, y=1.9, z=-1.8},
+               [11] = {x=-0.8, y=1.9, z=-3.1},
+               [12] = {x=0.0, y=1.9, z=-4.4},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         },
+      },
+   },
+   ["Dead-End"] = {
+      gridType = Constant_Grid_Horizontal,
+      entrances = {
+         A = {
+            position = {x=-5.25, y=1.89, z=0.0},
+            direction = 90.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Dark Fog",
+            type = "A",
+            direction = 30.0,
+				tiles	= {
+					{
+						adjacentTiles = {"K1"},
+                  position = {x=2.63, y=1.89, z=6.06},
+                  rotation = {x=0.0, y=300.0, z=0.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "All characters suffer 3 damage.",
+         major = "All characters suffer 7 damage.",
+      },
+      startingOffset = {x=-10.50, z=-4.55, rot=0.0},
+      mapTiles = {
+			{
+				tile = "K1",
+            position = {x=0.0, y=1.70, z=0.0},
+				rotation = {x=0.0, y=90.0, z=0.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position = {x=-3.93, y=1.89, z=-0.76},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-3.94, y=1.89, z=0.75},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-3.94, y=1.89, z=2.28},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-2.63, y=1.89, z=-0.01},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-2.62, y=1.89, z=1.52},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {7, 8},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Rock Column",
+								tiles = {
+                           {
+										position = {x=-1.32, y=1.89, z=-2.28},
+										rotation = {x=0.0, y=0.0, z=0.0},
+									},
+								},
+							},
+                     {
+								name = "Stalagmites",
+								tiles = {
+                           {
+										position = {x=0.0, y=1.89, z=-1.52},
+										rotation = {x=0.0, y=0.0, z=0.0},
+									},
+                           {
+										position = {x=0.0, y=1.89, z=-4.55},
+										rotation = {x=0.0, y=0.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=0.0, y=1.89, z=3.04},
+               [2] = {x=-1.31, y=1.89, z=3.78},
+               [3] = {x=0.0, y=1.89, z=1.52},
+               [4] = {x=2.62, y=1.89, z=4.56},
+               [5] = {x=1.32, y=1.89, z=5.30},
+               [6] = {x=2.63, y=1.89, z=3.03},
+               [7] = {x=-2.64, y=1.89, z=-1.53},
+               [8] = {x=-3.94, y=1.89, z=-2.28},
+               [9] = {x=-2.62, y=1.89, z=-3.07},
+               [10] = {x=1.32, y=1.89, z=-3.79},
+               [11] = {x=2.62, y=1.89, z=-3.04},
+               [12] = {x=2.62, y=1.89, z=-4.54},
+				},
+            numberTileRotation = {x=0.0, y=0.0, z=0.0},
+         },
+      },
+   },
+   Den = {
+      gridType = Constant_Grid_Vertical,
+      entrances = {
+         A = {
+            position = {x=-3.79, y=1.88, z=1.31},
+            direction = 120.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Dark Fog",
+            type = "A",
+            direction = 180.0,
+				tiles	= {
+					{
+						adjacentTiles = {"D2"},
+                  position = {x=-0.76, y=1.88, z=-3.96},
+                  rotation = {x=0.0, y=90.0, z=0.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "All enemies gain \"Retaliate 2, Range 3\" this round.",
+         major = "All enemies gain \"Retaliate 2, Range 3\" permanently.",
+      },
+      startingOffset = {x=0.88, z=18.19, rot=0.0},
+      mapTiles = {
+			{
+				tile = "D2",
+            position = {x=0.0, y=1.65, z=0.0},
+				rotation = {x=0.0, y=0.0, z=180.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position = {x=-3.03, y=1.88, z=-0.01},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-2.28, y=1.88, z=1.31},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-1.51, y=1.88, z=2.63},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-1.52, y=1.88, z=-0.04},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-0.76, y=1.88, z=1.32},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {8},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Nest",
+								tiles = {
+                           {
+										position = {x=0.76, y=1.88, z=-1.31},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=2.27, y=1.88, z=-1.31},
+               [2] = {x=-0.01, y=1.88, z=2.62},
+               [3] = {x=1.52, y=1.88, z=2.62},
+               [4] = {x=0.0, y=1.88, z=-2.61},
+               [5] = {x=1.51, y=1.88, z=-2.62},
+               [6] = {x=0.0, y=1.88, z=0.01},
+               [7] = {x=-0.75, y=1.88, z=-1.32},
+               [8] = {x=-2.28, y=1.88, z=-1.32},
+               [9] = {x=0.77, y=1.88, z=1.31},
+               [10] = {x=1.51, y=1.88, z=0.0},
+               [11] = {x=2.27, y=1.88, z=1.32},
+               [12] = {x=3.03, y=1.88, z=0.0},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         },
+      },
+   },
+   Encampment = {
+      gridType = Constant_Grid_Vertical,
+      entrances = {
+         B = {
+            position = {x=-4.5, y=1.9, z=0.0},
+            direction = 90.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "LIght Fog",
+            type = "A",
+            direction = 60.0,
+				tiles	= {
+					{
+						adjacentTiles = {"M1"},
+                  position = {x=3.8, y=1.9, z=3.9},
+                  rotation = {x=0.0, y=150.0, z=0.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "Upgrade a normal enemy in this room to elite.",
+         major = "Replace an elite enemy in the previous room.",
+      },
+      startingOffset = {x=-6.1, z=-3.5, rot=0.0},
+      locationsBlocked = {"Library"}, -- Both use tile M1
+      mapTiles = {
+			{
+				tile = "M1",
+            position = {x=0.0, y=1.7, z=0.0},
+				rotation = {x=0.0, y=270.0, z=180.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+                  {
+							position = {x=-3.8, y=1.9, z=1.3},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-3.0, y=1.9, z=0.0},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-3.8, y=1.9, z=-1.3},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-2.3, y=1.9, z=-1.3},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-3.0, y=1.9, z=-2.6},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {5, 7},
+            overlayTiles = {
+               {
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Nest",
+								tiles = {
+                           {
+										position = {x=0.0, y=1.9, z=0.0},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+               {
+						bag = Constant_TypeOverlay_DifficultTerrain,
+						type = {
+                     {
+								name = "Log",
+								tiles = {
+                           {
+										position = {x=1.5, y=1.9, z=-2.6},
+										rotation = {x=0.0, y=30.0, z=0.0},
+									},
+                           {
+										position = {x=-1.5, y=1.9, z=2.6},
+										rotation = {x=0.0, y=210.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=0.8, y=1.9, z=-1.3},
+               [2] = {x=1.5, y=1.9, z=0.0},
+               [3] = {x=0.8, y=1.9, z=1.3},
+               [4] = {x=-0.8, y=1.9, z=-1.3},
+               [5] = {x=-1.5, y=1.9, z=0.0},
+               [6] = {x=-0.8, y=1.9, z=1.3},
+               [7] = {x=-3.0, y=1.9, z=2.6},
+               [8] = {x=1.5, y=1.9, z=2.6},
+               [9] = {x=-1.5, y=1.9, z=-2.6},
+               [10] = {x=2.3, y=1.9, z=-3.9},
+               [11] = {x=3.0, y=1.9, z=-2.6},
+               [12] = {x=3.8, y=1.9, z=-1.3},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         },
+      },
+   },
+   Hallway = {
+      gridType = Constant_Grid_Horizontal,
+      entrances = {
+         A = {
+            position = {x=2.62, y=1.88, z=-4.55},
+            direction = 270.0,
+         },
+         B = {
+            position = {x=0.0, y=1.88, z=-6.06},
+            direction = 0.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Wooden Door Vertical",
+            type = "B",
+            direction = 0.0,
+				tiles	= {
+					{
+						adjacentTiles = {"G2"},
+                  position = {x=0.0, y=1.88, z=6.06},
+                  rotation = {x=0.0, y=0.0, z=180.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "All characters consume 1 small item.",
+         major = "All characters consume and spend all items.",
+      },
+      startingOffset = {x=0.0, z=-4.55, rot=0.0},
+      mapTiles = {
+			{
+				tile = "G2",
+            position = {x=0.0, y=1.71, z=0.0},
+				rotation = {x=0.0, y=0.0, z=180.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position = {x=-1.32, y=1.88, z=-5.31},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=0.0, y=1.88, z=-4.54},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=1.33, y=1.88, z=-5.32},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=-1.31, y=1.88, z=-3.79},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=0.01, y=1.88, z=-3.03},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=1.31, y=1.88, z=-3.78},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {3},
+            numberTiles	= {
+               [1] = {x=0.0, y=1.88, z=-1.51},
+               [2] = {x=-1.31, y=1.88, z=-0.77},
+               [3] = {x=1.31, y=1.88, z=-2.28},
+               [4] = {x=0.01, y=1.88, z=0.0},
+               [5] = {x=-1.31, y=1.88, z=0.76},
+               [6] = {x=1.31, y=1.88, z=-0.75},
+               [7] = {x=-1.32, y=1.88, z=2.27},
+               [8] = {x=-1.31, y=1.88, z=3.79},
+               [9] = {x=0.0, y=1.88, z=3.03},
+               [10] = {x=1.31, y=1.88, z=2.27},
+               [11] = {x=1.31, y=1.88, z=3.77},
+               [12] = {x=1.33, y=1.88, z=5.30},
+				},
+            numberTileRotation = {x=0.0, y=0.0, z=0.0},
+         },
+      },
+   },
+   Hovel = {
+      gridType = Constant_Grid_Vertical,
+      entrances = {
+         A = {
+            position = {x=0.0, y=1.9, z=-2.6},
+            direction = 0.0,
+         },
+         B = {
+            position = {x=3.0, y=1.9, z=0.0},
+            direction = 270.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Wooden Door Horizontal",
+            type = "A",
+            direction = 300.0,
+				tiles	= {
+					{
+						adjacentTiles = {"C1"},
+                  position = {x=-3.05, y=1.9, z=7.87},
+                  rotation = {x=0.0, y=210.0, z=180.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "WOUND all characters.",
+         major = "WOUND all characters permanently.",
+      },
+      startingOffset = {x=7.55, z=-5.23, rot=0.0},
+      locationsBlocked = {"Armory"}, -- Both use tile B2
+      mapTiles = {
+			{
+				tile = "B2",
+            position = {x=0.0, y=1.7, z=0.0},
+				rotation = {x=0.0, y=270.0, z=0.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position = {x=-0.8, y=1.9, z=-1.3},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=0.8, y=1.9, z=-1.3},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=2.3, y=1.9, z=-1.3},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=0.0, y=1.9, z=0.0},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=1.5, y=1.9, z=0.0},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=0.8, y=1.9, z=1.3},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=2.3, y=1.9, z=1.3},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=1.5, y=1.9, z=2.6},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {5, 11},
+            overlayTiles = {
+               {
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Table",
+								tiles = {
+                           {
+										position = {x=-2.3, y=1.9, z=1.3},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+               {
+						bag = Constant_TypeOverlay_Corridors,
+						type = {
+                     {
+								name = "Wooden Corridor 2",
+								tiles = {
+                           {
+										position = {x=0.76, y=1.9, z=3.98},
+										rotation = {x=0.0, y=270.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [3] = {x=-1.5, y=1.9, z=2.6},
+               [4] = {x=0.0, y=1.9, z=2.6},
+               [5] = {x=-1.5, y=1.9, z=0.0},
+               [6] = {x=0.8, y=2.0, z=3.9},
+               [7] = {x=-0.8, y=2.0, z=3.9},
+               [11] = {x=-2.3, y=1.9, z=-1.3},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         },
+         {
+            tile = "C1",
+            position = {x=-0.7, y=1.7, z=6.6},
+				rotation = {x=0.0, y=150.0, z=180.0},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Crate B",
+								tiles = {
+                           {
+										position = {x=0.0, y=1.9, z=7.9},
+										rotation = {x=0.0, y=150.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=-0.8, y=1.9, z=6.6},
+               [2] = {x=0.8, y=1.9, z=6.6},
+               [8] = {x=-2.3, y=1.9, z=6.6},
+               [9] = {x=2.3, y=1.9, z=6.6},
+               [10] = {x=-1.5, y=1.9, z=7.9},
+               [12] = {x=1.5, y=1.9, z=7.9},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         }
+      },
+   },
+   Library = {
+      gridType = Constant_Grid_Vertical,
+      entrances = {
+         B = {
+            position = {x=-4.5, y=1.9, z=0.0},
+            direction = 90.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Stone Door Horizontal",
+            type = "A",
+            direction = 0.0,
+				tiles	= {
+					{
+						adjacentTiles = {"M1"},
+                  position = {x=0.0, y=1.9, z=5.2},
+                  rotation = {x=0.0, y=270.0, z=180.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "STRENGTHEN all enemies.",
+         major = "STRENGTHEN all enemies permanently.",
+      },
+      startingOffset = {x=0.0, z=-3.5, rot=0.0},
+      locationsBlocked = {"Encampment"}, -- Both use tile M1
+      mapTiles = {
+			{
+				tile = "M1",
+            position = {x=0.0, y=1.7, z=0.0},
+				rotation = {x=0.0, y=270.0, z=0.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+                  {
+							position = {x=-3.8, y=1.9, z=1.3},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-3.0, y=1.9, z=0.0},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-3.0, y=1.9, z=2.6},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-2.3, y=1.9, z=1.3},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-1.5, y=1.9, z=0.0},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {4},
+            overlayTiles = {
+               {
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Stone Pillar",
+								tiles = {
+                           {
+										position = {x=-0.75, y=1.9, z=1.3},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+                           {
+										position = {x=-0.75, y=1.9, z=-1.3},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+								},
+							},
+                     {
+								name = "Bookcase",
+								tiles = {
+                           {
+										position = {x=-1.5, y=1.9, z=2.6},
+										rotation = {x=0.0, y=330.0, z=0.0},
+									},
+                           {
+										position = {x=-3.0, y=1.9, z=-2.6},
+										rotation = {x=0.0, y=330.0, z=0.0},
+									},
+                           {
+										position = {x=0.8, y=1.9, z=-3.9},
+										rotation = {x=0.0, y=330.0, z=0.0},
+									},
+                           {
+										position = {x=3.8, y=1.9, z=-1.3},
+										rotation = {x=0.0, y=330.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=0.8, y=1.9, z=-1.3},
+               [2] = {x=0.0, y=1.9, z=0.0},
+               [3] = {x=2.3, y=1.9, z=-1.3},
+               [4] = {x=-2.3, y=1.9, z=-1.3},
+               [5] = {x=-1.5, y=1.9, z=-2.6},
+               [6] = {x=-0.8, y=1.9, z=-3.9},
+               [7] = {x=0.8, y=1.9, z=1.3},
+               [8] = {x=1.5, y=1.9, z=2.6},
+               [9] = {x=0.0, y=1.9, z=2.6},
+               [10] = {x=1.5, y=1.9, z=-2.6},
+               [11] = {x=3.0, y=1.9, z=-2.6},
+               [12] = {x=2.3, y=1.9, z=-3.9},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         },
+      },
+   },
+   Passage = {
+      gridType = Constant_Grid_Horizontal,
+      entrances = {
+         A = {
+            position = {x=2.62, y=1.77, z=-6.06},
+            direction = 330.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Stone Door Horizontal",
+            type = "A",
+            direction = 30.0,
+				tiles	= {
+					{
+						adjacentTiles = {"K2"},
+                  position = {x=2.63, y=1.88, z=6.06},
+                  rotation = {x=0.0, y=300.0, z=180.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "Elite enemies gain INVISIBLE.",
+         major = "All enemies heal 1 hit point at hte start of each of their turns.",
+      },
+      startingOffset = {x=-10.50, z=-4.55, rot=0.0},
+      mapTiles = {
+			{
+				tile = "K2",
+            position = {x=0.0, y=1.72, z=0.0},
+				rotation = {x=0.0, y=90.0, z=180.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+                  {
+							position = {x=1.31, y=1.89, z=-5.30},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=2.62, y=1.89, z=-4.55},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=0.01, y=1.89, z=-4.55},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=1.32, y=1.89, z=-3.80},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+							position = {x=2.62, y=1.89, z=-3.03},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+					},
+				},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Boulder 2",
+								tiles = {
+                           {
+										position = {x=-3.94, y=1.89, z=-0.75},
+										rotation = {x=0.0, y=0.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=-1.32, y=1.89, z=-2.27},
+               [2] = {x=-1.35, y=1.89, z=-3.80},
+               [3] = {x=0.0, y=1.89, z=-1.52},
+               [4] = {x=1.31, y=1.89, z=3.80},
+               [5] = {x=1.31, y=1.89, z=5.30},
+               [6] = {x=2.62, y=1.89, z=4.55},
+               [7] = {x=-1.31, y=1.89, z=0.76},
+               [8] = {x=-2.62, y=1.89, z=0.0},
+               [9] = {x=-1.32, y=1.89, z=-0.75},
+               [10] = {x=-3.94, y=1.89, z=2.28},
+               [11] = {x=-2.63, y=1.89, z=3.03},
+               [12] = {x=-1.30, y=1.89, z=3.77},
+				},
+            numberTileRotation = {x=0.0, y=0.0, z=0.0},
+         },
+      },
+   },
+   Road = {
+      gridType = Constant_Grid_Horizontal,
+      entrances = {
+         A = {
+            position = {x=-2.6, y=1.9, z=-4.5},
+            direction = 90.0,
+         },
+         B = {
+            position = {x=0.0, y=1.9, z=-6.1},
+            direction = 0.0,
+         },
+      },
+      doorTiles = {
+         {
+            name = "LIght Fog",
+            type = "A",
+            direction = 90.0,
+				tiles	= {
+					{
+						adjacentTiles = {"G1"},
+                  position = {x=2.6, y=1.9, z=0.0},
+                  rotation = {x=0.0, y=180.0, z=0.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "Replace 1 normal enemy in the previous room.",
+         major = "Replace 2 normal enemies in the previous room.",
+      },
+      startingOffset = {x=-12.25, z=1.5, rot=0.0},
+      mapTiles = {
+			{
+				tile = "G1",
+            position = {x=0.0, y=1.7, z=0.0},
+				rotation = {x=0.0, y=180.0, z=0.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position	= {x=-1.3, y=1.9, z=-5.3},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+						{
+                     position	= {x=0.0, y=1.9, z=-4.5},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+						{
+                     position	= {x=1.3, y=1.9, z=-5.3},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+                     position	= {x=-1.3, y=1.9, z=-3.8},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+                     position	= {x=1.3, y=1.9, z=-3.8},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+						{
+                     position	= {x=-1.3, y=1.9, z=-2.3},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {4},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_DifficultTerrain,
+						type = {
+							{
+								name = "Log",
+								tiles = {
+									{
+										position	= {x=0.0, y=1.9, z=1.5},
+										rotation = {x=0.0, y=300.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=0.0, y=1.9, z=0.0},
+               [2] = {x=1.3, y=1.9, z=-0.8},
+               [3] = {x=1.3, y=1.9, z=0.8},
+               [4] = {x=0.0, y=1.9, z=-3.0},
+               [5] = {x=0.0, y=1.9, z=-1.5},
+               [6] = {x=-1.3, y=1.9, z=-0.8},
+               [7] = {x=1.3, y=1.9, z=3.8},
+               [8] = {x=1.3, y=1.9, z=2.3},
+               [9] = {x=-1.3, y=1.9, z=0.8},
+               [10] = {x=-1.3, y=1.9, z=3.8},
+               [11] = {x=0.0, y=1.9, z=4.5},
+               [12] = {x=-1.3, y=1.9, z=5.3},
+				},
+            numberTileRotation = {x=0.0, y=0.0, z=0.0},
+         },
+      },
+   },
+   Sewer = {
+      gridType = Constant_Grid_Vertical,
+      entrances = {
+         A = {
+            position = {x=0.76, y=1.88, z=-6.56},
+            direction = 0.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Stone Door Horizontal",
+            type = "A",
+            direction = 0.0,
+				tiles	= {
+					{
+						adjacentTiles = {"H1"},
+                  position = {x=0.76, y=1.88, z=3.94},
+                  rotation = {x=0.0, y=270.0, z=180.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "MUDDLE all characters.",
+         major = "MUDDLE all characters permanently.",
+      },
+      startingOffset = {x=0.0, z=-4.37, rot=0.0},
+      mapTiles = {
+			{
+				tile = "H1",
+            position = {x=0.0, y=1.65, z=0.0},
+				rotation = {x=0.0, y=90.0, z=0.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+                  {
+							position = {x=0.0, y=1.88, z=-5.24},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=1.52, y=1.88, z=-5.25},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=-0.75, y=1.88, z=-3.94},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=0.76, y=1.88, z=-3.90},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+                  {
+							position = {x=2.27, y=1.88, z=-3.94},
+							rotation = {x=0.0, y=90.0, z=0.0},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=0.76, y=1.88, z=1.32},
+               [2] = {x=-0.76, y=1.88, z=-1.31},
+               [3] = {x=0.76, y=1.88, z=-1.32},
+               [4] = {x=2.27, y=1.88, z=-1.31},
+               [5] = {x=3.79, y=1.88, z=1.31},
+               [6] = {x=5.31, y=1.88, z=1.31},
+               [7] = {x=4.55, y=1.88, z=2.63},
+               [8] = {x=0.0, y=1.88, z=0.01},
+               [9] = {x=1.52, y=1.88, z=0.0},
+               [10] = {x=-3.79, y=1.88, z=1.31},
+               [11] = {x=-2.28, y=1.88, z=1.32},
+               [12] = {x=-3.03, y=1.88, z=2.63},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         },
+      },
+   },
+   Trail = {
+      gridType = Constant_Grid_Vertical,
+      entrances = {
+         A = {
+            position = {x=0.8, y=1.9, z=-6.6},
+            direction = 0.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "LIght Fog",
+            type = "B",
+            direction = 270.0,
+				tiles	= {
+					{
+						adjacentTiles = {"F1"},
+                  position = {x=-2.3, y=1.9, z=3.9},
+                  rotation = {x=0.0, y=90.0, z=0.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "All characters spend all spendable items.",
+         major = "All enemies add +1 Move to all of their moves and +1 Range to all of their attacks.",
+      },
+      startingOffset = {x=12.1, z=0.0, rot=0.0},
+      locationsBlocked = {"Corridor"}, -- Both use tile F1
+      mapTiles = {
+			{
+				tile = "F1",
+            position = {x=0.0, y=1.7, z=0.0},
+            rotation = {x=0.0, y=180.0, z=0.0},
+            startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+                  {
+                     position = {x=0.0, y=1.9, z=-5.3},
+							rotation = {x=0.0, y=90.0, z=0.0}
+						},
+                  {
+                     position = {x=1.5, y=1.9, z=-5.3},
+							rotation = {x=0.0, y=90.0, z=0.0}
+						},
+                  {
+                     position = {x=-1.5, y=1.9, z=-5.3},
+							rotation = {x=0.0, y=90.0, z=0.0}
+						},
+                  {
+                     position = {x=0.8, y=1.9, z=-3.9},
+							rotation = {x=0.0, y=90.0, z=0.0}
+						},
+                  {
+                     position = {x=-0.8, y=1.9, z=-3.9},
+							rotation = {x=0.0, y=90.0, z=0.0}
+						},
+					},
+				},
+            overlayTiles = {
+               {
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+							{
+								name = "Boulder",
+								tiles = {
+                           {
+										position	= {x=1.5, y=1.9, z=-2.6},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+                           {
+										position	= {x=-1.5, y=1.9, z=2.6},
+										rotation = {x=0.0, y=90.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=-1.5, y=1.9, z=0.0},
+               [2] = {x=-0.8, y=1.9, z=1.3},
+               [3] = {x=1.5, y=1.9, z=0.0},
+               [4] = {x=0.8, y=1.9, z=1.3},
+               [5] = {x=-1.5, y=1.9, z=-2.6},
+               [6] = {x=0.0, y=1.9, z=-2.6},
+               [7] = {x=0.0, y=1.9, z=0.0},
+               [8] = {x=1.5, y=1.9, z=2.6},
+               [9] = {x=0.0, y=1.9, z=2.6},
+               [10] = {x=-1.5, y=1.9, z=5.2},
+               [11] = {x=0.8, y=1.9, z=-1.3},
+               [12] = {x=1.5, y=1.9, z=5.2},
+				},
+            numberTileRotation = {x=0.0, y=90.0, z=0.0},
+         },
+      },
+   },
+   Tunnel = {
+      gridType = Constant_Grid_Horizontal,
+      entrances = {
+         B = {
+            position = {x=-4.0, y=1.9, z=-5.3},
+            direction = 60.0,
+         },
+      },
+      doorTiles = {
+			{
+            name = "Dark Fog",
+            type = "A",
+            direction = 90.0,
+				tiles	= {
+					{
+						adjacentTiles = {"J1"},
+                  position = {x=5.3, y=1.9, z=3.0},
+                  rotation = {x=0.0, y=0.0, z=0.0},
+					},
+				},
+			},
+         {
+            name = "Dark Fog",
+            type = "B",
+            direction = 0.0,
+				tiles	= {
+					{
+						adjacentTiles = {"J1"},
+                  position = {x=2.6, y=1.9, z=6.1},
+                  rotation = {x=0.0, y=0.0, z=0.0},
+					},
+				},
+			},
+		},
+      penalties = {
+         minor = "CURSE all characters",
+         major = "CURSE all characters three times",
+      },
+      startingOffset = {x=-7.4, z=-3.8, rot=0.0},
+      mapTiles = {
+			{
+				tile = "J1",
+            position = {x=0.0, y=1.7, z=0.0},
+				rotation = {x=0.0, y=0.0, z=180.0},
+				startTiles = {
+					name = "Stone Corridor 1",
+					tiles = {
+						{
+							position = {x=-3.9, y=1.9, z=-3.8},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+						{
+                     position = {x=-2.6, y=1.9, z=-4.6},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+						{
+                     position = {x=-2.6, y=1.9, z=-6.1},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+                  {
+                     position = {x=-1.3, y=1.9, z=-5.3},
+							rotation = {x=0.0, y=0.0, z=0.0},
+						},
+					},
+				},
+            numberStartTiles = {2},
+            overlayTiles = {
+					{
+						bag = Constant_TypeOverlay_Obstacles,
+						type = {
+                     {
+								name = "Boulder",
+								tiles = {
+                           {
+										position = {x=-2.6, y=1.9, z=-3.0},
+										rotation = {x=0.0, y=180.0, z=0.0},
+									},
+                           {
+										position = {x=1.3, y=1.9, z=-3.8},
+										rotation = {x=0.0, y=180.0, z=0.0},
+									},
+								},
+							},
+                     {
+								name = "Boulder 2",
+								tiles = {
+                           {
+										position = {x=1.3, y=1.9, z=2.3},
+										rotation = {x=0.0, y=60.0, z=0.0},
+									},
+								},
+							},
+                     {
+								name = "Boulder 3",
+								tiles = {
+                           {
+										position = {x=2.6, y=1.9, z=-1.5},
+										rotation = {x=0.0, y=0.0, z=0.0},
+									},
+								},
+							},
+						},
+					},
+				},
+            numberTiles	= {
+               [1] = {x=1.3, y=1.9, z=-0.8},
+               [2] = {x=-1.3, y=1.9, z=-3.8},
+               [3] = {x=0.0, y=1.9, z=-4.6},
+               [4] = {x=3.9, y=1.9, z=5.3},
+               [5] = {x=0.0, y=1.9, z=-1.5},
+               [6] = {x=3.9, y=1.9, z=2.3},
+               [7] = {x=0.0, y=1.9, z=-3.0},
+               [8] = {x=3.9, y=1.9, z=0.8},
+               [9] = {x=1.3, y=1.9, z=0.8},
+               [10] = {x=2.6, y=1.9, z=4.6},
+               [11] = {x=2.6, y=1.9, z=-3.0},
+               [12] = {x=1.3, y=1.9, z=3.8},
+				},
+            numberTileRotation = {x=0.0, y=0.0, z=0.0},
+         },
+      },
+   },
+}
+
+RandomMonsterInformation_All = {
+   Archaic = {
+      [1] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Rubble",
+      },
+      [2] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Rubble",
+      },
+      [3] = {
+         type = "monster",
+         name = "Stone Golem",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Stone Golem",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [5] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Thorns",
+      },
+      [6] = {
+         type = "monster",
+         name = "Ancient Artillery",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [7] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Rubble",
+      },
+      [8] = {
+         type = "monster",
+         name = "Ancient Artillery",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [9] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Thorns",
+      },
+      [10] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Thorns",
+      },
+      [11] = {
+         type = "monster",
+         name = "Ancient Artillery",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [12] = {
+         type = "treasure",
+         contents = "Recover a lost card",
+      },
+   },
+   Corrupted = {
+      [1] = {
+         type = "monster",
+         name = "Cultist",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "Living Bones",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [3] = {
+         type = "monster",
+         name = "Night Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Night Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [5] = nil,
+      [6] = nil,
+      [7] = {
+         type = "monster",
+         name = "Living Bones",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [8] = {
+         type = "monster",
+         name = "Cultist",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [9] = {
+         type = "monster",
+         name = "Cultist",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [10] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Thorns",
+      },
+      [11] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Thorns",
+      },
+      [12] = {
+         type = "treasure",
+         contents = "Recover a lost card",
+      },
+   },
+   Crushing = {
+      [1] = {
+         type = "monster",
+         name = "Earth Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "Wind Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [3] = {
+         type = "monster",
+         name = "Wind Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [4] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Rubble",
+      },
+      [5] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Rubble",
+      },
+      [6] = {
+         type = "monster",
+         name = "Earth Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Wind Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [8] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Rubble",
+      },
+      [9] = {
+         type = "monster",
+         name = "Wind Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [10] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Rubble",
+      },
+      [11] = {
+         type = "treasure",
+         contents = "5 gold",
+      },
+      [12] = {
+         type = "treasure",
+         contents = "5 gold",
+      },
+   },
+   Cutthroat = {
+      [1] = {
+         type = "monster",
+         name = "Bandit Guard",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "coin",
+      },
+      [3] = {
+         type = "monster",
+         name = "Bandit Archer",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Bandit Archer",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [5] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"POISON", "Damage"},
+      },
+      [6] = {
+         type = "monster",
+         name = "Hound",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Bandit Guard",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [8] = {
+         type = "monster",
+         name = "Hound",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [9] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"POISON", "Damage"},
+      },
+      [10] = {
+         type = "monster",
+         name = "Bandit Archer",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [11] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"POISON", "Damage"},
+      },
+      [12] = {
+         type = "treasure",
+         contents = "10 gold",
+      },
+   },
+   Defiled = {
+      [1] = {
+         type = "monster",
+         name = "Sun Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "Forest Imp",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [3] = {
+         type = "monster",
+         name = "Forest Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Forest Imp",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [5] = {
+         type = "monster",
+         name = "Forest Imp",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Sun Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Forest Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [8] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"POISON", "IMMOBILIZE"},
+      },
+      [9] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"POISON", "IMMOBILIZE"},
+      },
+      [10] = {
+         type = "monster",
+         name = "Sun Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [11] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"POISON", "IMMOBILIZE"},
+      },
+      [12] = {
+         type = "treasure",
+         contents = "Heal 5 hit points",
+      },
+   },
+   Drowned = {
+      [1] = {
+         type = "monster",
+         name = "Lurker",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "Lurker",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [3] = {
+         type = "monster",
+         name = "Lurker",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Living Spirit",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [5] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Water 1",
+      },
+      [6] = {
+         type = "monster",
+         name = "Living Spirit",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Living Spirit",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [8] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"STUN", "Damage"},
+      },
+      [9] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"STUN", "Damage"},
+      },
+      [10] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"STUN", "Damage"},
+      },
+      [11] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Water 1",
+      },
+      [12] = {
+         type = "treasure",
+         contents = "Cure all negative conditions",
+      },
+   },
+   Foggy = {
+      [1] = {
+         type = "monster",
+         name = "Frost Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = nil,
+      [3] = {
+         type = "monster",
+         name = "Flame Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Water 1",
+      },
+      [5] = {
+         type = "monster",
+         name = "Frost Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Flame Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Frost Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [8] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Hot Coals 1",
+      },
+      [9] = {
+         type = "monster",
+         name = "Flame Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [10] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Water 1",
+      },
+      [11] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Hot Coals 1",
+      },
+      [12] = {
+         type = "treasure",
+         contents = "Refresh 2 small items",
+      },
+   },
+   Fortified = {
+      [1] = {
+         type = "monster",
+         name = "City Guard",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "City Guard",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [3] = {
+         type = "coin",
+      },
+      [4] = {
+         type = "coin",
+      },
+      [5] = {
+         type = "monster",
+         name = "City Archer",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "City Archer",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "City Archer",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [8] = {
+         type = "trap",
+         name = "Bear Trap",
+         trapEffects = {"Damage"},
+      },
+      [9] = {
+         type = "monster",
+         name = "Ancient Artillery",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [10] = {
+         type = "trap",
+         name = "Bear Trap",
+         trapEffects = {"Damage"},
+      },
+      [11] = {
+         type = "trap",
+         name = "Bear Trap",
+         trapEffects = {"Damage"},
+      },
+      [12] = {
+         type = "monster",
+         name = "Ancient Artillery",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+   },
+   Frigid = {
+      [1] = nil,
+      [2] = nil,
+      [3] = {
+         type = "monster",
+         name = "Savvas Icestorm",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Water 1",
+      },
+      [5] = {
+         type = "monster",
+         name = "Frost Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [6] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Water 1",
+      },
+      [7] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"DISARM"},
+      },
+      [8] = nil,
+      [9] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"DISARM"},
+      },
+      [10] = {
+         type = "monster",
+         name = "Wind Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [11] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"DISARM"},
+      },
+      [12] = {
+         type = "monster",
+         name = "Wind Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+   },
+   Hopeless = {
+      [1] = {
+         type = "monster",
+         name = "Night Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = nil,
+      [3] = {
+         type = "monster",
+         name = "Night Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [5] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [8] = {
+         type = "coin",
+      },
+      [9] = {
+         type = "coin",
+      },
+      [10] = {
+         type = "coin",
+      },
+      [11] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [12] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+   },
+   Horrific = {
+      [1] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [3] = {
+         type = "monster",
+         name = "Lurker",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [5] = nil,
+      [6] = {
+         type = "monster",
+         name = "Deep Terror",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [7] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"MUDDLE", "Damage"},
+      },
+      [8] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [9] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [10] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"MUDDLE", "Damage"},
+      },
+      [11] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"MUDDLE", "Damage"},
+      },
+      [12] = {
+         type = "monster",
+         name = "Deep Terror",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+   },
+   Infected = {
+      [1] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [3] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [5] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Ooze",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [8] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [9] = nil,
+      [10] = {
+         type = "monster",
+         name = "Ooze",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [11] = {
+         type = "monster",
+         name = "Ooze",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [12] = {
+         type = "coin",
+      },
+   },
+   Mangy = {
+      [1] = {
+         type = "monster",
+         name = "Vermling Shaman",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "Vermling Scout",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [3] = {
+         type = "monster",
+         name = "Cave Bear",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Vermling Scout",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [5] = {
+         type = "monster",
+         name = "Vermling Scout",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Vermling Scout",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Vermling Scout",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [8] = {
+         type = "monster",
+         name = "Vermling Scout",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [9] = {
+         type = "monster",
+         name = "Vermling Scout",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [10] = {
+         type = "coin",
+      },
+      [11] = {
+         type = "coin",
+      },
+      [12] = {
+         type = "treasure",
+         contents = "10 gold",
+      },
+   },
+   Putrid = {
+      [1] = {
+         type = "monster",
+         name = "Living Corpse",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "Living Corpse",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [3] = {
+         type = "monster",
+         name = "Living Corpse",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Ooze",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [5] = {
+         type = "monster",
+         name = "Living Corpse",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Living Corpse",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Ooze",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [8] = {
+         type = "monster",
+         name = "Ooze",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [9] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"MUDDLE", "Damage"},
+      },
+      [10] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"MUDDLE", "Damage"},
+      },
+      [11] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"MUDDLE", "Damage"},
+      },
+      [12] = {
+         type = "treasure",
+         contents = "10 gold",
+      },
+   },
+   Rotting = {
+      [1] = {
+         type = "monster",
+         name = "Living Corpse",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "Living Bones",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [3] = {
+         type = "monster",
+         name = "Living Spirit",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Living Corpse",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [5] = {
+         type = "monster",
+         name = "Living Bones",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Living Spirit",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [7] = {
+         type = "coin",
+      },
+      [8] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"STUN", "POISON"},
+      },
+      [9] = {
+         type = "monster",
+         name = "Living Spirit",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [10] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"STUN", "POISON"},
+      },
+      [11] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"STUN", "POISON"},
+      },
+      [12] = {
+         type = "treasure",
+         contents = "All enemies suffer 2 damage",
+      },
+   },
+   Scaled = {
+      [1] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"WOUND", "POISON"},
+      },
+      [2] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"WOUND", "POISON"},
+      },
+      [3] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"WOUND", "POISON"},
+      },
+      [4] = {
+         type = "monster",
+         name = "Rending Drake",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [5] = {
+         type = "monster",
+         name = "Rending Drake",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [7] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Thorns",
+      },
+      [8] = {
+         type = "monster",
+         name = "Spitting Drake",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [9] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Thorns",
+      },
+      [10] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [11] = {
+         type = "monster",
+         name = "Spitting Drake",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [12] = {
+         type = "coin",
+      },
+   },
+   Tribal = {
+      [1] = {
+         type = "monster",
+         name = "Inox Guard",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "Inox Guard",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [3] = {
+         type = "monster",
+         name = "Inox Shaman",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = nil,
+      [5] = {
+         type = "monster",
+         name = "Inox Archer",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [6] = nil,
+      [7] = {
+         type = "monster",
+         name = "Inox Shaman",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [8] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"WOUND", "POISON"},
+      },
+      [9] = {
+         type = "monster",
+         name = "Inox Archer",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [10] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"WOUND", "DISARM"},
+      },
+      [11] = {
+         type = "coin",
+      },
+      [12] = {
+         type = "coin",
+      },
+   },
+   Unstable = {
+      [1] = {
+         type = "monster",
+         name = "Savvas Lavaflow",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [2] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Rubble",
+      },
+      [3] = {
+         type = "monster",
+         name = "Earth Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Earth Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [5] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Rubble",
+      },
+      [6] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Rubble",
+      },
+      [7] = {
+         type = "monster",
+         name = "Flame Demon",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [8] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Hot Coals 1",
+      },
+      [9] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Hot Coals 1",
+      },
+      [10] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Hot Coals 1",
+      },
+      [11] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Hot Coals 1",
+      },
+      [12] = {
+         type = "monster",
+         name = "Flame Demon",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+   },
+   Venomous = {
+      [1] = {
+         type = "monster",
+         name = "Harrower Infester",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [3] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [4] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [5] = {
+         type = "monster",
+         name = "Giant Viper",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Harrower Infester",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [8] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"POISON", "STUN"},
+      },
+      [9] = {
+         type = "trap",
+         name = "Poison Gas",
+         trapEffects = {"POISON", "STUN"},
+      },
+      [10] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [11] = {
+         type = "monster",
+         name = "Black Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [12] = {
+         type = "treasure",
+         contents = "Poison all enemies",
+      },
+   },
+   Wild = {
+      [1] = {
+         type = "monster",
+         name = "Cave Bear",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "coin",
+      },
+      [3] = {
+         type = "coin",
+      },
+      [4] = {
+         type = "monster",
+         name = "Hound",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [5] = {
+         type = "monster",
+         name = "Hound",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Forest Imp",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Forest Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [8] = {
+         type = "trap",
+         name = "Bear Trap",
+         trapEffects = {"IMMOBILIZE", "Damage"},
+      },
+      [9] = {
+         type = "trap",
+         name = "Bear Trap",
+         trapEffects = {"IMMOBILIZE", "Damage"},
+      },
+      [10] = {
+         type = "monster",
+         name = "Cave Bear",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [11] = {
+         type = "monster",
+         name = "Forest Imp",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [12] = {
+         type = "treasure",
+         contents = "Cure all negative conditions",
+      },
+   },
+   Arid = {
+      [1] = {
+         type = "monster",
+         name = "Valrath Savage",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [2] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"WOUND", "Damage"},
+      },
+      [3] = {
+         type = "trap",
+         name = "Spike Trap",
+         trapEffects = {"WOUND", "Damage"},
+      },
+      [4] = nil,
+      [5] = {
+         type = "monster",
+         name = "Valrath Savage",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Valrath Savage",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [7] = {
+         type = "monster",
+         name = "Valrath Tracker",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [8] = nil,
+      [9] = {
+         type = "monster",
+         name = "Valrath Tracker",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [10] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Thorns",
+      },
+      [11] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_HazardousTerrain,
+         name = "Thorns",
+      },
+      [12] = {
+         type = "treasure",
+         contents = "10 gold",
+      },
+   },
+   Ethereal = {
+      [1] = {
+         type = "monster",
+         name = "Aesther Ashblade",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Elite,
+            [3] = Constant_LevelMonster_Elite,
+            [4] = Constant_LevelMonster_Elite,
+         },
+      },
+      [2] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Water 1",
+      },
+      [3] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Water 1",
+      },
+      [4] = {
+         type = "monster",
+         name = "Aesther Scout",
+         numCharacters = {
+            [2] = Constant_LevelMonster_Normal,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [5] = {
+         type = "monster",
+         name = "Aesther Ashblade",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [6] = {
+         type = "monster",
+         name = "Aesther Scout",
+         numCharacters = {
+            [2] = nil,
+            [3] = nil,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [7] = nil,
+      [8] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Water 1",
+      },
+      [9] = {
+         type = "overlay",
+         bag = Constant_TypeOverlay_DifficultTerrain,
+         name = "Water 1",
+      },
+      [10] = {
+         type = "monster",
+         name = "Aesther Scout",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = Constant_LevelMonster_Normal,
+         },
+      },
+      [11] = {
+         type = "monster",
+         name = "Ooze",
+         numCharacters = {
+            [2] = nil,
+            [3] = Constant_LevelMonster_Normal,
+            [4] = nil,
+         },
+      },
+      [12] = {
+         type = "treasure",
+         contents = "Create any two elements",
+      },
+   }
+}
 
 
 
