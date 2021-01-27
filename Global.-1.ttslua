@@ -1034,8 +1034,10 @@ function createMap(params)
 
       if battleGoals == nil then return end
 
-      if battleGoals.getQuantity() < 24 then
-         broadcastToAll("There are less then 24 Battle Goals in the Deck. Discard Battle Goals and Deal by hand.", "Red")
+      local battleGoalCount = tonumber(tab:match("battle goals:(%d+)")) or 24
+
+      if battleGoals.getQuantity() < battleGoalCount then
+         broadcastToAll("There are fewer than " .. battleGoalCount .. " Battle Goals in the deck. Discard Battle Goals and deal by hand.", "Red")
          return
       end
 
