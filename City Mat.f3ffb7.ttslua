@@ -9,11 +9,12 @@ prosp = {
    {min = 50, max = 56},
    {min = 57, max = 63},
    {min = 64, max = 70},
-   {min = 71, max = 95},
-   {min = 71, max = 95},
-   {min = 96, max = 133},
-   {min = 134, max = 150}
+   {min = 71, max = 95, version = 2},
+   {min = 71, max = 95, version = 1},
+   {min = 96, max = 133, minfc = 152, maxfc = 163, extra = 165},
+   {min = 134, max = 151, minfc = 164, maxfc = 164}
 }
+slots = {"Legs", "Body", "Head", "Hand", "One Hand", "Two Hands", "Small Item"}
 
 function onLoad(save_state)
 
@@ -28,28 +29,60 @@ function onLoad(save_state)
 
    for i = 0, 13 do
       buttonParameter.position = { - 7.8 + 1.2 * i, 0.1, 0.7}
-      self.setVar("button" .. i, function () layOut(i) end)
+      self.setVar("button" .. i, function () layOut(i, "") end)
       buttonParameter.click_function = "button" .. i
+      self.createButton(buttonParameter)
+   end
+
+   buttonParameter = {
+      function_owner = self,
+      width = 700,
+      height = 250,
+      color = {0.1, 0.1, 0.1},
+      font_color = {0.6, 0.6, 0.6},
+      rotation = {0, 90, 0},
+      font_size = 100
+   }
+
+   for i, slot in pairs(slots) do
+      buttonParameter.position = { 3.8 - 0.6 * i, 0.1, - 1.85}
+      self.setVar("sbutton" .. i, function () layOut(0, slot) end)
+      buttonParameter.click_function = "sbutton" .. i
+      buttonParameter.tooltip = "Lay out " .. slot .. " cards"
+      buttonParameter.label = slot
       self.createButton(buttonParameter)
    end
 end
 
-function layOut(i)
+function layOut(i, slot)
    local pos = self.positionToWorld({7.8 - 1.2 * i, 0.5, - 0.16})
    local deck = checkForDeck(pos)
+   local cards = {}
+   local guid
 
    if deck then
-      for _, _ in pairs(deck.getObjects()) do
-         deck.takeObject({
-            position = getPosOrGetCards(),
-            rotation = {0.00, 180.00, 0.00},
-            smooth = false,
-            flip = true,
-            guid = getlowest(deck)
-         })
+      cards = getLaidOutCards(deck, slot)
+      if cards ~= nil then
+         for i, card in pairs(cards) do
+            guid = card[1]
+            -- When taking the last item in the pile, guid must be removed
+            if deck.getQuantity() == 0 then
+               guid = nil
+            end
+
+            deck.takeObject({
+               position = getPosOrGetCards(),
+               rotation = {0.00, 180.00, 0.00},
+               smooth = false,
+               flip = true,
+               guid = guid
+            })
+         end
       end
-   else
-      local foundCards = getPosOrGetCards(i)
+   end
+
+   if cards == nil or #cards == 0 then
+      local foundCards = getPosOrGetCards(i, slot)
       for h, card in pairs(foundCards) do
          -- card.setPosition({pos.x, pos.y + (#foundCards - h)*0.2, pos.z})
          card.setPosition({pos.x, 3, pos.z})
@@ -58,16 +91,19 @@ function layOut(i)
    end
 end
 
-function getlowest(deck)
+function getLaidOutCards(deck, slot)
    local cards = {}
-   for i, j in pairs(deck.getObjects()) do
-      local number = j.description:gsub("blue", "")
-      number = number:gsub("red", "")
-      table.insert(cards, {j.guid, tonumber(number)})
+   local deckObjects = deck.getObjects()
+
+   for i, j in pairs(deckObjects) do
+      local descParams = interpretDesc(j.description)
+      if slot == "" or string.match(descParams.slot, slot) then
+         table.insert(cards, {j.guid, descParams.number * 10 + descParams.version})
+      end
    end
    table.sort(cards, function(a, b) return a[2] < b[2] end)
    if #cards == 0 then return nil end
-   return cards[1][1]
+   return cards
 end
 
 function checkForDeck(pos)
@@ -89,7 +125,7 @@ function checkForDeck(pos)
    return false
 end
 
-function getPosOrGetCards(d)
+function getPosOrGetCards(d, slot)
    local i, v = 0, 0
    local wasObjFound = false
    local posToCheck = {}
@@ -103,22 +139,11 @@ function getPosOrGetCards(d)
          end
       elseif d ~= nil then
          local number = prosp[d + 1]
-         local desc = wasObjFound.getDescription()
+         local descParams = interpretDesc(wasObjFound.getDescription())
          local change = 0
 
-         desc, change = desc:gsub("blue", "")
-         if change ~= 0 then
-            change = 11
-         else
-            desc, change = desc:gsub("red", "")
-            if change ~= 0 then
-               change = 10
-            else
-               change = d
-            end
-         end
-         if tonumber(desc) ~= nil then
-            if tonumber(desc) <= number.max and tonumber(desc) >= number.min and (change == d or d == 0) then
+         if descParams.number ~= nil then
+            if ((descParams.number <= number.max and descParams.number >= number.min) or (number.maxfc ~= nil and descParams.number <= number.maxfc and descParams.number >= number.minfc) or descParams.number == number.extra) and (number.version == nil or number.version == descParams.version) and (slot == "" or string.match(descParams.slot, slot)) then
                table.insert(objFound, wasObjFound)
             end
          end
@@ -132,6 +157,21 @@ function getPosOrGetCards(d)
    if d == nil then return nil
    else return objFound
    end
+end
+
+function interpretDesc(desc)
+   for number, version, slot in string.gmatch(desc, "(%d+)%s+(%d+)/%d+%s+(.+)") do
+      return {
+         number = tonumber(number),
+         version = tonumber(version),
+         slot = slot
+      }
+   end
+   return {
+       number = tonumber(desc),
+       version = 1,
+       slot = ""
+   }
 end
 
 function checkPosition(pos)
