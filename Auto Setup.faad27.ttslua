@@ -1,0 +1,915 @@
+String_TreasureIndexDeck = "Treasure Index Deck - SPOILERS"
+fullSetup_guid = "8d2074"
+Unlockable_guid = "346ed5"
+Scripts_guid = "75ab50"
+treasureDeck_guid = "bfef03"
+Board_guid = "7ef9dd"
+
+infiniteBagsGUIDs = {
+   MapTiles = "4895cd",
+   Corridors = "359306",
+   DifficultTerrain = "4efdc4",
+   HazardousTerrain = "0b51bb",
+   -- ObjectiveTokens = "a945e4",
+   Obstacles = "c912f5",
+   -- ScenarioAidTokens = "0c647c",
+   Traps = "0a3abe",
+   TreasureChests = "fe14ef",
+   Doors = "21be0e",
+}
+infiniteBagsGUIDs["Coin 1"] = "a41a54"
+
+conversionFromNumberToName = {
+   "Corridors",
+   "DifficultTerrain",
+   "HazardousTerrain",
+   "ObjectiveTokens",
+   "Obstacles",
+   "ScenarioAidTokens",
+   "Traps",
+   "TreasureChests"
+}
+
+tilesGUIDsFromBag = {
+   MapTiles = {},
+   Corridors = {},
+   DifficultTerrain = {},
+   HazardousTerrain = {},
+   ObjectiveTokens = {},
+   Obstacles = {},
+   ScenarioAidTokens = {},
+   Traps = {},
+   TreasureChests = {},
+   Doors = {}
+}
+
+scenarioPageList = {3, 4, 5, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 35, 37, 38, 39, 40, 41, 43, 44, 45, 46, 47, 49, 50, 51, 53, 54, 56, 57, 58, 60, 61, 62, 63, 64, 65, 66, 68, 69, 71, 72, 73, 74, 75, 76, 77, 78, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 94, 95, 96, 97, 99, 100, 101, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 116, 117, 118, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
+
+function getBagContent(bag, name)
+   if bag == nil then return end
+   for _, obj in pairs(bag.getObjects()) do
+      if tilesGUIDsFromBag[name][obj.name] then return end
+      tilesGUIDsFromBag[name][obj.name] = obj.guid
+   end
+end
+
+function createMap(params)
+   --params.NumScenario > 1-115
+   --params.NumCharacters > 1-4
+   --params.HiddenRooms > true/false
+   --params.MonsterStandee > true/false
+
+   local scenarioInformation = getObjectFromGUID(fullSetup_guid).getTable("ScenarioInformation_All")[params.NumScenario]
+   local startingRooms = {}
+   local doorsToSpawn = {}
+
+   -- scenario page
+   local tabInfo = getNotebookTabs()
+   local tab = ""
+   local spawn3D = false
+
+   for _, t in pairs(tabInfo) do
+      if t.title == "Options" then tab = t.body end
+   end
+   if tab ~= "" then
+      local settings = tab:match("scenario page:(%a+)")
+      if settings == "spawn" then
+         spawnScenarioPages(scenarioInformation.scenarioPages)
+      elseif settings == "change" then
+         for _, obj in pairs(getAllObjects()) do
+            if params.NumScenario < 96 and obj.getName() == "Scenario Book" then
+               obj.book.setPage(scenarioPageList[params.NumScenario] - 1, false)
+               break
+            elseif params.NumScenario > 95 and params.NumScenario < 200 and obj.getName():find("FC Rulebook & Scenario Guide") then
+               obj.book.setPage(scenarioPageList[params.NumScenario] - 1, false)
+               break
+            end
+         end
+      end
+      spawn3D = tab:match("3D model:(%a+)")
+   end
+   if scenarioInformation.gridType == nil then
+      broadcastToAll("Check the Scenario Book for this Scenario!", "Red")
+      return
+   end
+   Grid.type = scenarioInformation.gridType + 1
+
+   --Conclusion
+   if scenarioInformation.scenarioConclusions ~= nil then
+      spawnScenarioConclusions(scenarioInformation.scenarioConclusions)
+   end
+
+   -- Place Map Tiles
+   local mapTiles = getBagFromInfinite(infiniteBagsGUIDs.MapTiles)
+   getBagContent(mapTiles, "MapTiles")
+   local startRooms = true
+   for k, v in pairs(scenarioInformation.mapTiles) do
+      if not checkPosForName(v.position, v.tile) then
+         mapTiles.takeObject({position = v.position, rotation = v.rotation, smooth = false, guid = tilesGUIDsFromBag.MapTiles[v.tile]}).lock()
+      end
+
+      if startRooms then
+         startingRooms[v.tile] = true
+         -- table.insert(startingRooms, v.tile)
+      end
+
+      if v.startTiles ~= nil then
+         startRooms = false
+         if params.HiddenRooms then break end
+      end
+   end
+   mapTiles.destruct()
+
+   -- Place Overlay Tiles
+   local i = 1
+   for _, _ in pairs(startingRooms) do
+      --Monster
+      if scenarioInformation.mapTiles[i].monsters ~= nil then
+         for _, v in pairs(scenarioInformation.mapTiles[i].monsters) do
+            for _, t in ipairs(v.tiles) do
+               if t.numCharacters[params.NumCharacters] ~= nil then
+                  local parameter = {}
+                  --Set Parameters
+                  parameter.monsterName = v.name
+                  if params.MonsterStandee then
+                     parameter.monsterType = "Standee"
+                  else
+                     if scenarioInformation.gridType == 1 then
+                        parameter.monsterType = "Horizontal"
+                     elseif scenarioInformation.gridType == 2 then
+                        parameter.monsterType = "Vertical"
+                     end
+                  end
+                  if t.numCharacters[params.NumCharacters] == 1 then
+                     parameter.monsterDifficulty = "normal"
+                  elseif t.numCharacters[params.NumCharacters] == 2 then
+                     parameter.monsterDifficulty = "elite"
+                  end
+                  parameter.monsterPosition = t.position
+                  --Call Spawn Monster
+                  getObjectFromGUID(Scripts_guid).call("spawnMonster", parameter)
+               end
+            end
+         end
+      end
+      --Overlay Tiles
+      if scenarioInformation.mapTiles[i].overlayTiles ~= nil then
+         placeOverlay(scenarioInformation.mapTiles[i].overlayTiles, scenarioInformation.mapTiles[i].tile, params.NumScenario, params.MonsterStandee, params.NumCharacters, spawn3D)
+      end
+      --Start Tiles
+      if scenarioInformation.mapTiles[i].startTiles ~= nil then
+         placeStartTiles(scenarioInformation.mapTiles[i].startTiles)
+      end
+      --Scenario Sections
+      if scenarioInformation.mapTiles[i].scenarioSections ~= nil then
+         placeSections(scenarioInformation.mapTiles[i].scenarioSections)
+      end
+      i = i + 1
+   end
+
+   --Doors
+   if scenarioInformation.doorTiles ~= nil then
+      for k, v in pairs(scenarioInformation.doorTiles) do
+         for _, doorTile in pairs(v.tiles) do
+            local adjacentTiles = ""
+            local startingRoom = false
+            for _, adjTile in pairs(doorTile.adjacentTiles) do
+               if startingRooms[adjTile] then
+                  startingRoom = true
+               else
+                  adjacentTiles = adjacentTiles .. adjTile
+               end
+            end
+            if params.HiddenRooms and startingRoom or not params.HiddenRooms then
+               if doorsToSpawn[v.name] == nil then
+                  doorsToSpawn[v.name] = {}
+               end
+               table.insert(doorsToSpawn[v.name], {position = doorTile.position, rotation = doorTile.rotation, adjacentTile = adjacentTiles})
+            end
+         end
+      end
+   end
+
+   placeDoor(doorsToSpawn, params.NumScenario, params.MonsterStandee, params.NumCharacters)
+
+   if not params.HiddenRooms and scenarioInformation.monsterList then
+      for k, v in pairs(scenarioInformation.monsterList) do
+         local monsterInfo = {monsterName = v, monsterPlacement = false}
+         if params.MonsterStandee then
+            monsterInfo.monsterType = "Standee"
+         else
+            if scenarioInformation.gridType == 1 then
+               monsterInfo.monsterType = "Horizontal"
+            elseif scenarioInformation.gridType == 2 then
+               monsterInfo.monsterType = "Vertical"
+            end
+         end
+         getObjectFromGUID(Scripts_guid).call("spawnMonster", monsterInfo)
+      end
+   end
+end
+
+function revealRoom(params)
+   local scenarioInformation = getObjectFromGUID(fullSetup_guid).getTable("ScenarioInformation_All")[params.NumScenario]
+   local roomInformation = {}
+   local doorsToSpawn = {}
+   local mapTilesSpawned = {}
+   local tabInfo = getNotebookTabs()
+   local tab = ""
+   local spawn3D = false
+
+   for _, t in pairs(tabInfo) do
+      if t.title == "Options" then tab = t.body end
+   end
+   if tab ~= "" then
+      spawn3D = tab:match("3D model:(%a+)")
+   end
+
+   -- Place Map Tiles
+   local mapTiles = getBagFromInfinite(infiniteBagsGUIDs.MapTiles)
+   getBagContent(mapTiles, "MapTiles")
+   for k, v in pairs(scenarioInformation.mapTiles) do
+      if params.room:find(v.tile) then
+         table.insert(roomInformation, v)
+         mapTilesSpawned[v.tile] = true
+         if not checkPosForName(v.position, v.tile) then
+            mapTiles.takeObject({position = v.position, rotation = v.rotation, smooth = false, guid = tilesGUIDsFromBag.MapTiles[v.tile]}).lock()
+         end
+      end
+   end
+   mapTiles.destruct()
+
+   for _, room in pairs(roomInformation) do
+      if room.monsters ~= nil then
+         local tableToSpawn = {}
+         for _, v in pairs(room.monsters) do
+            for _, t in ipairs(v.tiles) do
+               if t.numCharacters[params.NumCharacters] ~= nil then
+                  local parameter = {}
+                  --Set Parameters
+                  parameter.monsterName = v.name
+                  if params.MonsterStandee then
+                     parameter.monsterType = "Standee"
+                  else
+                     if scenarioInformation.gridType == 1 then
+                        parameter.monsterType = "Horizontal"
+                     elseif scenarioInformation.gridType == 2 then
+                        parameter.monsterType = "Vertical"
+                     end
+                  end
+                  if t.numCharacters[params.NumCharacters] == 1 then
+                     parameter.monsterDifficulty = "normal"
+                  elseif t.numCharacters[params.NumCharacters] == 2 then
+                     parameter.monsterDifficulty = "elite"
+                  end
+                  parameter.monsterPosition = t.position
+                  if tableToSpawn[v.name] == nil then tableToSpawn[v.name] = {} end
+                  table.insert(tableToSpawn[v.name], parameter)
+               end
+            end
+         end
+         for _, monster in pairs(tableToSpawn) do
+            for _, individual in pairs(monster) do
+               --Call Spawn Monster
+               getObjectFromGUID(Scripts_guid).call("spawnMonster", individual)
+            end
+         end
+      end
+
+
+      if room.overlayTiles ~= nil then
+         placeOverlay(room.overlayTiles, room.tile, params.NumScenario, params.MonsterStandee, params.NumCharacters, spawn3D)
+      end
+      if room.scenarioSections ~= nil then
+         placeSections(room.scenarioSections)
+      end
+   end
+
+   --Doors
+   if scenarioInformation.doorTiles ~= nil then
+      for k, v in pairs(scenarioInformation.doorTiles) do
+         for _, doorTile in pairs(v.tiles) do
+            local adjacentTiles = ""
+            local doorThisRoom = false
+            for _, adjTile in pairs(doorTile.adjacentTiles) do
+               if mapTilesSpawned[adjTile] then
+                  doorThisRoom = true
+               else
+                  adjacentTiles = adjacentTiles .. adjTile
+               end
+            end
+            if doorThisRoom then
+               if doorsToSpawn[v.name] == nil then
+                  doorsToSpawn[v.name] = {}
+               end
+               table.insert(doorsToSpawn[v.name], {position = doorTile.position, rotation = doorTile.rotation, adjacentTile = adjacentTiles})
+            end
+         end
+      end
+   end
+
+   placeDoor(doorsToSpawn, params.NumScenario, params.MonsterStandee, params.NumCharacters)
+end
+
+function placeStartTiles(startTable)
+   local doorName = startTable.name
+   local doorsBag = getBagFromInfinite(infiniteBagsGUIDs.Corridors)
+   getBagContent(doorsBag, "Corridors")
+   local door = checkPosForName(startTable.tiles[1].position, doorName)
+   if not door then
+      door = doorsBag.takeObject({position = startTable.tiles[1].position, rotation = startTable.tiles[1].rotation, smooth = false, guid = tilesGUIDsFromBag.Corridors[doorName]})
+      Wait.condition(function() door.lock() door.setName("Start Area") end, function() return checkLoaded(door) end)
+      setScript(door, "Start", nil, nil)
+   end
+   for k, l in pairs(startTable.tiles) do
+      if k > 1 then
+         if getObjectFromGUID(door) ~= nil then
+            door = getObjectFromGUID(door)
+         end
+         if not checkPosForName(l.position, doorName) then
+            local obj = door.clone()
+            obj.setPosition(l.position)
+            obj.setRotation(l.rotation)
+            obj.lock()
+            obj.setName("Start Area")
+         end
+      end
+   end
+   doorsBag.destruct()
+end
+
+function placeOverlay(tilesTable, mapTile, NumScenario, MonsterStandee, NumCharacters, spawn3D)
+   for _, v in pairs(tilesTable) do
+      local tilesBag = getBagFromInfinite(infiniteBagsGUIDs[conversionFromNumberToName[v.bag]])
+      getBagContent(tilesBag, conversionFromNumberToName[v.bag])
+      local deleteBag = true
+      for _, t in pairs(v.type) do
+         if t.name == "Coin 1" then
+            tilesBag = getObjectFromGUID(infiniteBagsGUIDs[t.name])
+            deleteBag = false
+            for _, l in pairs(t.tiles) do
+               if not checkPosForName(l.position, t.name) then
+                  tilesBag.takeObject({position = l.position, rotation = l.rotation, smooth = false})
+               end
+            end
+         else
+            if spawn3D == "exchange" then
+               if tilesGUIDsFromBag[conversionFromNumberToName[v.bag]][t.name:gsub(" Horizontal", "") .. " (3D)"] then
+                  t.name = t.name:gsub(" Horizontal", "") .. " (3D)"
+               elseif tilesGUIDsFromBag[conversionFromNumberToName[v.bag]][t.name:gsub(" Vertical", "") .. " (3D)"] then
+                  t.name = t.name:gsub(" Vertical", "") .. " (3D)"
+               end
+               if t.name == "Table (3D)" then
+                  for k in pairs(t.tiles) do
+                     t.tiles[k].rotation = {x = t.tiles[k].rotation.x, y = t.tiles[k].rotation.y, z = 0}
+                  end
+               end
+            end
+            local tile = checkPosForName(t.tiles[1].position, t.name)
+            if not tile then
+               tile = tilesBag.takeObject({position = t.tiles[1].position, rotation = t.tiles[1].rotation, smooth = false, guid = tilesGUIDsFromBag[conversionFromNumberToName[v.bag]][t.name]})
+               Wait.condition(function() tile.lock() end, function() return checkLoaded(tile) end)
+               if t.name:find("Treasure") and t.tiles[1].params then
+                  Wait.condition(function() setScript(tile, "Treasure", t.tiles[1].params.buttonLabel, NumScenario) end, function() return checkLoaded(tile) end)
+               elseif t.tiles[1].params then
+                  setOverlayScript(t.tiles[1].params.scriptFunction, tile, NumScenario, MonsterStandee, NumCharacters, mapTile)
+               end
+            end
+            for k, l in pairs(t.tiles) do
+               if k > 1 then
+                  if getObjectFromGUID(tile) ~= nil then
+                     tile = getObjectFromGUID(tile)
+                  end
+                  if not checkPosForName(l.position, t.name) then
+                     local obj = tile.clone()
+                     obj.setPosition(l.position)
+                     obj.setRotation(l.rotation)
+                     obj.lock()
+                     if t.name:find("Treasure") and l.params then
+                        Wait.condition(function() setScript(obj, "Treasure", l.params.buttonLabel, NumScenario) end, function() return checkLoaded(obj) end)
+                     elseif l.params then
+                        setOverlayScript(l.params.scriptFunction, obj, NumScenario, MonsterStandee, NumCharacters, mapTile)
+                     end
+                  end
+               end
+            end
+            if spawn3D == "add" then
+               if tilesGUIDsFromBag[conversionFromNumberToName[v.bag]][t.name:gsub(" Horizontal", "") .. " (3D)"] then
+                  t.name = t.name:gsub(" Horizontal", "") .. " (3D)"
+               elseif tilesGUIDsFromBag[conversionFromNumberToName[v.bag]][t.name:gsub(" Vertical", "") .. " (3D)"] then
+                  t.name = t.name:gsub(" Vertical", "") .. " (3D)"
+               end
+               if t.name == "Table (3D)" then
+                  for k in pairs(t.tiles) do
+                     t.tiles[k].rotation = {x = t.tiles[k].rotation.x, y = t.tiles[k].rotation.y, z = 0}
+                  end
+               end
+               local tile = checkPosForName(t.tiles[1].position, t.name)
+               if not tile then
+                  tile = tilesBag.takeObject({position = t.tiles[1].position, rotation = t.tiles[1].rotation, smooth = false, guid = tilesGUIDsFromBag[conversionFromNumberToName[v.bag]][t.name]})
+                  Wait.condition(function() tile.lock() end, function() return checkLoaded(tile) end)
+                  if t.name:find("Treasure") then
+                     Wait.condition(function() setScript(tile, "Treasure", t.tiles[1].params.buttonLabel, NumScenario) end, function() return checkLoaded(tile) end)
+                  end
+               end
+               for k, l in pairs(t.tiles) do
+                  if k > 1 then
+                     if getObjectFromGUID(tile) ~= nil then
+                        tile = getObjectFromGUID(tile)
+                     end
+                     if not checkPosForName(l.position, t.name) then
+                        local obj = tile.clone()
+                        obj.setPosition(l.position)
+                        obj.setRotation(l.rotation)
+                        obj.lock()
+                     end
+                  end
+               end
+            end
+         end
+      end
+      if deleteBag then
+         tilesBag.destruct()
+      end
+   end
+end
+
+function setOverlayScript(scriptFunction, obj, NumScenario, MonsterStandee, NumCharacters, mapTile)
+   if scriptFunction:find("AdjacentTiles") then
+      local adjacentTile = scriptFunction:match("AdjacentTiles =  {(.*)}")
+      adjacentTile = adjacentTile:gsub("'", "")
+      adjacentTile = adjacentTile:gsub(",", "")
+      adjacentTile = adjacentTile:gsub(mapTile, "")
+      Wait.condition(function() setScript(obj, "Door", adjacentTile, NumScenario, MonsterStandee, NumCharacters) end, function() return checkLoaded(obj) end)
+   elseif scriptFunction:find("FCChallengeStairs") then
+      Wait.condition(function() setScript(obj, "PressurePlate", "Stairs" .. scriptFunction:match("FCChallengeStairs','(.*)'"), NumScenario, MonsterStandee, NumCharacters) end, function() return checkLoaded(obj) end)
+   elseif scriptFunction:find("rotate100") then
+      if scriptFunction:find("rotate100',1)") then
+         Wait.condition(function() setScript(obj, "PressurePlate", "Clockwise") end, function() return checkLoaded(obj) end)
+      else
+         Wait.condition(function() setScript(obj, "PressurePlate", "Anticlockwise") end, function() return checkLoaded(obj) end)
+      end
+   end
+end
+
+
+function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters)
+   local ScriptConstruct = ""
+   if info ~= nil then
+      ScriptConstruct = ScriptConstruct .. "\ninfo = '" .. info .. "'"
+   end
+   ScriptConstruct = ScriptConstruct
+   .. "\nfunction onLoad()"
+   .. "\n	local open = false"
+   .. "\n	local ButtonTable = {"
+   .. "\n		click_function	= 'selfFunction'"
+   .. "\n		,function_owner	= self"
+   .. "\n		,position		= {x=0,y=0,z=0}"
+   .. "\n		,rotation		= {x=0,y=180-self.getRotation().y,z=0}"
+   if info ~= nil then
+      ScriptConstruct = ScriptConstruct .. "\n		,label			= '" .. info .. "'"
+   end
+   if typ == "Door" then
+      ScriptConstruct = ScriptConstruct
+      .. "\n		,label			= 'Open'"
+      .. "\n		,color			= {0.408,0.525,0.910}"
+      .. "\n		,height			= 250"
+      .. "\n		,width			= 500"
+      .. "\n		,font_size		= 200"
+   elseif typ == "Start" then
+      ScriptConstruct = ScriptConstruct
+      .. "\n		,label			= 'Start'"
+      .. "\n		,color			= {0.612,0.678,0.741}"
+      .. "\n		,height			= 250"
+      .. "\n		,width			= 500"
+      .. "\n		,font_size		= 200"
+   elseif typ == "Treasure" then
+      ScriptConstruct = ScriptConstruct
+      .. "\n		,color			= {0.941,0.694,0.027}"
+      .. "\n		,height			= 250"
+      .. "\n		,width			= 280"
+      .. "\n		,font_size		= 200"
+   elseif typ == "Conclusion" then
+      ScriptConstruct = ScriptConstruct
+      .. "\n		,color			= {1,1,1}"
+      .. "\n		,height			= 250"
+      .. "\n		,width			= 1000"
+      .. "\n		,font_size		= 100"
+      .. "\n		,position		= {x=0,y=-0.1,z=0}"
+      .. "\n		,rotation		= {x=0,y=180-self.getRotation().y,z=180}"
+   elseif typ == "PressurePlate" then
+      ScriptConstruct = ScriptConstruct
+      .. "\n		,color			= {0.408,0.925,0.510}"
+      .. "\n		,height			= 250"
+      .. "\n		,width			= 750"
+      .. "\n		,font_size		= 100"
+      .. "\n		,position		= {x=0,y=0,z=0}"
+      .. "\n		,rotation		= {x=0,y=180-self.getRotation().y,z=0}"
+   end
+   ScriptConstruct = ScriptConstruct
+   .. "\n	}"
+   if typ == "Door" then
+      ScriptConstruct = ScriptConstruct
+      .. "\n	if"
+      .. "\n		self.getName() == 'Stone Door Horizontal'"
+      .. "\n		or self.getName() == 'Stone Door Vertical'"
+      .. "\n		or self.getName() == 'Wooden Door Horizontal'"
+      .. "\n		or self.getName() == 'Wooden Door Vertical'"
+      .. "\n	then"
+      .. "\n		ButtonTable.position.y = -0.13"
+      .. "\n		ButtonTable.rotation.z = 180"
+      .. "\n	end"
+      .. "\n"
+      .. "\n	if ButtonTable.label == 'Teleport' then"
+      .. "\n		ButtonTable.width = 700"
+      .. "\n	end"
+   end
+
+   ScriptConstruct = ScriptConstruct
+   .. "\n	self.createButton(ButtonTable)"
+   .. "\nend"
+   .. "\n"
+   .. "\nfunction selfFunction()"
+   if typ == "Door" then
+      ScriptConstruct = ScriptConstruct
+      .. "\n	if not open then open = true self.editButton({index=0, label='Open?'}) Wait.time(function() open = false self.editButton({index=0, label='Open'}) end, 2) return end"
+      .. "\n	local params = {"
+      .. "\n			room = info"
+      .. "\n			,NumCharacters = " .. NumCharacters
+      .. "\n			,MonsterStandee = " .. (MonsterStandee == true and "true" or "false")
+      .. "\n			,NumScenario = " .. NumScenario
+      .. "\n	}"
+      .. "\n	if info ~= '' then getObjectFromGUID('" .. self.getGUID() .. "').call('revealRoom',params) end"
+      .. "\n	self.unlock()"
+      .. "\n	self.flip()"
+      .. "\n	Wait.condition(function() self.lock() end, function() return self.resting end, 10)"
+   elseif typ == "Start" then
+      ScriptConstruct = ScriptConstruct
+      .. "\n	local AllObjects = getAllObjects()"
+      .. "\n"
+      .. "\n	for _,obj in ipairs(AllObjects) do"
+      .. "\n		if obj.getName() == 'Start Area' then"
+      .. "\n			obj.destruct()"
+      .. "\n		end"
+      .. "\n	end"
+   elseif typ == "Treasure" and info ~= "G" then
+      ScriptConstruct = ScriptConstruct
+      .. "\n	local params = {"
+      .. "\n		card = " .. info
+      .. "\n		,guid = self.guid"
+      .. "\n}"
+      .. "\n	getObjectFromGUID('" .. self.getGUID() .. "').call('getTreasureCard',params)"
+   elseif typ == "Conclusion" then
+      ScriptConstruct = ScriptConstruct
+      .. "\n	self.setColorTint({r=1,b=1,g=1})"
+      .. "\n	self.setLock(false)"
+      .. "\n	self.flip()"
+      .. "\n	Wait.condition(function() self.lock() end, function() return self.resting end, 10)"
+   elseif typ == "PressurePlate" then
+      if info:find("lockwise") then
+         ScriptConstruct = ScriptConstruct
+         .. "\n	getObjectFromGUID('" .. self.getGUID() .. "').call('rotate100'," .. ((info == "Clockwise") and 1 or - 1) .. ")"
+      elseif info:find("Stairs") then
+         info = info:gsub("Stairs", "")
+         ScriptConstruct = ScriptConstruct
+         .. "\n	local params = {"
+         .. "\n			room = '" .. info .. "'"
+         .. "\n			,NumCharacters = " .. NumCharacters
+         .. "\n			,MonsterStandee = " .. (MonsterStandee == true and "true" or "false")
+         .. "\n			,NumScenario = " .. NumScenario
+         .. "\n	}"
+         .. "\n	getObjectFromGUID('" .. self.getGUID() .. "').call('FCChallengeStairs',params)"
+      end
+   end
+   ScriptConstruct = ScriptConstruct
+   .. "\nend"
+   obj.setLuaScript(ScriptConstruct)
+end
+
+---------------------
+--Scenario 100 Rotate
+---------------------
+function rotate100(value)
+   local F1 = getObjectFromGUID(tilesGUIDsFromBag.MapTiles["F1"])
+   local scenarioState = 1
+
+   local hitlist = Physics.cast({
+      origin = {0.01, 3.00, 5.30},
+      direction = {0, 1, 0},
+      type = 3,
+      size = {16.51, 5.10, 16.44},
+      max_distance = 0,
+      debug = false
+   })
+
+   for u, v in pairs(hitlist) do
+      position = v.hit_object.getPosition()
+      if position.y > 1.68 then
+         if v.hit_object ~= F1 then
+            F1.addAttachment(v.hit_object)
+         end
+      end
+   end
+
+   local rot = F1.getRotation().y
+   if rot > 70 and rot < 110 then
+      scenarioState = 3
+   elseif rot > 170 and rot < 190 then
+      scenarioState = 4
+   elseif rot > 260 and rot < 280 then
+      scenarioState = 1
+   elseif rot > 350 or rot < 10 then
+      scenarioState = 2
+   else
+      if value == -1 then scenarioState = 2 end
+   end
+
+   scenarioState = scenarioState + value
+
+   if scenarioState > 4 then
+      scenarioState = 1
+   elseif scenarioState < 1 then
+      scenarioState = 4
+   end
+
+   if scenarioState == 1 then
+      F1.setPosition({ - 2.62, 1.71, 4.54})
+      F1.setRotation({0.00, 269.95, 180.00})
+      Grid.type = 2
+   elseif scenarioState == 2 then
+      F1.setPosition({0.00, 1.71, 7.87})
+      F1.setRotation({0.00, 359.91, 180.00})
+      Grid.type = 3
+   elseif scenarioState == 3 then
+      F1.setPosition({2.63, 1.71, 4.57})
+      F1.setRotation({0.00, 90.00, 180.00})
+      Grid.type = 2
+   elseif scenarioState == 4 then
+      F1.setPosition({0.00, 1.71, 2.56})
+      F1.setRotation({0.00, 180.01, 180.00})
+      Grid.type = 3
+   end
+
+   F1.removeAttachments()
+end
+
+function FCChallengeStairs(params)
+   local scripts = getObjectFromGUID(Board_guid)
+   local hitlist = Physics.cast({
+      origin = { - 0.05, 4.34, 2.71},
+      direction = {0, 1, 0},
+      type = 3,
+      size = {12.77, 5.10, 10.53},
+      max_distance = 0,
+      debug = false
+   })
+
+   for u, v in pairs(hitlist) do
+      if v.hit_object.getLock() or v.hit_object.getName() == "Coin 1" then
+         v.hit_object.destruct()
+      end
+   end
+
+   local params = {
+      room = params.room
+      , NumCharacters = params.NumCharacters
+      , MonsterStandee = params.MonsterStandee
+      , NumScenario = 300
+   }
+
+   revealRoom(params)
+   scripts.call('cleanMonster')
+end
+
+function placeDoor(doorsToSpawn, NumScenario, MonsterStandee, NumCharacters)
+   local faceUpDoors = {}
+   faceUpDoors["LIght Fog"] = true
+   faceUpDoors["Dark Fog"] = true
+   -- Place Door Tiles
+   local doorTiles = getBagFromInfinite(infiniteBagsGUIDs.Doors)
+   getBagContent(doorTiles, "Doors")
+   for k, v in pairs(doorsToSpawn) do
+      local door = checkPosForName(v[1].position, k)
+      if not door then
+         door = doorTiles.takeObject({position = v[1].position, rotation = v[1].rotation, smooth = false, guid = tilesGUIDsFromBag.Doors[k]})
+         Wait.condition(function() door.setPosition(v[1].position) door.lock() end, function() return checkLoaded(door) end)
+         Wait.condition(function() setScript(door, "Door", v[1].adjacentTile, NumScenario, MonsterStandee, NumCharacters) end, function() return checkLoaded(door) end)
+      else
+         local obj = getObjectFromGUID(door)
+         local info = obj.getVar("info")
+         if info:find(v[1].adjacentTile) then
+            info = v[1].adjacentTile
+            -- info = info:gsub(v[1].adjacentTile, "")
+         else
+            info = ""
+         end
+         obj.setVar("info", info)
+         -- obj.setVar("revealRoom", false)
+      end
+      if #v > 1 then
+         for c, l in pairs(v) do
+            if c > 1 then
+               if getObjectFromGUID(door) ~= nil then
+                  door = getObjectFromGUID(door)
+               end
+               local doorToCheck = checkPosForName(l.position, k)
+               if not doorToCheck then
+                  local obj = door.clone()
+                  obj.setPosition(l.position)
+                  obj.setRotation(l.rotation)
+                  obj.lock()
+                  setScript(obj, "Door", l.adjacentTile, NumScenario, MonsterStandee, NumCharacters)
+               else
+                  Wait.frames(
+                     function()
+                        local obj = getObjectFromGUID(doorToCheck)
+                        local info = obj.getVar("info")
+                        if info:find(l.adjacentTile) then
+                           info = l.adjacentTile
+                        else
+                           info = ""
+                        end
+                        obj.setVar("info", info)
+                        -- obj.setVar("revealRoom", false)
+                     end,
+                  10)
+               end
+            end
+         end
+      end
+   end
+   doorTiles.destruct()
+end
+
+function spawnScenarioPages(params)
+   local position = {x = -28.937500, y = 1.799863, z = 3.788861}
+
+   if #params == 2 then position.x = position.x - 10.5 end
+
+   for _, i in ipairs(params) do
+      i.type = "Custom_Token"
+      i.position = position
+      i.rotation = {x = 0, y = 180, z = 0}
+      i.scale = {x = 3, y = 1, z = 3}
+      i.sound = false
+      i.snap_to_grid = true
+
+      spawnObject(i).setCustomObject(i)
+      position.x = position.x + 10.5
+   end
+end
+
+--Get Treasure Card
+function getTreasureCard(params)
+   local Unlockable = getObjectFromGUID(Unlockable_guid)
+   local CardName = ""
+   local deck = nil
+   local foundInChest = false
+
+   --Draw Treasure Deck out of Unlockable Chest
+   for _, obj in ipairs(Unlockable.getObjects()) do
+      if obj.name == String_TreasureIndexDeck then
+         local pos = Unlockable.getPosition()
+         pos.y = pos.y - 10
+         deck = Unlockable.takeObject({
+            guid = obj.guid
+            , position = pos
+            , smooth = false
+         })
+         foundInChest = true
+         break
+      end
+   end
+
+   if deck == nil then
+      deck = getObjectFromGUID(treasureDeck_guid)
+      if deck ~= nil then
+         if deck.getName() ~= String_TreasureIndexDeck then
+            deck = findTreasureDeck()
+         end
+      else
+         deck = findTreasureDeck()
+      end
+   end
+
+   if deck == nil then
+      broadcastToAll("Treasure Deck not found!", "Red")
+      return
+   end
+
+   if params.card < 10 then CardName = CardName .. "0" end
+   CardName = CardName .. params.card
+
+   for _, card in ipairs(deck.getObjects()) do
+      if card.nickname:find(CardName) then
+         deck.takeObject({
+            guid = card.guid
+            , position = {x = -22.312502, y = 1.771799, z = 3.788862}
+            , rotation = {x = -0.000252, y = 180.000000, z = -0.000764}
+            , smooth = false
+         }).lock()
+         break
+      end
+   end
+
+   if foundInChest then
+      Unlockable.putObject(deck)
+   end
+   getObjectFromGUID(params.guid).destruct()
+end
+
+--Spawn Scenario Conclusion
+function spawnScenarioConclusions(params)
+   local position = {x = 29.55, y = 1.75, z = 2.19}
+
+   if #params >= 2 then position.x = position.x + 10.5 end
+
+   for _, i in ipairs(params) do
+      if i.buttonLabel == nil then
+         i.buttonLabel = "Reveal Conclusion"
+      end
+      i.type = "Custom_Token"
+      i.position = position
+      i.rotation = {0.00, 180.00, 180.00}
+      i.sound = false
+      i.snap_to_grid = true
+
+      obj = spawnObject(i)
+      obj.setCustomObject(i)
+      obj.setColorTint({r = 0 / 255, g = 0 / 255, b = 0 / 255})
+      setScript(obj, "Conclusion", i.buttonLabel)
+      position.x = position.x - 10.5
+   end
+end
+
+function placeSections(scenarioSections)
+   -- For Each Page, Spawn Page
+   for _, tSection in pairs(scenarioSections) do
+      if tSection.params == nil then
+         tSection.params = {}
+      end
+
+      if tSection.hidden ~= nil then
+         tSection.params.buttonLabel = tSection.buttonLabel
+         tSection.rotation = {0.00, 180.00, 180.00}
+      else
+         tSection.rotation = {0.00, 180.00, 0.00}
+      end
+
+      tSection.type = "Custom_Token"
+      tSection.sound = false
+      tSection.snap_to_grid = true
+
+      obj = spawnObject(tSection)
+      obj.setCustomObject(tSection)
+      if tSection.hidden ~= nil then
+         obj.setColorTint({r = 0 / 255, g = 0 / 255, b = 0 / 255})
+      end
+      setScript(obj, "Conclusion", tSection.buttonLabel)
+
+   end
+end
+
+function findTreasureDeck()
+   for _, obj in pairs(getAllObjects()) do
+      if obj.getName() == String_TreasureIndexDeck then
+         return obj
+      end
+   end
+   return nil
+end
+
+function checkPosForName(pos, name)
+   local hitlist = Physics.cast({
+      origin = pos,
+      direction = {0, 1, 0},
+      type = 3,
+      size = {1, 20, 1},
+      max_distance = 0,
+      debug = false
+   })
+
+   for u, v in pairs(hitlist) do
+      if v.hit_object.getName():find(name) then return v.hit_object.getGUID() end
+   end
+   return nil
+end
+
+function getBagFromInfinite(guid)
+   local infiniteBag = getObjectFromGUID(guid)
+   if infiniteBag ~= nil then
+      local pos = infiniteBag.getPosition()
+      pos.y = pos.y - 5
+      local bag = infiniteBag.takeObject({position = pos, smooth = false})
+      Wait.condition(function() bag.lock() end, function() return checkLoaded(bag) end)
+      return bag
+   end
+end
+
+function checkLoaded(obj)
+   if not obj.loading_custom and not obj.spawning then
+      return true
+   end
+
+   return false
+end

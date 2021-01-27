@@ -1,0 +1,38 @@
+<Defaults>
+  <InputField onValueChanged="onValueChanged" rotation="0 0 180" colors="#FFFFFF00|#00000070|#000000B0" fontStyle="Bold" scale="0.1 0.1" textAlignment="MiddleCenter" lineType="MultiLineNewLine"/>
+  <InputField class="playerNames"  width="4200" height="400" fontSize="300" colors="#000000A0|#00000070|#000000B0" lineType="SingleLine"/>
+  <Text rotation="0 0 180" color="#000000" fontStyle="Bold" scale="0.1 0.1" width="500" height="500" fontSize="400"/>
+  <Text class="big" width="1000" height="600" fontSize="500" scale="0.2 0.2"/>
+  <Button rotation="0 0 180" textColor="#000000" colors="#FFFFFF00|#00000070|#000000B0" fontStyle="Bold" scale="0.1 0.1" width="1500" height="500" fontSize="300" onClick="onClick"/>
+  <Button class="addSub" width="350" height="350" fontSize="300"/>
+  <Button class="big" width="600" height="600" fontSize="500" scale="0.2 0.2"/>
+</Defaults>
+
+<Button onClick="lockUI" position="0 -680 -60" width="5000" height="1400"/>
+<InputField id="partyName" readOnly="false" placeholder="Enter Party Name" position="280 -513 -60" width="6000" height="1300" fontSize="500" text=""></InputField>
+<InputField id="location" placeholder="" position="250 -343 -60" width="5500" height="1300" fontSize="500" text=""></InputField>
+<Text id="partyReputation" position="-515 -505 -60" class="big" color="#000000" text="0"></Text>
+<Button id="addRep" value="partyReputation" position="-630 -505 -60" class="big" text="+"></Button>
+<Button id="subRep" value="partyReputation" position="-400 -505 -60" class="big" text="-"></Button>
+<Text id="shopPrice" position="-515 -355 -60" class="big" color="#000000" text="0"></Text>
+<InputField id="notes" placeholder="" position="0 -20 -60" width="14000" height="3200" fontSize="450" text=""></InputField>
+<InputField id="partyAchiev" placeholder="" position="0 400 -60" width="14000" height="3200" fontSize="450" text=""></InputField>
+<InputField id="playerone" placeholder="" position="370 640 -60" class="playerNames" text=""></InputField>
+<InputField id="playertwo" placeholder="" position="370 690 -60" class="playerNames" text=""></InputField>
+<InputField id="playerthree" placeholder="" position="-280 640 -60" class="playerNames" text=""></InputField>
+<InputField id="playerfour" placeholder="" position="-280 690 -60" class="playerNames" text=""></InputField>
+<Text id="playeronelvl" position="120 640 -60" text="0"></Text>
+<Text id="playertwolvl" position="120 690 -60" text="0"></Text>
+<Text id="playerthreelvl" position="-530 640 -60" text="0"></Text>
+<Text id="playerfourlvl" position="-530 690 -60" text="0"></Text>
+<Button id="addOne" value="playeronelvl" position="100 640 -60" class="addSub" text="+"></Button>
+<Button id="subOne" value="playeronelvl" position="140 640 -60" class="addSub" text="-"></Button>
+<Button id="addTwo" value="playertwolvl" position="100 690 -60" class="addSub" text="+"></Button>
+<Button id="subTwo" value="playertwolvl" position="140 690 -60" class="addSub" text="-"></Button>
+<Button id="addThree" value="playerthreelvl" position="-550 640 -60" class="addSub" text="+"></Button>
+<Button id="subThree" value="playerthreelvl" position="-510 640 -60" class="addSub" text="-"></Button>
+<Button id="addFour" value="playerfourlvl" position="-550 690 -60" class="addSub" text="+"></Button>
+<Button id="subFour" value="playerfourlvl" position="-510 690 -60" class="addSub" text="-"></Button>
+<Text id="averageLevel" position="250 745 -60" text="1" width="800"></Text>
+<Button id="difficulty" position="-120 745 -60" text="Normal" value="0"></Button>
+<Text id="scenarioLevel" position="-450 745 -60" text="1"></Text>
