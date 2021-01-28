@@ -1,0 +1,183 @@
+trapBagGuid = "0a3abe"
+
+function onLoad(save_state)
+   buttonParameter = {
+      function_owner = self,
+      width = 350,
+      height = 180,
+      color = {0.1, 0.1, 0.1},
+      font_color = {0.6, 0.6, 0.6},
+      position = {0, 2.5, -0.2},
+      rotation = {0, 180, 0},
+      font_size = 50,
+      click_function = "createCustomTraps",
+      tooltip = "Create custom traps",
+      label = "Create Traps",
+   }
+   self.createButton(buttonParameter)
+end
+
+function createCustomTraps()
+   local infiniteBag = getObjectFromGUID(trapBagGuid)
+   if infiniteBag == nil then
+      broadcastToAll("Could not find trap infinite bag", "Red")
+      return
+   end
+
+   local bag = infiniteBag.takeObject({position = {-3, 1.7, 0}, smooth = false})
+   if bag == nil then
+      broadcastToAll("Could not find trap tile bag", "Red")
+      return
+   end
+
+   local trapMasters = {}
+   for i, obj in pairs(bag.getObjects()) do
+      trapMasters[obj.name] = bag.takeObject({
+         position          = {0, 1.7 + 0.3 * i, 0},
+         rotation          = {0, 0, 0},
+         smooth            = false,
+         guid              = obj.guid,
+      })
+   end
+
+   for i, trap in pairs(trapData) do
+      local trapMaster = trapMasters[trap.overlay]
+      if trapMaster == nil then
+         broadcastToAll("Could not find tile for \"" .. trap.overlay .. "\" trap", "Red")
+      else
+         local trapTileHorizontal = trapMaster.clone()
+         trapTileHorizontal.setPosition({3, 1.9 + 0.4 * i, 0})
+         processPlayerTrap(trapTileHorizontal, trap, "Horizontal")
+
+         local trapTileVertical = trapMaster.clone()
+         trapTileVertical.setPosition({3, 1.7 + 0.4 * i, 0})
+         trapTileVertical.setRotation({0, 90, 0})
+         processPlayerTrap(trapTileVertical, trap, "Vertical")
+      end
+   end
+
+   -- Clean up masters
+   for _, obj in pairs(trapMasters) do
+      obj.destruct()
+   end
+   bag.destruct()
+end
+
+function processPlayerTrap(tile, trap, orientation)
+   local decalParams = {}
+   local scale = 0.6 / #trap.effects + 0.2
+   if #trap.effects > 1 and trap.splashEffect ~= nil then
+      scale = scale - 0.05 -- Adjust multi-effect traps to allow for the splash icons
+   end
+   local spacing = scale + 0.05
+   local origin = (-0.5 - 0.5 * #trap.effects) * spacing
+   local tileRotation = tile.getRotation().y
+   local rotation = 360.0 - tileRotation
+   local nameEffects = {}
+   local nameSuffix = ""
+
+   for i, effect in pairs(trap.effects) do
+      local radians = math.rad(tileRotation)
+      table.insert(nameEffects, effect)
+      table.insert(decalParams, {
+         name = effect,
+         url = trapDecals[effect],
+         position = {x=(origin+spacing*i)* math.cos(radians), y=0.01, z=(origin+spacing*i)*math.sin(radians)},
+         rotation = {x=90, y=rotation, z=0},
+         scale = {x=scale, y=scale, z=scale},
+      })
+   end
+
+   if trap.splashEffect ~= nil then
+      nameSuffix = ", " .. trap.splashEffect .. " to all adjacent enemies"
+      local radius = 0.6
+      local scale = 0.27
+      for angle = 30, 360, 60 do
+         local radians = math.rad(angle)
+         table.insert(decalParams, {
+            name = trap.splashEffect,
+            url = trapDecals[trap.splashEffect],
+            position = {x=radius*math.cos(radians), y=0.009, z=radius*math.sin(radians)},
+            rotation = {x=90, y=rotation, z=0},
+            scale = {x=scale, y=scale, z=scale},
+         })
+      end
+   end
+
+   tile.setDecals(decalParams)
+   tile.setName(trap.card .. " Trap " .. orientation)
+   tile.setDescription(table.concat(nameEffects, " and ") .. nameSuffix)
+end
+
+trapData = {
+   {
+      card = "Archer",
+      effects = {"3 Damage"},
+      overlay = "Spike Trap",
+   },
+   {
+      card = "Flame Demon",
+      effects = {"4 Damage"},
+      overlay = "Poison Gas",
+   },
+   {
+      card = "Tinkerer's Tools",
+      effects = {"STUN"},
+      overlay = "Bear Trap",
+   },
+   {
+      card = "Gas Canister",
+      effects = {"4 Damage", "MUDDLE"},
+      overlay = "Poison Gas",
+   },
+   {
+      card = "Volatile Concoction",
+      effects = {"2 Damage", "POISON"},
+      overlay = "Poison Gas",
+   },
+   {
+      card = "Proximity Mine",
+      effects = {"6 Damage"},
+      overlay = "Bear Trap",
+   },
+   {
+      card = "Crippling Noose",
+      effects = {"4 Damage", "STUN"},
+      overlay = "Bear Trap",
+   },
+   {
+      card = "Flight of Flame",
+      effects = {"2 Damage", "WOUND"},
+      splashEffect = "WOUND",
+      overlay = "Poison Gas",
+   },
+   {
+      card = "Foot Snare",
+      effects = {"2 Damage", "IMMOBILIZE"},
+      overlay = "Bear Trap",
+   },
+   {
+      card = "Detonation",
+      effects = {"3 Damage"},
+      splashEffect = "2 Damage",
+      overlay = "Poison Gas",
+   },
+}
+
+trapDecals = {
+   ["2 Damage"] = "http://cloud-3.steamusercontent.com/ugc/929311677225890374/9B9B38BE2BB6A23EC21C977911FEC8915C74FF19/",
+   ["3 Damage"] = "http://cloud-3.steamusercontent.com/ugc/929311677225891903/93FF8C7F051FDD06DAEBD17F2BBD917960CB1779/",
+   ["4 Damage"] = "http://cloud-3.steamusercontent.com/ugc/929311677225892191/F2D0FC8179C04D3E4BFD2A546FAD7BC76D813091/",
+   ["5 Damage"] = "http://cloud-3.steamusercontent.com/ugc/929311677225892469/3DC5E471FC5F2CB1D6DBFC91DF5ADB2751A52E12/",
+   ["6 Damage"] = "http://cloud-3.steamusercontent.com/ugc/929311677225892918/3720A0E91CA48BB3972BBE924B26A34FFA34F57F/",
+   ["7 Damage"] = "http://cloud-3.steamusercontent.com/ugc/929311677225893323/DBBE037A62CFA34AD9E05F34A035BDE7A22995EB/",
+   ["8 Damage"] = "http://cloud-3.steamusercontent.com/ugc/929311677225893738/3DAE234411D631E7076F3639F4389ECE2019FB73/",
+   ["9 Damage"] = "http://cloud-3.steamusercontent.com/ugc/929311677225894076/3DF6535BBE81D65752CBCF9EBC0119A6A41696FC/",
+   ["CURSE"] = "http://cloud-3.steamusercontent.com/ugc/938309024726987796/ABB2E197E22015077D39A378AA9A9E7A317C69FE/",
+   ["DISARM"] = "http://cloud-3.steamusercontent.com/ugc/938309024726989091/DB993A58BC37C60B64A2F2CCDAED888F6176BC43/",
+   ["IMMOBILIZE"] = "http://cloud-3.steamusercontent.com/ugc/938309024726990928/14B27BE1DC8F226D05FDB7D7D5D420FFCA6919B0/",
+   ["MUDDLE"] = "http://cloud-3.steamusercontent.com/ugc/938309024726993395/820BE84906894B87F0C0DAC77C3BFBCD9B1AD504/",
+   ["POISON"] = "http://cloud-3.steamusercontent.com/ugc/938309024726994202/6EAECD4A8A6A56F42834D486A21219002B883C53/",
+   ["STUN"] = "http://cloud-3.steamusercontent.com/ugc/83721958671678940/616CC0951CB17024448D3CBC7E5CA9D3A05D7555/",
+   ["WOUND"] = "http://cloud-3.steamusercontent.com/ugc/938309024726992099/9B90EEDC5B68B4FFD04C0037008F9C96BA603C24/",
+}
