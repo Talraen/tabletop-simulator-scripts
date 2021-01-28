@@ -24,7 +24,9 @@ function createCustomTraps()
       return
    end
 
-   local bag = infiniteBag.takeObject({position = {-3, 1.7, 0}, smooth = false})
+   local notecardPos = self.positionToWorld({0, 0, 0})
+
+   local bag = infiniteBag.takeObject({position = {notecardPos.x-2, notecardPos.y+0.3, notecardPos.z+0.5}, smooth = false})
    if bag == nil then
       broadcastToAll("Could not find trap tile bag", "Red")
       return
@@ -33,7 +35,7 @@ function createCustomTraps()
    local trapMasters = {}
    for i, obj in pairs(bag.getObjects()) do
       trapMasters[obj.name] = bag.takeObject({
-         position          = {0, 1.7 + 0.3 * i, 0},
+         position          = {notecardPos.x+2, notecardPos.y+0.3*i, notecardPos.z+0.5},
          rotation          = {0, 0, 0},
          smooth            = false,
          guid              = obj.guid,
@@ -46,11 +48,12 @@ function createCustomTraps()
          broadcastToAll("Could not find tile for \"" .. trap.overlay .. "\" trap", "Red")
       else
          local trapTileHorizontal = trapMaster.clone()
-         trapTileHorizontal.setPosition({3, 1.9 + 0.4 * i, 0})
+         trapTileHorizontal.setPosition({notecardPos.x, notecardPos.y+0.4*i, notecardPos.z+0.6})
+         trapTileHorizontal.setRotation({0, 180, 0})
          processPlayerTrap(trapTileHorizontal, trap, "Horizontal")
 
          local trapTileVertical = trapMaster.clone()
-         trapTileVertical.setPosition({3, 1.7 + 0.4 * i, 0})
+         trapTileVertical.setPosition({notecardPos.x, notecardPos.y+0.2+0.4*i, notecardPos.z+0.6})
          trapTileVertical.setRotation({0, 90, 0})
          processPlayerTrap(trapTileVertical, trap, "Vertical")
       end
