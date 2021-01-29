@@ -115,7 +115,6 @@ function drawLocation(deck, roomNum, entranceType, allowList, blockList)
    local deckObjects = deck.getObjects()
 
    for i, card in pairs(deckObjects) do
-      print(entranceType, card.description, JSON.encode(allowList, card.name, JSON.encode(blockList)))
       if (entranceType == nil or entranceType == "" or string.match(card.description, entranceType)) and (allowList == nil or inArray(allowList, card.name)) and (blockList == nil or not inArray(blockList, card.name)) then
          -- TODO: This should put all passed cards on the bottom
          deck.takeObject({
