@@ -1000,13 +1000,13 @@ function createRandomDungeon(params)
    end
 
    -- Treasure chests and coins rotate independent of tiles
-   local treasureChestRotation = {x=0.0, y=0.0, z=0.0}
+   local treasureChestRotation = 0
    local treasureChestName = "Treasure Chest Vertical"
    if Grid.type == 3 then
-      treasureChestRotation = {x=0.0, y=90.0, z=0.0}
+      treasureChestRotation = 90
       treasureChestName = "Treasure Chest Horizontal"
    end
-   local coinRotation = {x=0.0, y=180.0, z=0.0}
+   local coinRotation = 180
 
    -- Place Map Tiles
    local mapTiles = getBagFromInfinite(infiniteBagsGUIDs.MapTiles)
@@ -1086,9 +1086,9 @@ function createRandomDungeon(params)
             for _, tile in pairs(overlayType.tiles) do
                processOffset(tile.position, tile.rotation, offset)
                if overlayType.name == "Coin 1" then
-                  tile.rotation = deepCopy(coinRotation) -- Never rotate coins
+                  tile.rotation = {x=0, y=coinRotation, z=0} -- Never rotate coins
                elseif string.match(overlayType.name, "Treasure") then
-                  tile.rotation = deepCopy(treasureChestRotation) -- Never rotate treasure chests
+                  tile.rotation = {x=0, y=treasureChestRotation, z=0} -- Never rotate treasure chests
                end
             end
          end
@@ -1158,7 +1158,7 @@ function processNumberTiles(tile, monsterInformation, monsters, treasureChestNam
                   tiles = {
                      {
                         position = position,
-                        rotation = deepCopy(treasureChestRotation),
+                        rotation = {x=0, y=treasureChestRotation, z=0},
                         params = {
                            buttonTheme = "Treasure",
                            buttonLabel = "G",
@@ -1171,6 +1171,7 @@ function processNumberTiles(tile, monsterInformation, monsters, treasureChestNam
          monsterInformation[j] = nil
       end
       local number = monsterInformation[j]
+
       if number ~= nil then
          if number.type == "coin" then
             table.insert(tile.overlayTiles, {
@@ -1180,7 +1181,7 @@ function processNumberTiles(tile, monsterInformation, monsters, treasureChestNam
                      tiles = {
                         {
                            position = position,
-                           rotation = deepCopy(coinRotation),
+                           rotation = {x=0, y=coinRotation, z=0},
                         },
                      },
                   },
@@ -1206,7 +1207,7 @@ function processNumberTiles(tile, monsterInformation, monsters, treasureChestNam
                      tiles = {
                         {
                            position = position,
-                           rotation = deepCopy(treasureChestRotation),
+                           rotation = {x=0, y=treasureChestRotation, z=0},
                         },
                      },
                   },
@@ -1222,7 +1223,7 @@ function processNumberTiles(tile, monsterInformation, monsters, treasureChestNam
                      tiles = {
                         {
                            position = position,
-                           rotation = deepCopy(tile.numberTileRotation),
+                           rotation = {x=0, y=tile.numberTileRotation, z=0},
                         },
                      },
                   },
@@ -1237,7 +1238,7 @@ function processNumberTiles(tile, monsterInformation, monsters, treasureChestNam
                      tiles = {
                         {
                            position = position,
-                           rotation = deepCopy(tile.numberTileRotation),
+                           rotation = {x=0, y=tile.numberTileRotation, z=0},
                         },
                      },
                   },
@@ -1252,13 +1253,13 @@ end
 
 function addNumberTilesToScenario(tile, NumScenario)
    -- Treasure chests and coins rotate independent of tiles
-   local treasureChestRotation = {x=0.0, y=0.0, z=0.0}
+   local treasureChestRotation = 0
    local treasureChestName = "Treasure Chest Vertical"
    if Grid.type == 3 then
-      treasureChestRotation = {x=0.0, y=90.0, z=0.0}
+      treasureChestRotation = 90
       treasureChestName = "Treasure Chest Horizontal"
    end
-   local coinRotation = {x=0.0, y=180.0, z=0.0}
+   local coinRotation = 180
 
    local monstersAllowed = {}
    if NumScenario == 103 then
