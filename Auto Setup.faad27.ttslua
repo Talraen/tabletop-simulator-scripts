@@ -456,6 +456,9 @@ end
 function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters)
    local ScriptConstruct = ""
    if info ~= nil then
+      if info == "G" then
+         info = "Goal"
+      end
       ScriptConstruct = ScriptConstruct .. "\ninfo = '" .. info .. "'"
    end
    ScriptConstruct = ScriptConstruct
@@ -487,8 +490,12 @@ function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters)
       ScriptConstruct = ScriptConstruct
       .. "\n		,color			= {0.941,0.694,0.027}"
       .. "\n		,height			= 250"
-      .. "\n		,width			= 280"
       .. "\n		,font_size		= 200"
+      if info == "Goal" then
+         ScriptConstruct = ScriptConstruct .. "\n		,width			= 450"
+      else
+         ScriptConstruct = ScriptConstruct .. "\n		,width			= 280"
+      end
    elseif typ == "Conclusion" then
       ScriptConstruct = ScriptConstruct
       .. "\n		,color			= {1,1,1}"
@@ -552,7 +559,7 @@ function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters)
       .. "\n			obj.destruct()"
       .. "\n		end"
       .. "\n	end"
-   elseif typ == "Treasure" and info ~= "G" then
+   elseif typ == "Treasure" and info ~= "Goal" then
       ScriptConstruct = ScriptConstruct
       .. "\n	local params = {"
       .. "\n		card = " .. info
