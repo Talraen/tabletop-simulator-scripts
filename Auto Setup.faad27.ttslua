@@ -454,6 +454,15 @@ end
 
 
 function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters)
+   -- If this is a treasure that has already been collected, instead remove it
+   if typ == "Treasure" and NumScenario ~= 82 then -- Don't remove opened chests in Burning Mountain
+      local number = tonumber(info)
+      if number ~= nil and getTreasureCard({card = number, checkIfMissing = true}) then
+         obj.destruct()
+         return
+      end
+   end
+
    local ScriptConstruct = ""
    if info ~= nil then
       ScriptConstruct = ScriptConstruct .. "\ninfo = '" .. info .. "'"
@@ -800,20 +809,27 @@ function getTreasureCard(params)
    if params.card < 10 then CardName = CardName .. "0" end
    CardName = CardName .. params.card
 
+   local treasureCardFound = false
    for _, card in ipairs(deck.getObjects()) do
       if card.nickname:find(CardName) then
-         deck.takeObject({
-            guid = card.guid
-            , position = {x = -22.312502, y = 1.771799, z = 3.788862}
-            , rotation = {x = -0.000252, y = 180.000000, z = -0.000764}
-            , smooth = false
-         }).lock()
-         break
+         treasureCardFound = true
+         if not params.checkIfMissing then
+            deck.takeObject({
+               guid = card.guid
+               , position = {x = -22.312502, y = 1.771799, z = 3.788862}
+               , rotation = {x = -0.000252, y = 180.000000, z = -0.000764}
+               , smooth = false
+            }).lock()
+            break
+         end
       end
    end
 
    if foundInChest then
       Unlockable.putObject(deck)
+   end
+   if params.checkIfMissing then
+      return not treasureCardFound
    end
    getObjectFromGUID(params.guid).destruct()
 end
