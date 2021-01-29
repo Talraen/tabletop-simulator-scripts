@@ -1269,3 +1269,4 @@ function deepCopy(orig)
 		copy = orig
 	end
 	return copy
+end
