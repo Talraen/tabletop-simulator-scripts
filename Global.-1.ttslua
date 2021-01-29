@@ -21,12 +21,17 @@ envelopes["Cragheart"] = {infi = "ec1d2a", bag = "2ae7c4", state = 3, life = 10,
 envelopes["Tinkerer"] = {infi = "fdef02", bag = "bdf901", state = 7, life = 8, HPBarOffset = -5}
 
 toCheck = {}
+toCheckEnd = {}
 toCheck["Player Curse"] = {51.60, 4.00, 23.65}
 toCheck["Bless"] = {51.60, 4.00, 19.99}
-toCheck["Player -1"] = {51.60, 4.00, 16.38}
+toCheckEnd["Player -1"] = {51.60, 4.00, 16.38}
 
 function onLoad()
    megaFreeze() -- Make objects non-interactive
+
+   for name, position in pairs(toCheck) do
+      toCheckEnd[name] = position
+   end
 end
 
 function onPlayerConnect(player_id)
@@ -393,17 +398,17 @@ end
 function checkForBlessCurse(deck)
    if deck.tag == "Deck" then
       for _, u in pairs(deck.getObjects()) do
-         if toCheck[u.name] then
+         if toCheckEnd[u.name] then
             local card = deck.takeObject({
-               position = toCheck[u.name],
+               position = toCheckEnd[u.name],
                guid = u.guid,
                flip = true
             })
          end
       end
    elseif deck.tag == "Card" then
-      if toCheck[deck.getName()] then
-         deck.setPositionSmooth(toCheck[deck.getName()])
+      if toCheckEnd[deck.getName()] then
+         deck.setPositionSmooth(toCheckEnd[deck.getName()])
       end
    end
 end

@@ -69,9 +69,10 @@ colorsToTable = {
 }
 
 toCheck = {}
+toCheckEnd = {}
 toCheck["Monster Curse"] = {51.60, 4.00, - 23.66}
 toCheck["Bless"] = {51.60, 4.00, 19.99}
-toCheck["Player -1"] = {51.60, 4.00, 16.38}
+toCheckEnd["Player -1"] = {51.60, 4.00, 16.38}
 
 function onLoad(save_state)
    createButt("P1FFA", - 2.4, 0.718, nil, "Active Card")
@@ -142,7 +143,9 @@ function onLoad(save_state)
    createButt("CreIce", - 2.09, - 0.195, "Element", "Create ", " created ")
    createButt("CreFire", - 2.387, - 0.195, "Element", "Create ", " created ")
 
-
+   for name, position in pairs(toCheck) do
+      toCheckEnd[name] = position
+   end
 end
 
 function createButt(name, x, z, type, tooltip, broadcast)
@@ -481,18 +484,18 @@ function checkAMDeck()
    for _, c in pairs(hitlist) do
       if c.hit_object.tag == "Deck" then
          for _, u in pairs(c.hit_object.getObjects()) do
-            if toCheck[u.name] then
+            if toCheckEnd[u.name] then
                local card = c.hit_object.takeObject({
-                  position = toCheck[u.name],
+                  position = toCheckEnd[u.name],
                   guid = u.guid,
                   flip = true
                })
             end
          end
       elseif c.hit_object.tag == "Card" then
-         if toCheck[c.hit_object.getName()] then
+         if toCheckEnd[c.hit_object.getName()] then
             if c.hit_object.is_face_down then c.hit_object.flip() end
-            c.hit_object.setPositionSmooth(toCheck[c.hit_object.getName()])
+            c.hit_object.setPositionSmooth(toCheckEnd[c.hit_object.getName()])
          end
       end
    end
