@@ -23,6 +23,7 @@ envelopes["Tinkerer"] = {infi = "fdef02", bag = "bdf901", state = 7, life = 8, H
 toCheck = {}
 toCheck["Player Curse"] = {51.60, 4.00, 23.65}
 toCheck["Bless"] = {51.60, 4.00, 19.99}
+toCheck["Player -1"] = {51.60, 4.00, 16.38}
 
 function onLoad()
    megaFreeze() -- Make objects non-interactive
