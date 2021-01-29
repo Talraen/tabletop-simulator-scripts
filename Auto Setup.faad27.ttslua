@@ -1152,7 +1152,7 @@ function createRandomDungeon(params)
                if overlayType.name == "Coin 1" then
                   tile.rotation = deepCopy(coinRotation) -- Never rotate coins
                elseif string.match(overlayType.name, "Treasure") then
-                  tile.rotation = deepCopy(treasureChestRotation) -- Never rotate coins
+                  tile.rotation = deepCopy(treasureChestRotation) -- Never rotate treasure chests
                end
             end
          end
