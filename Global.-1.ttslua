@@ -407,7 +407,7 @@ function checkForBlessCurse(deck)
    end
 end
 
-function moveRoundTracker()
+function moveRoundTracker(reset)
    local tabInfo = getNotebookTabs()
    local tab = ""
    local tracker = {
@@ -428,6 +428,7 @@ function moveRoundTracker()
 
    local roundTracker = nil
    local startPos = {x = -3.30, y = 1.92, z = -18.86}
+
    for i = 0, 11 do
       local hitlist = Physics.cast({
          origin = {startPos.x + 0.6 * i, startPos.y, startPos.z},
@@ -443,6 +444,11 @@ function moveRoundTracker()
       end
    end
    if roundTracker then
+      if reset then
+         roundTracker.setPosition({startPos.x, startPos.y, startPos.z})
+         return
+      end
+
       local oldPos = roundTracker.getPosition()
       if oldPos.x < - 3 and tracker.number == -0.6 then
          broadcastToAll("Last Round Ended!", {1, 0, 0})
@@ -898,6 +904,9 @@ function spawnerClicked(player, value, id)
          end
 
          playArea.call("buttonClickedEx", {"AMS"})
+         --here
+         print('doing the thing')
+         moveRoundTracker(true)
          Wait.time(function() playArea.call("checkAMDeck") end, 3)
       end
 
