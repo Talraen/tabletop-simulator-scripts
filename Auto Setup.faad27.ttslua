@@ -2,7 +2,6 @@ String_TreasureIndexDeck = "Treasure Index Deck - SPOILERS"
 fullSetup_guid = "8d2074"
 Unlockable_guid = "346ed5"
 Scripts_guid = "75ab50"
-treasureDeck_guid = "bfef03"
 Board_guid = "7ef9dd"
 DeckMat_guid = "a75fcd"
 
@@ -369,7 +368,6 @@ function placeOverlay(tilesTable, mapTile, NumScenario, MonsterStandee, NumChara
                   end
                end
             end
-            local tile = checkPosForName(t.tiles[1].position, t.name)
             if not tile then
                tile = tilesBag.takeObject({position = t.tiles[1].position, rotation = t.tiles[1].rotation, smooth = false, guid = tilesGUIDsFromBag[conversionFromNumberToName[v.bag]][t.name]})
                Wait.condition(function() tile.lock() end, function() return checkLoaded(tile) end)
@@ -494,7 +492,6 @@ function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters, p
       ScriptConstruct = ScriptConstruct
       .. "\n		,color			= {0.941,0.694,0.027}"
       .. "\n		,height			= 250"
-      .. "\n		,width			= 280"
       .. "\n		,font_size		= 200"
    elseif typ == "Conclusion" then
       ScriptConstruct = ScriptConstruct
@@ -555,6 +552,7 @@ function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters, p
       .. "\n	if not open then open = true self.editButton({index=0, label='Open?'}) Wait.time(function() open = false self.editButton({index=0, label='Open'}) end, 2) return end"
       .. "\n	local params = {"
       .. "\n		    doorGuid = self.guid"
+      .. "\n		   ,NumScenario = " .. params.NumScenario
       .. "\n		   ,exitPositionX = " .. params.position.x
       .. "\n			,exitPositionZ = " .. params.position.z
       .. "\n			,exitDirection = " .. params.direction
@@ -587,7 +585,6 @@ function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters, p
       .. "\n			obj.destruct()"
       .. "\n		end"
       .. "\n	end"
-   elseif typ == "Treasure" and info ~= "G" then
       ScriptConstruct = ScriptConstruct
       .. "\n	local params = {"
       .. "\n		card = " .. info
@@ -810,17 +807,6 @@ function getTreasureCard(params)
    local foundInChest = false
 
    --Draw Treasure Deck out of Unlockable Chest
-   for _, obj in ipairs(Unlockable.getObjects()) do
-      if obj.name == String_TreasureIndexDeck then
-         local pos = Unlockable.getPosition()
-         pos.y = pos.y - 10
-         deck = Unlockable.takeObject({
-            guid = obj.guid
-            , position = pos
-            , smooth = false
-         })
-         foundInChest = true
-         break
       end
    end
 
@@ -845,13 +831,6 @@ function getTreasureCard(params)
 
    for _, card in ipairs(deck.getObjects()) do
       if card.nickname:find(CardName) then
-         deck.takeObject({
-            guid = card.guid
-            , position = {x = -22.312502, y = 1.771799, z = 3.788862}
-            , rotation = {x = -0.000252, y = 180.000000, z = -0.000764}
-            , smooth = false
-         }).lock()
-         break
       end
    end
 
@@ -968,6 +947,15 @@ function createRandomDungeon(params)
    end
    randomDungeonDoors = {}
 
+   local tabInfo = getNotebookTabs()
+   local tab = ""
+   local spawn3D = false
+
+   for _, t in pairs(tabInfo) do
+      if t.title == "Options" then tab = t.body end
+   end
+   spawn3D = tab:match("3D model:(%a+)")
+
    params.locationsBlocked = params.locationsBlocked or {}
 
    local locationInformation = deepCopy(getObjectFromGUID(fullSetup_guid).getTable("RandomLocationInformation_All")[params.location])
@@ -980,6 +968,26 @@ function createRandomDungeon(params)
       Grid.type = locationInformation.gridType + 1
       if locationInformation.startingOffset ~= nil then
          offset = locationInformation.startingOffset
+      end
+
+      -- For scenario 55, show scenario pages on first room
+      if params.NumScenario == 55 and tab ~= "" then
+         local scenarioInformation = getObjectFromGUID(fullSetup_guid).getTable("ScenarioInformation_All")[params.NumScenario]
+
+         local settings = tab:match("scenario page:(%a+)")
+         if settings == "spawn" then
+            spawnScenarioPages(scenarioInformation.scenarioPages)
+         elseif settings == "change" then
+            for _, obj in pairs(getAllObjects()) do
+               if params.NumScenario < 96 and obj.getName() == "Scenario Book" then
+                  obj.book.setPage(scenarioPageList[params.NumScenario] - 1, false)
+                  break
+               elseif params.NumScenario > 95 and params.NumScenario < 200 and obj.getName():find("FC Rulebook & Scenario Guide") then
+                  obj.book.setPage(scenarioPageList[params.NumScenario] - 1, false)
+                  break
+               end
+            end
+         end
       end
    end
 
@@ -1026,6 +1034,27 @@ function createRandomDungeon(params)
       local monsters = {}
       -- Process numbered tiles, creating other fields for tile creation
       for j, position in pairs(tile.numberTiles) do
+         if params.NumScenario == 55 and j == 12 and params.roomNumber == 3 then
+            table.insert(tile.overlayTiles, {
+               bag = getObjectFromGUID(fullSetup_guid).getVar("Constant_TypeOverlay_TreasureChests"),
+               type = {
+                  {
+                     name = treasureChestName,
+                     tiles = {
+                        {
+                           position = position,
+                           rotation = deepCopy(treasureChestRotation),
+                           params = {
+                              buttonTheme = "Treasure",
+                              buttonLabel = "G",
+                           },
+                        },
+                     },
+                  },
+               },
+            })
+            monsterInformation[j] = nil
+         end
          local number = monsterInformation[j]
          if number ~= nil then
             if number.type == "coin" then
@@ -1058,7 +1087,6 @@ function createRandomDungeon(params)
                   type = {
                      {
                         name = treasureChestName,
-                        replaceName = "Treasure: " .. number.contents,
                         tiles = {
                            {
                               position = position,
@@ -1180,7 +1208,7 @@ function createRandomDungeon(params)
             end
             processOffset(doorTile.position, doorTile.rotation, offset)
             doorType.direction = (doorType.direction + offset.rot + 360) % 360 -- Update door direction for next tile
-            table.insert(doorsToSpawn[doorType.name], {position = doorTile.position, rotation = doorTile.rotation, adjacentTile = adjacentTiles, direction = doorType.direction, doorType = doorType.type, roomNumber = params.roomNumber + 1, locationsAllowed = params.locationsAllowed, monstersAllowed = params.monstersAllowed, locationsBlocked = params.locationsBlocked})
+            table.insert(doorsToSpawn[doorType.name], {position = doorTile.position, rotation = doorTile.rotation, adjacentTile = adjacentTiles, direction = doorType.direction, doorType = doorType.type, roomNumber = params.roomNumber + 1, locationsAllowed = params.locationsAllowed, monstersAllowed = params.monstersAllowed, locationsBlocked = params.locationsBlocked, NumScenario = params.NumScenario})
          end
       end
    end
@@ -1241,4 +1269,3 @@ function deepCopy(orig)
 		copy = orig
 	end
 	return copy
-end

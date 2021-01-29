@@ -107,7 +107,7 @@ function generateRandomDungeonRoom(params)
    local location = drawLocation(locationDeck, params.roomNumber, params.entranceType, params.locationsAllowed, params.locationsBlocked)
    local monster = drawMonster(monsterDeck, params.roomNumber, params.monstersAllowed)
 
-   Global.call("createMap", {777, {roomNumber = params.roomNumber, location = location, monster = monster, exitPositionX = params.exitPositionX, exitPositionZ = params.exitPositionZ, exitDirection = params.exitDirection, entranceType = params.entranceType, locationsAllowed = params.locationsAllowed, monstersAllowed = params.monstersAllowed, doorGuid = params.doorGuid, locationsBlocked = params.locationsBlocked}})
+   Global.call("createMap", {params.NumScenario or 777, {roomNumber = params.roomNumber, location = location, monster = monster, exitPositionX = params.exitPositionX, exitPositionZ = params.exitPositionZ, exitDirection = params.exitDirection, entranceType = params.entranceType, locationsAllowed = params.locationsAllowed, monstersAllowed = params.monstersAllowed, doorGuid = params.doorGuid, locationsBlocked = params.locationsBlocked, NumScenario = params.NumScenario}})
 end
 
 -- Gets the top appropriate Random Location from the deck, given the entrance type and an optional list of allowed cards

@@ -5,6 +5,7 @@ setup = {
    buttons = true
 }
 autoSetup_guid = "faad27"
+DeckMat_guid = "a75fcd"
 
 mamd = { - 2.05, 1.88, - 16.05}
 mamdp = {2.05, 1.88, - 16.05}
@@ -919,6 +920,17 @@ function resetLevel(params)
 end
 
 function createMap(params)
+   -- Scenario 55 start should be intercepted and made into a random dungeon
+   if params[1] == 55 and params[2] == nil then
+      params = {
+         NumScenario = params[1],
+         roomNumber = 1,
+         locationsAllowed = {"Trail", "Encampment", "Clearing", "Road", "Cabin", "Crossroads"},
+         monstersAllowed = {"Mangy", "Wild", "Scaled", "Cutthroat", "Tribal", "Infected"},
+      }
+      getObjectFromGUID(DeckMat_guid).call('generateRandomDungeonRoom',params)
+      return
+   end
    -- local spawner = getObjectFromGUID("8d2074")
    local dealBattleGoals = true
    local spawner = nil
@@ -974,7 +986,7 @@ function createMap(params)
       if t.title == "Options" then tab = t.body end
    end
 
-   if params[1] == 777 then -- 777 indicates random dungeon
+   if params[1] == 777 or params[1] == 55 then -- 777 indicates random dungeon
       params[2]["NumScenario"] = params[1];
       params[2]["NumCharacters"] = #playerCount < 2 and 2 or (#playerCount > 4 and 4 or #playerCount)
       params[2]["MonsterStandee"] = (self.UI.getAttribute("typeDropdownScenario", "selected") == "Standee") and true or false
@@ -1043,8 +1055,6 @@ function createMap(params)
 
       if battleGoals == nil then return end
 
-      if battleGoals.getQuantity() < 24 then
-         broadcastToAll("There are less then 24 Battle Goals in the Deck. Discard Battle Goals and Deal by hand.", "Red")
          return
       end
 
