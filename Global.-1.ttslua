@@ -797,6 +797,8 @@ function spawnerClicked(player, value, id)
                            coins = coins + 5
                         end
                         obj.destruct()
+                     elseif obj.getName():find("Treasure Chest") then
+                        obj.destruct()
                      elseif obj.getName() == "Character Sheet" then
                         charSheet = obj
                      elseif obj.getName():find("%d+ xp") then
