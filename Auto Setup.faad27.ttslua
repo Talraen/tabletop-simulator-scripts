@@ -973,11 +973,6 @@ function createRandomDungeon(params)
    local locationInformation = deepCopy(getObjectFromGUID(fullSetup_guid).getTable("RandomLocationInformation_All")[params.location])
    local monsterInformation = deepCopy(getObjectFromGUID(fullSetup_guid).getTable("RandomMonsterInformation_All")[params.monster])
 
-   -- TODO: Make random dungeon button require double click
-
-   -- TODO: Remove these notes when done adding data
-   -- 0 is up, 270 is left, 180 is down, 90 is right
-   -- Positive X is right, positive Z is up
    local offset = {x=0.0, z=0.0, rot=0.0}
 
    -- Set grid (first tile only)
