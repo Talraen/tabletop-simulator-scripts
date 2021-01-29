@@ -126,6 +126,10 @@ function createMap(params)
    -- Place Overlay Tiles
    local i = 1
    for _, _ in pairs(startingRooms) do
+      -- Process random monster card for scenario 103
+      if params.NumScenario == 103 then
+         addNumberTilesToScenario(scenarioInformation.mapTiles[i], params.NumScenario)
+      end
       --Monster
       if scenarioInformation.mapTiles[i].monsters ~= nil then
          for _, v in pairs(scenarioInformation.mapTiles[i].monsters) do
@@ -243,6 +247,10 @@ function revealRoom(params)
    mapTiles.destruct()
 
    for _, room in pairs(roomInformation) do
+      -- Process random monster card for scenario 103
+      if params.NumScenario == 103 and room.numberTiles ~= nil then
+         addNumberTilesToScenario(room, params.NumScenario)
+      end
       if room.monsters ~= nil then
          local tableToSpawn = {}
          for _, v in pairs(room.monsters) do
@@ -1030,108 +1038,8 @@ function createRandomDungeon(params)
          processOffset(tile.position, tile.rotation, offset)
          mapTiles.takeObject({position = tile.position, rotation = tile.rotation, smooth = false, guid = tilesGUIDsFromBag.MapTiles[tile.tile]}).lock()
       end
-      tile.overlayTiles = tile.overlayTiles or {}
       local monsters = {}
-      -- Process numbered tiles, creating other fields for tile creation
-      for j, position in pairs(tile.numberTiles) do
-         if params.NumScenario == 55 and j == 12 and params.roomNumber == 3 then
-            table.insert(tile.overlayTiles, {
-               bag = getObjectFromGUID(fullSetup_guid).getVar("Constant_TypeOverlay_TreasureChests"),
-               type = {
-                  {
-                     name = treasureChestName,
-                     tiles = {
-                        {
-                           position = position,
-                           rotation = deepCopy(treasureChestRotation),
-                           params = {
-                              buttonTheme = "Treasure",
-                              buttonLabel = "G",
-                           },
-                        },
-                     },
-                  },
-               },
-            })
-            monsterInformation[j] = nil
-         end
-         local number = monsterInformation[j]
-         if number ~= nil then
-            if number.type == "coin" then
-               table.insert(tile.overlayTiles, {
-                  type = {
-                     {
-                        name = "Coin 1",
-                        tiles = {
-                           {
-                              position = position,
-                              rotation = deepCopy(coinRotation),
-                           },
-                        },
-                     },
-                  },
-               })
-            elseif number.type == "monster" then
-               table.insert(monsters, {
-                  name = number.name,
-                  tiles = {
-                     {
-                        numCharacters = number.numCharacters,
-                        position = position,
-                     },
-                  },
-               })
-            elseif number.type == "treasure" then
-               table.insert(tile.overlayTiles, {
-                  bag = getObjectFromGUID(fullSetup_guid).getVar("Constant_TypeOverlay_TreasureChests"),
-                  type = {
-                     {
-                        name = treasureChestName,
-                        tiles = {
-                           {
-                              position = position,
-                              rotation = deepCopy(treasureChestRotation),
-                           },
-                        },
-                     },
-                  },
-               })
-            elseif number.type == "trap" then
-               table.insert(tile.overlayTiles, {
-                  bag = getObjectFromGUID(fullSetup_guid).getVar("Constant_TypeOverlay_Traps"),
-                  type = {
-                     {
-                        name = number.name,
-                        trapEffects = number.trapEffects,
-                        tiles = {
-                           {
-                              position = position,
-                              rotation = deepCopy(tile.numberTileRotation),
-                           },
-                        },
-                     },
-                  },
-               })
-            elseif number.type == "overlay" then
-               table.insert(tile.overlayTiles, {
-                  bag = number.bag,
-                  type = {
-                     {
-                        name = number.name,
-                        tiles = {
-                           {
-                              position = position,
-                              rotation = deepCopy(tile.numberTileRotation),
-                           },
-                        },
-                     },
-                  },
-               })
-            else
-               broadcastToAll("Invalid Random Monster type \"" .. hex.type .. "\" for number " .. i, "Red")
-            end
-         end
-      end
+      processNumberTiles(tile, monsterInformation, monsters, treasureChestName, treasureChestRotation, coinRotation, params.NumScenario, params.roomNumber)
       --Add starting tiles on empty numbers
       if tile.numberStartTiles ~= nil then
          for _, num in pairs(tile.numberStartTiles) do
@@ -1231,6 +1139,138 @@ function createRandomDungeon(params)
       if entrances > 1 then
          broadcastToAll("The " .. params.location .. " has two entrances. Players must choose which to start at, and place all figures within two hexes of that entrance. Consult the " .. params.location .. " card for entrance locations.", {1, 1, 1})
       end
+   end
+end
+
+function processNumberTiles(tile, monsterInformation, monsters, treasureChestName, treasureChestRotation, coinRotation, NumScenario, roomNumber)
+   if tile.numberTiles == nil then
+      return
+   end
+   tile.overlayTiles = tile.overlayTiles or {}
+   -- Process numbered tiles, creating other fields for tile creation
+   for j, position in pairs(tile.numberTiles) do
+      if NumScenario == 55 and j == 12 and roomNumber == 3 then
+         table.insert(tile.overlayTiles, {
+            bag = getObjectFromGUID(fullSetup_guid).getVar("Constant_TypeOverlay_TreasureChests"),
+            type = {
+               {
+                  name = treasureChestName,
+                  tiles = {
+                     {
+                        position = position,
+                        rotation = deepCopy(treasureChestRotation),
+                        params = {
+                           buttonTheme = "Treasure",
+                           buttonLabel = "G",
+                        },
+                     },
+                  },
+               },
+            },
+         })
+         monsterInformation[j] = nil
+      end
+      local number = monsterInformation[j]
+      if number ~= nil then
+         if number.type == "coin" then
+            table.insert(tile.overlayTiles, {
+               type = {
+                  {
+                     name = "Coin 1",
+                     tiles = {
+                        {
+                           position = position,
+                           rotation = deepCopy(coinRotation),
+                        },
+                     },
+                  },
+               },
+            })
+         elseif number.type == "monster" then
+            table.insert(monsters, {
+               name = number.name,
+               tiles = {
+                  {
+                     numCharacters = number.numCharacters,
+                     position = position,
+                  },
+               },
+            })
+         elseif number.type == "treasure" then
+            table.insert(tile.overlayTiles, {
+               bag = getObjectFromGUID(fullSetup_guid).getVar("Constant_TypeOverlay_TreasureChests"),
+               type = {
+                  {
+                     name = treasureChestName,
+                     replaceName = "Treasure Chest: " .. number.contents,
+                     tiles = {
+                        {
+                           position = position,
+                           rotation = deepCopy(treasureChestRotation),
+                        },
+                     },
+                  },
+               },
+            })
+         elseif number.type == "trap" then
+            table.insert(tile.overlayTiles, {
+               bag = getObjectFromGUID(fullSetup_guid).getVar("Constant_TypeOverlay_Traps"),
+               type = {
+                  {
+                     name = number.name,
+                     trapEffects = number.trapEffects,
+                     tiles = {
+                        {
+                           position = position,
+                           rotation = deepCopy(tile.numberTileRotation),
+                        },
+                     },
+                  },
+               },
+            })
+         elseif number.type == "overlay" then
+            table.insert(tile.overlayTiles, {
+               bag = number.bag,
+               type = {
+                  {
+                     name = number.name,
+                     tiles = {
+                        {
+                           position = position,
+                           rotation = deepCopy(tile.numberTileRotation),
+                        },
+                     },
+                  },
+               },
+            })
+         else
+            broadcastToAll("Invalid Random Monster type \"" .. hex.type .. "\" for number " .. i, "Red")
+         end
+      end
+   end
+end
+
+function addNumberTilesToScenario(tile, NumScenario)
+   -- Treasure chests and coins rotate independent of tiles
+   local treasureChestRotation = {x=0.0, y=0.0, z=0.0}
+   local treasureChestName = "Treasure Chest Vertical"
+   if Grid.type == 3 then
+      treasureChestRotation = {x=0.0, y=90.0, z=0.0}
+      treasureChestName = "Treasure Chest Horizontal"
+   end
+   local coinRotation = {x=0.0, y=180.0, z=0.0}
+
+   local monstersAllowed = {}
+   if NumScenario == 103 then
+      monstersAllowed = {"Corrupted", "Cutthroat", "Drowned", "Mangy", "Rotting", "Tribal", "Venomous", "Wild"}
+   end
+   local monsters = {}
+   local monsterCard = getObjectFromGUID(DeckMat_guid).call('drawMonster', {roomNumber = tile.roomNumber, allowed = monstersAllowed})
+   local monsterInformation = deepCopy(getObjectFromGUID(fullSetup_guid).getTable("RandomMonsterInformation_All")[monsterCard])
+   processNumberTiles(tile, monsterInformation, monsters, treasureChestName, treasureChestRotation, coinRotation, NumScenario, tile.roomNumber)
+   tile.monsters = tile.monsters or {}
+   for _, monster in pairs(monsters) do
+      table.insert(tile.monsters, monster)
    end
 end
 

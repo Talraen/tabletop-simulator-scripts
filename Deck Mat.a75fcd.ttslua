@@ -102,23 +102,22 @@ end
 function doNothing() end
 
 function generateRandomDungeonRoom(params)
-   local locationDeck = checkForDeck(self.positionToWorld({-2.125, 0.1, 0.0}))
-   local monsterDeck = checkForDeck(self.positionToWorld({-3.555, 0.1, 0.0}))
-   local location = drawLocation(locationDeck, params.roomNumber, params.entranceType, params.locationsAllowed, params.locationsBlocked)
-   local monster = drawMonster(monsterDeck, params.roomNumber, params.monstersAllowed)
+   local location = drawLocation({roomNumber = params.roomNumber, entranceType = params.entranceType, allowed = params.locationsAllowed, blocked = params.locationsBlocked})
+   local monster = drawMonster({roomNumber = params.roomNumber, allowed = params.monstersAllowed})
 
    Global.call("createMap", {params.NumScenario or 777, {roomNumber = params.roomNumber, location = location, monster = monster, exitPositionX = params.exitPositionX, exitPositionZ = params.exitPositionZ, exitDirection = params.exitDirection, entranceType = params.entranceType, locationsAllowed = params.locationsAllowed, monstersAllowed = params.monstersAllowed, doorGuid = params.doorGuid, locationsBlocked = params.locationsBlocked, NumScenario = params.NumScenario}})
 end
 
 -- Gets the top appropriate Random Location from the deck, given the entrance type and an optional list of allowed cards
-function drawLocation(deck, roomNum, entranceType, allowList, blockList)
+function drawLocation(params)
+   local deck = checkForDeck(self.positionToWorld({-2.125, 0.1, 0.0}))
    local deckObjects = deck.getObjects()
 
    for i, card in pairs(deckObjects) do
-      if (entranceType == nil or entranceType == "" or string.match(card.description, entranceType)) and (allowList == nil or inArray(allowList, card.name)) and (blockList == nil or not inArray(blockList, card.name)) then
+      if (params.entranceType == nil or params.entranceType == "" or string.match(card.description, params.entranceType)) and (params.allowed == nil or inArray(params.allowed, card.name)) and (params.blocked == nil or not inArray(params.blocked, card.name)) then
          -- TODO: This should put all passed cards on the bottom
          deck.takeObject({
-            position = {16.0 + 5.9 * roomNum, 1.7, 28.8},
+            position = {16.0 + 5.9 * params.roomNumber, 1.7, 28.8},
             rotation = {0.00, 180.00, 0.00},
             index = i - 1
          })
@@ -129,13 +128,14 @@ function drawLocation(deck, roomNum, entranceType, allowList, blockList)
 end
 
 -- Gets the top appropriate Random Monster from the deck, given an optional list of allowed cards
-function drawMonster(deck, roomNum, allowList)
+function drawMonster(params)
+   local deck = checkForDeck(self.positionToWorld({-3.555, 0.1, 0.0}))
    local deckObjects = deck.getObjects()
    for i, card in pairs(deckObjects) do
-      if allowList == nil or inArray(allowList, card.name) then
+      if params.allowed == nil or inArray(params.allowed, card.name) then
          -- TODO: This should put all passed cards on the bottom
          deck.takeObject({
-            position = {13.5 + 5.9 * roomNum, 1.7, 28.8},
+            position = {13.5 + 5.9 * params.roomNumber, 1.7, 28.8},
             rotation = {0.00, 180.00, 0.00},
             index = i - 1
          })
