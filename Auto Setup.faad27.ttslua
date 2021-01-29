@@ -2,7 +2,7 @@ String_TreasureIndexDeck = "Treasure Index Deck - SPOILERS"
 fullSetup_guid = "8d2074"
 Unlockable_guid = "346ed5"
 Scripts_guid = "75ab50"
-treasureDeck_guid = "bfef03"
+treasureDeck_guid = "284016"
 Board_guid = "7ef9dd"
 
 infiniteBagsGUIDs = {
@@ -767,17 +767,19 @@ function getTreasureCard(params)
    local foundInChest = false
 
    --Draw Treasure Deck out of Unlockable Chest
-   for _, obj in ipairs(Unlockable.getObjects()) do
-      if obj.name == String_TreasureIndexDeck then
-         local pos = Unlockable.getPosition()
-         pos.y = pos.y - 10
-         deck = Unlockable.takeObject({
-            guid = obj.guid
-            , position = pos
-            , smooth = false
-         })
-         foundInChest = true
-         break
+   if Unlockable ~= nil then
+      for _, obj in ipairs(Unlockable.getObjects()) do
+         if obj.name == String_TreasureIndexDeck then
+            local pos = Unlockable.getPosition()
+            pos.y = pos.y - 10
+            deck = Unlockable.takeObject({
+               guid = obj.guid
+               , position = pos
+               , smooth = false
+            })
+            foundInChest = true
+            break
+         end
       end
    end
 
