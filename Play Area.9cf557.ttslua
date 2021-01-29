@@ -71,6 +71,7 @@ colorsToTable = {
 toCheck = {}
 toCheck["Monster Curse"] = {51.60, 4.00, - 23.66}
 toCheck["Bless"] = {51.60, 4.00, 19.99}
+toCheck["Player -1"] = {51.60, 4.00, 16.38}
 
 function onLoad(save_state)
    createButt("P1FFA", - 2.4, 0.718, nil, "Active Card")
