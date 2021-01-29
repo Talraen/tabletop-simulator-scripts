@@ -446,6 +446,7 @@ function moveRoundTracker(reset)
    if roundTracker then
       if reset then
          roundTracker.setPosition({startPos.x, startPos.y, startPos.z})
+         roundTracker.setRotation({0, 0, 0})
          return
       end
 
@@ -458,7 +459,12 @@ function moveRoundTracker(reset)
          roundTracker.setPosition({oldPos.x + tracker.number, oldPos.y, oldPos.z})
          return
       end
-      broadcastToAll("Round 12 Ended!", {1, 0, 0})
+      if tab:match("continuous:(%a*)") == "yes" then
+         roundTracker.setPosition({startPos.x, startPos.y, startPos.z})
+         roundTracker.setRotation({0, 90, 0})
+      else
+         broadcastToAll("Round 12 Ended!", {1, 0, 0})
+      end
    end
 
 end
