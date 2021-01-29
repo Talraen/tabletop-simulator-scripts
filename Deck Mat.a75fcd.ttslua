@@ -47,7 +47,7 @@ function onLoad(save_state)
       rotation = {0, 0, 0},
       font_size = 100,
       label = "Random Dungeon",
-      tooltip = "Draw for random dungeon",
+      tooltip = "Double-click to start",
       click_function = "randomDeckDraw"
    }
    self.createButton(buttonParameter)
@@ -86,8 +86,20 @@ function rotateDeck(param)
 end
 
 function randomDeckDraw()
-   generateRandomDungeonRoom({roomNumber = 1})
+   local firstClick = Timer.destroy("firstClick")
+   if firstClick == false then
+      Timer.create({
+         identifier = "firstClick",
+         function_name = "doNothing",
+         function_owner = self,
+         delay = 1
+      })
+   else
+      generateRandomDungeonRoom({roomNumber = 1})
+   end
 end
+
+function doNothing() end
 
 function generateRandomDungeonRoom(params)
    local locationDeck = checkForDeck(self.positionToWorld({-2.125, 0.1, 0.0}))
