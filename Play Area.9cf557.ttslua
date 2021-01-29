@@ -236,7 +236,9 @@ function buttonClicked(clicked, broadcast, player_clicker_color)
             return
          elseif pre == "Con" and v.hit_object.getName() == element then
             v.hit_object.setPosition(elements[element].inert)
-            broadcastToAll(Player[player_clicker_color].steam_name .. broadcast .. element, colorsToTable[player_clicker_color])
+            if player_clicker_color ~= nil then
+               broadcastToAll(Player[player_clicker_color].steam_name .. broadcast .. element, colorsToTable[player_clicker_color])
+            end
             return
          elseif pre == "low" and v.hit_object.getName() == element then
             if v.hit_object.getPosition().x > 1 then

@@ -904,9 +904,12 @@ function spawnerClicked(player, value, id)
          end
 
          playArea.call("buttonClickedEx", {"AMS"})
-         --here
-         print('doing the thing')
          moveRoundTracker(true)
+         local elements = {"Fire", "Ice", "Air", "Earth", "Light", "Dark"}
+         for _, j in pairs(elements) do
+            playArea.call("buttonClickedEx", {"Con" .. j})
+         end
+
          Wait.time(function() playArea.call("checkAMDeck") end, 3)
       end
 
