@@ -22,12 +22,12 @@ flags = {
   {x = 4.85, name = "The Voice Silenced", guids = {"62661c"}, position = {91.39 - 24.7, 1.835, 20.33}, toBeCleared = {"20bd86"}},
   {x = 5.67, name = "Water-Breathing", guids = {"a661c1"}, position = {106.53 - 24.7, 1.835, 20.38}, toBeCleared = {}},
 
-  {x = 7.3, name = "Through the Portal", guids = {"aee336"}, position = {122.01 - 24.7, 1.83, 20.46}, toBeCleared = {"bba683"}},
-  {x = 8.1, name = "Severed Ties", guids = {"bba683"}, position = {122.01 - 24.7, 1.83, 20.46}, toBeCleared = {"aee336"}},
-  {x = 8.95, name = "Knowledge is Power", guids = {"9de60f", "06c3de", "15da44", "9e48c6"}, position = {{123.81 - 24.7, 1.83, 21.27}, {123.76 - 24.7, 1.83, 19.80}, {123.76 - 24.7, 1.83, 19.26}, {123.76 - 24.7, 1.83, 18.74}}, toBeCleared = {}, multipart = true},
-  {x = 9.77, name = "Peril Adverted", guids = {"9afaaa", "122ee0", "2ee41d", "87c2c7"}, position = {{125.70 - 24.7, 1.83, 20.49}, {125.70 - 24.7, 1.831, 20.08}, {125.72 - 24.7, 1.831, 19.91}, {125.69 - 24.7, 1.831, 19.14}}, toBeCleared = {}, multipart = true},
-  {x = 10.55, name = "Pieces of an Artifact", guids = {"5f377d", "baf7bf", "f1dcf6"}, position = {{127.30 - 24.7, 1.83, 20.79}, {127.20 - 24.7, 1.83, 19.01}, {127.19 - 24.7, 1.83, 18.65}}, toBeCleared = {"4fe058"}, multipart = true},
-  {x = 11.33, name = "Mechanical Splendor", guids = {"4fe058"}, position = {127.29 - 24.7, 1.83, 20.45}, toBeCleared = {"5f377d", "baf7bf", "f1dcf6"}}
+  {x = 7.3, name = "Through the Portal", guids = {"aee336"}, position = {121.93 - 24.7, 1.83, 20.46}, toBeCleared = {"bba683"}},
+  {x = 8.1, name = "Severed Ties", guids = {"bba683"}, position = {121.93 - 24.7, 1.83, 20.46}, toBeCleared = {"aee336"}},
+  {x = 8.95, name = "Knowledge is Power", guids = {"9de60f", "06c3de", "15da44", "9e48c6"}, position = {{123.71 - 24.7, 1.83, 21.27}, {123.66 - 24.7, 1.83, 19.80}, {123.66 - 24.7, 1.83, 19.26}, {123.66 - 24.7, 1.83, 18.74}}, toBeCleared = {}, multipart = true},
+  {x = 9.77, name = "Peril Adverted", guids = {"9afaaa", "122ee0", "2ee41d", "87c2c7"}, position = {{125.60 - 24.7, 1.83, 20.49}, {125.60 - 24.7, 1.831, 20.08}, {125.62 - 24.7, 1.831, 19.91}, {125.59 - 24.7, 1.831, 19.14}}, toBeCleared = {}, multipart = true},
+  {x = 10.55, name = "Pieces of an Artifact", guids = {"5f377d", "baf7bf", "f1dcf6"}, position = {{127.23 - 24.7, 1.83, 20.79}, {127.13 - 24.7, 1.83, 19.01}, {127.12 - 24.7, 1.83, 18.65}}, toBeCleared = {"4fe058"}, multipart = true},
+  {x = 11.33, name = "Mechanical Splendor", guids = {"4fe058"}, position = {127.22 - 24.7, 1.83, 20.45}, toBeCleared = {"5f377d", "baf7bf", "f1dcf6"}}
 }
 
 function onLoad(save_state)
