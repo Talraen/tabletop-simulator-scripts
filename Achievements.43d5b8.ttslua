@@ -1,0 +1,119 @@
+flags = {
+  {x = -11.12, name = "Ancient Technology", guids = {"75331a", "29d554", "7d2769", "583c5e", "3c7397"}, position = {117.48 - 24.7, 1.835, 20.42}, toBeCleared = {}},
+  {x = -10.22, name = "Artifact: Cleansed", guids = {"2e0277"}, position = {95.58 - 24.7, 1.835, 20.40}, toBeCleared = {"a7bc86", "4a36f4"}},
+  {x = -9.32, name = "Artifact: Lost", guids = {"a7bc86"}, position = {95.58 - 24.7, 1.835, 20.40}, toBeCleared = {"4a36f4", "2e0277"}},
+  {x = -8.45, name = "Artifact: Recovered", guids = {"4a36f4"}, position = {95.58 - 24.7, 1.835, 20.40}, toBeCleared = {"2e0277", "a7bc86"}},
+  {x = -7.6, name = "City Rule: Demonic", guids = {"20ac29"}, position = {93.46 - 24.7, 1.835, 20.27}, toBeCleared = {"7df8f7", "b83859"}},
+  {x = -6.8, name = "City Rule: Economic", guids = {"7df8f7"}, position = {93.46 - 24.7, 1.835, 20.27}, toBeCleared = {"20ac29", "b83859"}},
+  {x = -6, name = "City Rule: Militaristic", guids = {"b83859"}, position = {93.46 - 24.7, 1.835, 20.27}, toBeCleared = {"20ac29", "7df8f7"}},
+  {x = -5.09, name = "End of Corruption", guids = {"66e031", "5a6270", "268c1c"}, position = {113.02 - 24.7, 1.835, 20.59}, toBeCleared = {}},
+  {x = -4.2, name = "End of Gloom", guids = {"18cd70"}, position = {115.40 - 24.7, 1.835, 20.17}, toBeCleared = {}},
+  {x = -3.4, name = "End of the Invasion", guids = {"d5f083"}, position = {110.81 - 24.7, 1.835, 20.40}, toBeCleared = {}},
+  {x = -2.55, name = "The Annihilation of the Order", guids = {"1b658f"}, position = {119.81 - 24.7, 1.835, 20.25}, toBeCleared = {}},
+  {x = -1.75, name = "The Dead Invade", guids = {"0b3ed8"}, position = {100.14 - 24.7, 1.835, 20.32}, toBeCleared = {}},
+  {x = -0.9, name = "The Rift Neutralized", guids = {"a7d764"}, position = {108.77 - 24.7, 1.835, 20.34}, toBeCleared = {"120efa"}}, -- Check
+  {x = -0.1, name = "The Drake Aided", guids = {"7c2e92"}, position = {102.27 - 24.7, 1.835, 20.32}, toBeCleared = {"37a8a8"}},
+  {x = 0.7, name = "The Drake Slain", guids = {"37a8a8"}, position = {102.27 - 24.7, 1.835, 20.32}, toBeCleared = {"7c2e92"}},
+  {x = 1.54, name = "The Edge of Darkness", guids = {"6b8148"}, position = {89.41 - 24.7, 1.835, 20.25}, toBeCleared = {}},
+  {x = 2.34, name = "The Merchant Flees", guids = {"e4f8e6"}, position = {97.90 - 24.7, 1.835, 20.30}, toBeCleared = {}},
+  {x = 3.14, name = "The Power of Enhancement", guids = {"e28cba"}, position = {104.36 - 24.7, 1.835, 20.36}, toBeCleared = {}},
+  -- {x = 5.97, name = "The Rift Closed", guids = {"a7d764"}, position = {108.77, 1.835, 20.34}, toBeCleared = {"120efa"}},
+  {x = 4, name = "The Voice Freed", guids = {"20bd86"}, position = {91.39 - 24.7, 1.835, 20.33}, toBeCleared = {"62661c"}},
+  {x = 4.85, name = "The Voice Silenced", guids = {"62661c"}, position = {91.39 - 24.7, 1.835, 20.33}, toBeCleared = {"20bd86"}},
+  {x = 5.67, name = "Water-Breathing", guids = {"a661c1"}, position = {106.63 - 24.7, 1.835, 20.38}, toBeCleared = {}},
+
+  {x = 7.3, name = "Through the Portal", guids = {"aee336"}, position = {122.01 - 24.7, 1.83, 20.46}, toBeCleared = {"bba683"}},
+  {x = 8.1, name = "Severed Ties", guids = {"bba683"}, position = {122.01 - 24.7, 1.83, 20.46}, toBeCleared = {"aee336"}},
+  {x = 8.95, name = "Knowledge is Power", guids = {"9de60f", "06c3de", "15da44", "9e48c6"}, position = {{123.81 - 24.7, 1.83, 21.27}, {123.76 - 24.7, 1.83, 19.80}, {123.76 - 24.7, 1.83, 19.26}, {123.76 - 24.7, 1.83, 18.74}}, toBeCleared = {}, multipart = true},
+  {x = 9.77, name = "Peril Adverted", guids = {"9afaaa", "122ee0", "2ee41d", "87c2c7"}, position = {{125.70 - 24.7, 1.83, 20.49}, {125.70 - 24.7, 1.831, 20.08}, {125.72 - 24.7, 1.831, 19.91}, {125.69 - 24.7, 1.831, 19.14}}, toBeCleared = {}, multipart = true},
+  {x = 10.55, name = "Pieces of an Artifact", guids = {"5f377d", "baf7bf", "f1dcf6"}, position = {{127.30 - 24.7, 1.83, 20.79}, {127.20 - 24.7, 1.83, 19.01}, {127.19 - 24.7, 1.83, 18.65}}, toBeCleared = {"4fe058"}, multipart = true},
+  {x = 11.33, name = "Mechanical Splendor", guids = {"4fe058"}, position = {127.29 - 24.7, 1.83, 20.45}, toBeCleared = {"5f377d", "baf7bf", "f1dcf6"}}
+}
+
+function onLoad(save_state)
+  button_parameter = {
+    click_function = "dud",
+    function_owner = self,
+    label          = "",
+    width          = 400,
+    height         = 800,
+    color          = {0, 0, 0, 0}
+  }
+
+  for i = 1, #flags do
+    self.setVar("button_" .. i, function () clicked(i) end)
+    button_parameter.click_function = "button_" .. i
+    button_parameter.position = {flags[i].x, 0, 0}
+    button_parameter.tooltip = flags[i].name
+    self.createButton(button_parameter)
+  end
+end
+
+function clicked(i)
+  local aBag = getObjectFromGUID("3ea749")
+  for _,j in pairs(flags[i].toBeCleared) do
+    local obj = getObjectFromGUID(j)
+    if obj ~= nil then aBag.putObject(obj) end
+  end
+
+  if #flags[i].guids > 1 then
+    local lvl = 0
+    for u, v in pairs(flags[i].guids) do
+      local obj = getObjectFromGUID(v)
+      if obj ~= nil then
+		if not flags[i].multipart then
+			aBag.putObject(obj)
+		end
+        if u < #flags[i].guids then
+			local newPos = flags[i].position
+			local nextObj = getObjectFromGUID(flags[i].guids[u+1])
+			if flags[i].multipart then
+				newPos = flags[i].position[u+1]
+			end
+			if not flags[i].multipart or (flags[i].multipart and nextObj == nil) then
+          new = aBag.takeObject({
+            position       = newPos,
+            rotation       = {0, 180, 0},
+            smooth         = true,
+            guid           = flags[i].guids[u+1],
+          })
+          new.setLock(true)
+		  end
+        end
+        lvl = u+1
+      end
+    end
+    if lvl == 0 then
+		local newPos = flags[i].position
+		if flags[i].multipart then
+			newPos = flags[i].position[1]
+		end
+      new = aBag.takeObject({
+        position       = newPos,
+        rotation       = {0, 180, 0},
+        smooth         = true,
+        guid           = flags[i].guids[1],
+      })
+      new.setLock(true)
+    end
+	if lvl > #flags[i].guids and flags[i].multipart then
+		for u, v in pairs(flags[i].guids) do
+			aBag.putObject(getObjectFromGUID(v))
+		end
+	end
+  else
+    local obj = getObjectFromGUID(flags[i].guids[1])
+    if obj ~= nil then
+      aBag.putObject(obj)
+    else
+      new = aBag.takeObject({
+        position       = flags[i].position,
+        rotation       = {0, 180, 0},
+        smooth         = true,
+        guid           = flags[i].guids[1],
+      })
+      new.setLock(true)
+    end
+  end
+  aBag.putObject(self)
+end
