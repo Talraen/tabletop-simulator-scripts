@@ -37,7 +37,7 @@ function removePlayer(obj, player_clicker_color, alt_click)
 
   for u,v in pairs(getObjectFromGUID(zone).getObjects()) do
     if hittedBag then
-      if v.getGUID() ~= "dff000" and v.getGUID() ~= "42d2b6" and v.getGUID() ~= "577a97" and v.getGUID() ~= "7ef9dd" and v ~= self and v ~= hittedBag then
+      if v.getGUID() ~= nil and v.getGUID() ~= "dff000" and v.getGUID() ~= "42d2b6" and v.getGUID() ~= "577a97" and v.getGUID() ~= "7ef9dd" and v.getGUID() ~= "49a4e0" and v.getGUID() ~= "dac936" and v.getGUID() ~= "62cd94" and v.getGUID() ~= "963318" and v ~= self and v ~= hittedBag then
         hittedBag.putObject(v)
       end
     else
