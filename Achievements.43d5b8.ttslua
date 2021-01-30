@@ -12,9 +12,9 @@ flags = {
   {x = -2.55, name = "The Annihilation of the Order", guids = {"1b658f"}, position = {119.81 - 24.7, 1.835, 20.25}, toBeCleared = {}},
   {x = -1.75, name = "The Dead Invade", guids = {"0b3ed8"}, position = {100.14 - 24.7, 1.835, 20.32}, toBeCleared = {}},
   {x = -0.9, name = "The Rift Neutralized", guids = {"a7d764"}, position = {108.77 - 24.7, 1.835, 20.34}, toBeCleared = {"120efa"}}, -- Check
-  {x = -0.1, name = "The Drake Aided", guids = {"7c2e92"}, position = {102.27 - 24.7, 1.835, 20.32}, toBeCleared = {"37a8a8"}},
-  {x = 0.7, name = "The Drake Slain", guids = {"37a8a8"}, position = {102.27 - 24.7, 1.835, 20.32}, toBeCleared = {"7c2e92"}},
-  {x = 1.54, name = "The Edge of Darkness", guids = {"6b8148"}, position = {89.41 - 24.7, 1.835, 20.25}, toBeCleared = {}},
+  {x = -0.1, name = "The Drake Aided", guids = {"7c2e92"}, position = {89.41 - 24.7, 1.835, 20.25}, toBeCleared = {"37a8a8"}},
+  {x = 0.7, name = "The Drake Slain", guids = {"37a8a8"}, position = {89.41 - 24.7, 1.835, 20.25}, toBeCleared = {"7c2e92"}},
+  {x = 1.54, name = "The Edge of Darkness", guids = {"6b8148"}, position = {102.27 - 24.7, 1.835, 20.32}, toBeCleared = {}},
   {x = 2.34, name = "The Merchant Flees", guids = {"e4f8e6"}, position = {97.90 - 24.7, 1.835, 20.30}, toBeCleared = {}},
   {x = 3.14, name = "The Power of Enhancement", guids = {"e28cba"}, position = {104.36 - 24.7, 1.835, 20.36}, toBeCleared = {}},
   -- {x = 5.97, name = "The Rift Closed", guids = {"a7d764"}, position = {108.77, 1.835, 20.34}, toBeCleared = {"120efa"}},
