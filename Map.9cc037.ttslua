@@ -25,8 +25,8 @@ function onLoad(save_state)
    self.createButton({
       click_function = "addAchiev",
       function_owner = self,
-      position = { - 0.35, 0, - 7.5},
-      width = 5700,
+      position = { 0.95, 0, - 7.5},
+      width = 7000,
       height = 750,
       color = {1, 1, 1, 0},
       tooltip = "Add Achievement"
