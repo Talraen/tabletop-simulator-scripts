@@ -1,3 +1,13 @@
+exceptions = {}
+exceptions["dff000"] = true
+exceptions["42d2b6"] = true
+exceptions["577a97"] = true
+exceptions["7ef9dd"] = true
+exceptions["49a4e0"] = true
+exceptions["dac936"] = true
+exceptions["62cd94"] = true
+exceptions["963318"] = true
+
 function onLoad(save_state)
   self.createButton({
     click_function = "removePlayer",
@@ -37,7 +47,7 @@ function removePlayer(obj, player_clicker_color, alt_click)
 
   for u,v in pairs(getObjectFromGUID(zone).getObjects()) do
     if hittedBag then
-      if v.getGUID() ~= "dff000" and v.getGUID() ~= "42d2b6" and v.getGUID() ~= "577a97" and v.getGUID() ~= "7ef9dd" and v ~= self and v ~= hittedBag then
+      if not exceptions[v.getGUID()] and v.getGUID() ~= nil and v ~= self and v ~= hittedBag then
         hittedBag.putObject(v)
       end
     else
