@@ -56,12 +56,11 @@ function clicked(i)
     if obj ~= nil then aBag.putObject(obj) end
   end
 
-  local placed = false -- Stop looping after an achievement is placed
   if #flags[i].guids > 1 then
     local lvl = 0
     for u, v in pairs(flags[i].guids) do
       local obj = getObjectFromGUID(v)
-      if obj ~= nil and not placed then
+      if obj ~= nil then
 		if not flags[i].multipart then
 			aBag.putObject(obj)
 		end
@@ -79,7 +78,9 @@ function clicked(i)
             guid           = flags[i].guids[u+1],
           })
           new.setLock(true)
-          placed = true
+
+          lvl = u+1
+          break
 		  end
         end
         lvl = u+1
