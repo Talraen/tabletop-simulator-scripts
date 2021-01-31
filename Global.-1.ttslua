@@ -1046,9 +1046,12 @@ function createMap(params)
       0.3, 5)
       Wait.time(
          function()
+            local originalPosition = battleGoals.getPosition()
+            battleGoals.setPosition({0, 20, 0})
             for _, color in pairs(playerCount) do
                battleGoals.deal(2, color)
             end
+            battleGoals.setPosition(originalPosition)
          end,
       3)
    end
