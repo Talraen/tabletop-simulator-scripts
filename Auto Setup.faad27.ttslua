@@ -581,6 +581,9 @@ function setScript(obj, typ, info, NumScenario, MonsterStandee, NumCharacters)
          .. "\n	getObjectFromGUID('" .. self.getGUID() .. "').call('FCChallengeStairs',params)"
       end
    end
+   if params and params.customScript ~= nil then
+      ScriptConstruct = ScriptConstruct .. "\n " .. params.customScript
+   end
    ScriptConstruct = ScriptConstruct
    .. "\nend"
    obj.setLuaScript(ScriptConstruct)
@@ -867,8 +870,16 @@ function placeSections(scenarioSections)
       if tSection.hidden ~= nil then
          obj.setColorTint({r = 0 / 255, g = 0 / 255, b = 0 / 255})
       end
-      setScript(obj, "Conclusion", tSection.buttonLabel)
+      --here
 
+      local customScript = nil
+      if tSection.params ~= nil then
+         if tSection.params.scriptFunction ~= nil then
+            customScript = tSection.params.scriptFunction
+         end
+      end
+
+      setScript(obj, "Conclusion", tSection.buttonLabel, nil, nil, nil, {customScript = customScript})
    end
 end
 
