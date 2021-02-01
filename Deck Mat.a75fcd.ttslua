@@ -115,12 +115,26 @@ function drawLocation(params)
 
    for i, card in pairs(deckObjects) do
       if (params.entranceType == nil or params.entranceType == "" or string.match(card.description, params.entranceType)) and (params.allowed == nil or inArray(params.allowed, card.name)) and (params.blocked == nil or not inArray(params.blocked, card.name)) then
-         -- TODO: This should put all passed cards on the bottom
          deck.takeObject({
             position = {16.0 + 5.9 * params.roomNumber, 1.7, 28.8},
             rotation = {0.00, 180.00, 0.00},
             index = i - 1
          })
+
+         if i == 2 then
+            -- Move top card to bottom
+            local discard = deck.takeObject({
+               position = self.positionToWorld({-2.125, 0.0, 0.0}),
+               rotation = {0, 0, 0},
+               index = 0
+            })
+            Wait.frames(function() deck.putObject(discard) end, 10)
+         elseif i > 2 then
+            -- Move multiple cards to bottom
+            local decks = deck.cut(deck.getQuantity() - i + 1)
+            Wait.frames(function() decks[1].putObject(decks[2]) end, 10)
+         end
+
          return card.name
       end
    end
@@ -133,12 +147,26 @@ function drawMonster(params)
    local deckObjects = deck.getObjects()
    for i, card in pairs(deckObjects) do
       if params.allowed == nil or inArray(params.allowed, card.name) then
-         -- TODO: This should put all passed cards on the bottom
          deck.takeObject({
             position = {13.5 + 5.9 * params.roomNumber, 1.7, 28.8},
             rotation = {0.00, 180.00, 0.00},
             index = i - 1
          })
+
+         if i == 2 then
+            -- Move top card to bottom
+            local discard = deck.takeObject({
+               position = self.positionToWorld({-2.125, 0.0, 0.0}),
+               rotation = {0, 0, 0},
+               index = 0
+            })
+            Wait.frames(function() deck.putObject(discard) end, 10)
+         elseif i > 2 then
+            -- Move multiple cards to bottom
+            local decks = deck.cut(deck.getQuantity() - i + 1)
+            Wait.frames(function() decks[1].putObject(decks[2]) end, 10)
+         end
+
          return card.name
       end
    end
