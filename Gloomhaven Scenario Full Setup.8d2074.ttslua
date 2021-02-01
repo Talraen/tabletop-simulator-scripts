@@ -45523,6 +45523,7 @@ ScenarioInformation_All = {
 						adjacentTiles	= {"A1","C1"}
 						,position		= {-3.03, 1.77, 21.00}
 						,rotation		= {0.01, 30.01, 180.02}
+                  ,secret        = true
 					}
 				}
 			}
@@ -46275,6 +46276,7 @@ ScenarioInformation_All = {
 			}
 			,{
 				tile			= "C1"
+            ,secret        = true
 				,position		= {-6.06, 1.77, 21.00}
 				,rotation		= {0.00, 270.03, 0.00}
 				,scenarioSections = {
@@ -46372,6 +46374,7 @@ ScenarioInformation_All = {
 			}
 			,{
 				tile			= "A1"
+            ,secret        = true
 				,position		= {5.30, 1.43, 8.47}
 				,rotation		= {0.00, 270.03, 0.00}
 			}
@@ -48882,6 +48885,7 @@ ScenarioInformation_All = {
 						adjacentTiles	= {"A2","A1"}
 						,position		= {-3.79, 1.77, 3.94}
 						,rotation		= {359.99, 89.99, 180.01}
+                  ,secret        = true
 					}
 				}
 			}
@@ -49273,6 +49277,7 @@ ScenarioInformation_All = {
 			}
 			,{
 				tile			= "A2"
+            ,secret        = true
 				,position		= {-6.06, 1.19, 11.38}
 				,rotation		= {0.00, 0.02, 0.00}
 				,overlayTiles	= {
@@ -49294,6 +49299,7 @@ ScenarioInformation_All = {
 			}
 			,{
 				tile			= "A1"
+            ,secret        = true
 				,position		= {-7.58, 1.71, 5.25}
 				,rotation		= {0.00, 269.98, 0.00}
 				,scenarioSections = {

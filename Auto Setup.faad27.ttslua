@@ -104,7 +104,7 @@ function createMap(params)
    getBagContent(mapTiles, "MapTiles")
    local startRooms = true
    for k, v in pairs(scenarioInformation.mapTiles) do
-      if not checkPosForName(v.position, v.tile) then
+      if not checkPosForName(v.position, v.tile) and not v.secret then
          mapTiles.takeObject({position = v.position, rotation = v.rotation, smooth = false, guid = tilesGUIDsFromBag.MapTiles[v.tile]}).lock()
       end
 
@@ -180,7 +180,7 @@ function createMap(params)
                   adjacentTiles = adjacentTiles .. adjTile
                end
             end
-            if params.HiddenRooms and startingRoom or not params.HiddenRooms then
+            if params.HiddenRooms and startingRoom or not params.HiddenRooms and not doorTile.secret then
                if doorsToSpawn[v.name] == nil then
                   doorsToSpawn[v.name] = {}
                end
