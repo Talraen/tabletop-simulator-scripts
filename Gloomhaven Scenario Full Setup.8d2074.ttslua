@@ -54556,7 +54556,7 @@ ScenarioInformation_All = {
 				,position		= {1.52, 1.71, 2.62}
 				,rotation		= {0.00, 90.00, 180.00}
 				,startTiles		= {
-					name	= "Man Stone Corridor 1"
+					name	= "Stone Corridor 1"
 					,tiles	= {
 						{
 							position	= {-0.76, 1.88, -1.31}
@@ -54585,11 +54585,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-0.76, 1.88, 6.56}
-										,rotation	= {0.00, 270.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {3.79, 1.88, 6.56}
-										,rotation	= {0.00, 270.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 								}
 							}
@@ -54754,7 +54754,7 @@ ScenarioInformation_All = {
 		,monsterList	= {
 			"City Guard"
 			,"Vermling Scout"
-			,"Vermling Shamen"
+			,"Vermling Shaman"
 		}
 	}
 	-- Spellweaver Solo
@@ -54801,7 +54801,7 @@ ScenarioInformation_All = {
 				,position		= {-12.85, 1.71, 11.75}
 				,rotation		= {0.00, 270.00, 180.00}
 				,startTiles		= {
-					name	= "Wooden Corridor 1"
+					name	= "Stone Corridor 1"
 					,tiles	= {
 						{
 							position	= {-18.19, 1.77, 13.13}
@@ -54835,7 +54835,7 @@ ScenarioInformation_All = {
 								}
 							}
 							,{
-								name	= "Crate A"
+								name	= "Crate B"
 								,tiles	= {
 									{
 										position	= {-9.09, 1.88, 13.12}
@@ -54993,23 +54993,23 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-4.55, 1.88, 13.13}
-										,rotation	= {0.00, 90.00, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
 									,{
 										position	= {-3.79, 1.88, 11.81}
-										,rotation	= {0.00, 90.00, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
 									,{
 										position	= {-2.26, 1.88, 9.17}
-										,rotation	= {0.00, 90.00, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
 									,{
 										position	= {0.76, 1.88, 9.17}
-										,rotation	= {0.00, 90.00, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
 									,{
 										position	= {-3.04, 1.88, 7.88}
-										,rotation	= {0.00, 90.00, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
 								}
 							}
@@ -55161,7 +55161,7 @@ ScenarioInformation_All = {
 				,position		= {-1.52, 1.71, -2.63}
 				,rotation		= {0.00, 180.00, 0.00}
 				,startTiles		= {
-					name	= "Man Stone Corridor 1"
+					name	= "Stone Corridor 1"
 					,tiles	= {
 						{
 							position	= {-4.55, 1.88, -2.63}
@@ -55230,17 +55230,17 @@ ScenarioInformation_All = {
 							{
 								name	= "Bear Trap"
 								,tiles	= {
-									{
+{
 										position	= {4.55, 1.88, -2.63}
-										,rotation	= {0.00, 90.00, 180.00}
+										,rotation	= {0.00, 270.00, 180.00}
 									}
 									,{
 										position	= {7.59, 1.88, -2.63}
-										,rotation	= {0.00, 90.00, 180.00}
+										,rotation	= {0.00, 270.00, 180.00}
 									}
 									,{
 										position	= {10.61, 1.88, -2.63}
-										,rotation	= {0.00, 90.00, 180.00}
+										,rotation	= {0.00, 270.00, 180.00}
 									}
 								}
 							}
@@ -55345,6 +55345,10 @@ ScenarioInformation_All = {
 									{
 										position	= {-3.03, 1.88, 10.50}
 										,rotation	= {0.00, 90.00, 0.00}
+                              ,params		= {
+											buttonTheme		= "Treasure"
+											,buttonLabel	= "G"
+										}
 									}
 								}
 							}
@@ -55518,7 +55522,7 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"E1","H1"}
 						,position		= {-7.88, 1.88, 6.06}
-						,rotation		= {0.01, 0.00, 180.00}
+						,rotation		= {0.01, 180.00, 180.00}
 					}
 				}
 			}
@@ -55646,23 +55650,23 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-5.25, 1.88, 1.52}
-										,rotation	= {0.02, 240.00, 359.97}
+										,rotation	= {0.02, 180.00, 359.97}
 									}
 									,{
 										position	= {-5.25, 1.88, 0.00}
-										,rotation	= {0.02, 240.00, 359.97}
+										,rotation	= {0.02, 180.00, 359.97}
 									}
 									,{
 										position	= {-1.33, 1.88, 2.25}
-										,rotation	= {0.02, 240.00, 359.97}
+										,rotation	= {0.02, 180.00, 359.97}
 									}
 									,{
 										position	= {-1.31, 1.88, 0.76}
-										,rotation	= {0.02, 240.00, 359.97}
+										,rotation	= {0.02, 180.00, 359.97}
 									}
 									,{
 										position	= {-1.31, 1.88, -0.76}
-										,rotation	= {0.00, 240.00, 0.00}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 								}
 							}
@@ -55732,6 +55736,11 @@ ScenarioInformation_All = {
 				}
 			}
 		}
+      ,monsterList	= {
+			"Vermling Scout"
+			,"Vermling Shaman"
+			,"Earth Demon"
+		}
 	}
 	-- Sun Solo
 	,[206] = {
@@ -55767,15 +55776,15 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-2.63, 1.76, 1.52}
-										,rotation	= {0.00, 0.14, 180.00}
+										,rotation	= {0.00, 180.14, 180.00}
 									}
 									,{
 										position	= {-0.01, 1.76, 1.52}
-										,rotation	= {0.00, 359.84, 180.00}
+										,rotation	= {0.00, 179.84, 180.00}
 									}
 									,{
 										position	= {2.63, 1.76, 1.50}
-										,rotation	= {0.00, 359.03, 180.01}
+										,rotation	= {0.00, 179.03, 180.01}
 									}
 								}
 							}
@@ -55783,20 +55792,20 @@ ScenarioInformation_All = {
 								name	= "Earth Corridor 2"
 								,tiles	= {
 									{
-										position	= {-3.94, 1.88, 0.76}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {-3.94, 1.88, 2.27}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 									,{
-										position	= {-1.31, 1.88, 0.75}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {-1.31, 1.88, 2.27}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 									,{
-										position	= {1.30, 1.88, 0.76}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {1.30, 1.88, 2.28}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 									,{
-										position	= {3.94, 1.88, 0.76}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {3.94, 1.88, 2.28}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 								}
 							}
@@ -55835,16 +55844,16 @@ ScenarioInformation_All = {
 								name	= "Log"
 								,tiles	= {
 									{
-										position	= {-2.62, 1.88, 3.04}
-										,rotation	= {0.00, 299.71, 0.00}
+										position	= {-3.95, 1.88, 3.77}
+										,rotation	= {0.00, 119.71, 0.00}
 									}
 									,{
 										position	= {-1.31, 1.88, -2.27}
 										,rotation	= {0.00, 120.00, 0.00}
 									}
 									,{
-										position	= {1.31, 1.88, 6.82}
-										,rotation	= {0.00, 60.00, 0.00}
+										position	= {2.62, 1.88, 7.59}
+										,rotation	= {0.00, 240.00, 0.00}
 									}
 								}
 							}
@@ -55852,6 +55861,17 @@ ScenarioInformation_All = {
 					}
 				}
 			}
+		}
+      ,monsterList	= {
+			"City Guard"
+			,"Bandit Guard"
+			,"Bandit Archer"
+         ,"Inox Guard"
+         ,"Inox Archer"
+         ,"Inox Shaman"
+         ,"Vermling Scout"
+         ,"Vermling Shaman"
+         ,"Cave Bear"
 		}
 	}
 	-- Tripple Arrow Solo
@@ -56056,7 +56076,7 @@ ScenarioInformation_All = {
 								}
 							}
 							,{
-								name	= "Crate A"
+								name	= "Crate B"
 								,tiles	= {
 									{
 										position	= {-1.31, 1.88, -2.27}
@@ -56091,7 +56111,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {5.25, 1.77, -7.58}
-										,rotation	= {0.00, 0.00, 180.00}
+										,rotation	= {0.00, 180.00, 180.00}
 									}
 								}
 							}
@@ -56099,8 +56119,8 @@ ScenarioInformation_All = {
 								name	= "Wooden Corridor 2"
 								,tiles	= {
 									{
-										position	= {5.25, 1.89, -4.55}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {5.25, 1.89, -3.05}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 								}
 							}
@@ -56256,15 +56276,15 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-2.63, 1.76, 1.52}
-										,rotation	= {0.00, 0.14, 180.00}
+										,rotation	= {0.00, 180.14, 180.00}
 									}
 									,{
 										position	= {-0.01, 1.76, 1.52}
-										,rotation	= {0.00, 359.84, 180.00}
+										,rotation	= {0.00, 179.84, 180.00}
 									}
 									,{
 										position	= {2.63, 1.76, 1.50}
-										,rotation	= {0.00, 359.03, 180.01}
+										,rotation	= {0.00, 179.03, 180.01}
 									}
 								}
 							}
@@ -56272,20 +56292,20 @@ ScenarioInformation_All = {
 								name	= "Earth Corridor 2"
 								,tiles	= {
 									{
-										position	= {-3.94, 1.88, 0.76}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {-3.94, 1.88, 2.27}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 									,{
-										position	= {-1.31, 1.88, 0.75}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {-1.31, 1.88, 2.26}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 									,{
-										position	= {1.30, 1.88, 0.76}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {1.30, 1.88, 2.27}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 									,{
-										position	= {3.94, 1.88, 0.76}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {3.94, 1.88, 2.27}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 								}
 							}
@@ -56343,6 +56363,11 @@ ScenarioInformation_All = {
 				}
 			}
 		}
+      ,monsterList	= {
+         "Hound"
+         ,"Spitting Drake"
+         ,"Cave Bear"
+      }
 	}
 	-- Moon Solo
 	,[209] = {
@@ -56357,22 +56382,22 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"G2","D2"}
 						,position		= {6.82, 1.89, 3.94}
-						,rotation		= {0.00, 270.01, 0.03}
+						,rotation		= {0.00, 90.01, 0.03}
 					}
 					,{
 						adjacentTiles	= {"G2","L2"}
 						,position		= {0.76, 1.89, 6.55}
-						,rotation		= {0.10, 270.08, 0.00}
+						,rotation		= {0.10, 90.08, 0.00}
 					}
 					,{
 						adjacentTiles	= {"L2","A2"}
 						,position		= {-5.30, 1.88, 1.31}
-						,rotation		= {0.01, 270.01, 359.97}
+						,rotation		= {0.01, 90.01, 359.97}
 					}
 					,{
 						adjacentTiles	= {"L2","B4"}
 						,position		= {-6.82, 1.89, 6.56}
-						,rotation		= {359.91, 269.97, 0.00}
+						,rotation		= {359.91, 89.97, 0.00}
 					}
 				}
 			}
@@ -56474,7 +56499,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {8.34, 1.88, -1.31}
-										,rotation	= {0.00, 89.81, 0.00}
+										,rotation	= {0.00, 269.81, 0.00}
 									}
 								}
 							}
@@ -56605,7 +56630,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-6.82, 1.88, -1.31}
-										,rotation	= {0.00, 89.81, 0.00}
+										,rotation	= {0.00, 269.81, 0.00}
 									}
 								}
 							}
@@ -56681,6 +56706,10 @@ ScenarioInformation_All = {
 				}
 			}
 		}
+      ,monsterList	= {
+         "Night Demon"
+         ,"Deep Terror"
+      }
 	}
 	-- Cthulu Solo
 	,[210] = {
@@ -56719,7 +56748,7 @@ ScenarioInformation_All = {
 			{
 				tile			= "M1"
 				,position		= {0.00, 1.77, 5.25}
-				,rotation		= {0.00, 270.00, 0.00}
+				,rotation		= {0.00, 90.00, 0.00}
 				,startTiles		= {
 					name	= "Stone Corridor 1"
 					,tiles	= {
@@ -56759,19 +56788,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-1.52, 1.88, 7.88}
-										,rotation	= {0.00, 90.01, 0.00}
+										,rotation	= {0.00, 270.01, 0.00}
 									}
 									,{
 										position	= {1.52, 1.88, 7.88}
-										,rotation	= {0.00, 90.01, 0.00}
+										,rotation	= {0.00, 270.01, 0.00}
 									}
 									,{
 										position	= {-1.52, 1.88, 2.62}
-										,rotation	= {0.00, 90.01, 0.00}
+										,rotation	= {0.00, 270.01, 0.00}
 									}
 									,{
 										position	= {1.52, 1.88, 2.63}
-										,rotation	= {0.00, 90.01, 0.00}
+										,rotation	= {0.00, 270.01, 0.00}
 									}
 								}
 							}
@@ -57007,6 +57036,10 @@ ScenarioInformation_All = {
 				}
 			}
 		}
+      ,monsterList	= {
+         "Giant Viper"
+         ,"Black Imp"
+      }
 	}
 	-- Lightnings Solo
 	,[211] = {
@@ -57021,17 +57054,17 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"G1","M1"}
 						,position		= {3.94, 1.88, 6.82}
-						,rotation		= {0.01, 300.00, 359.98}
+						,rotation		= {0.01, 180.00, 359.98}
 					}
 					,{
 						adjacentTiles	= {"M1","C2","D1"}
 						,position		= {0.00, 1.88, -1.52}
-						,rotation		= {0.00, 300.00, 0.01}
+						,rotation		= {0.00, 180.00, 0.01}
 					}
 					,{
 						adjacentTiles	= {"M1","D1","C2"}
 						,position		= {-1.31, 1.88, 0.76}
-						,rotation		= {0.00, 240.88, 0.00}
+						,rotation		= {0.00, 180.88, 0.00}
 					}
 				}
 			}
@@ -57068,7 +57101,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {5.25, 1.88, 16.67}
-										,rotation	= {0.00, 299.96, 0.00}
+										,rotation	= {0.00, 359.96, 0.00}
 									}
 								}
 							}
@@ -57090,8 +57123,8 @@ ScenarioInformation_All = {
 								name	= "Log"
 								,tiles	= {
 									{
-										position	= {5.25, 1.88, 12.12}
-										,rotation	= {359.99, 299.99, 359.99}
+										position	= {3.94, 1.88, 12.88}
+										,rotation	= {359.99, 119.99, 359.99}
 									}
 								}
 							}
@@ -57105,7 +57138,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {3.94, 1.88, 14.40}
-										,rotation	= {359.99, 240.19, 0.00}
+										,rotation	= {359.99, 0.19, 0.00}
 									}
 								}
 							}
@@ -57156,12 +57189,12 @@ ScenarioInformation_All = {
 								name	= "Tree"
 								,tiles	= {
 									{
-										position	= {2.62, 1.88, 3.03}
-										,rotation	= {0.00, 300.45, 0.00}
+										position	= {2.62, 1.88, 4.55}
+										,rotation	= {0.00, 180.45, 0.00}
 									}
 									,{
-										position	= {6.56, 1.88, 2.27}
-										,rotation	= {0.00, 119.99, 0.00}
+										position	= {6.56, 1.88, 0.76}
+										,rotation	= {0.00, 359.99, 0.00}
 									}
 								}
 							}
@@ -57174,8 +57207,8 @@ ScenarioInformation_All = {
 								name	= "Log"
 								,tiles	= {
 									{
-										position	= {3.94, 1.88, 0.76}
-										,rotation	= {0.00, 240.00, 0.00}
+										position	= {2.63, 1.88, 0.00}
+										,rotation	= {0.00, 60.00, 0.00}
 									}
 								}
 							}
@@ -57189,11 +57222,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {1.31, 1.88, 0.76}
-										,rotation	= {359.99, 240.19, 0.00}
+										,rotation	= {359.99, 0.19, 0.00}
 									}
 									,{
 										position	= {5.25, 1.88, 3.03}
-										,rotation	= {359.99, 240.19, 0.00}
+										,rotation	= {359.99, 0.19, 0.00}
 									}
 								}
 							}
@@ -57250,7 +57283,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-2.62, 1.77, -1.52}
-										,rotation	= {359.98, 0.01, 179.99}
+										,rotation	= {359.98, 180.01, 179.99}
 									}
 								}
 							}
@@ -57264,11 +57297,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-6.56, 1.88, 2.27}
-										,rotation	= {0.00, 300.00, 0.00}
+										,rotation	= {0.00, 0.00, 0.00}
 									}
 									,{
 										position	= {-5.25, 1.88, -1.52}
-										,rotation	= {0.00, 300.00, 0.00}
+										,rotation	= {0.00, 0.00, 0.00}
 									}
 								}
 							}
@@ -57291,7 +57324,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-2.63, 1.88, 1.52}
-										,rotation	= {0.00, 240.37, 0.00}
+										,rotation	= {0.00, 0.37, 0.00}
 									}
 								}
 							}
@@ -57367,6 +57400,12 @@ ScenarioInformation_All = {
 				,rotation		= {0.00, 329.85, 180.00}
 			}
 		}
+      ,monsterList	= {
+         "Living Corpse"
+         ,"Living Bones"
+         ,"Cultist"
+         ,"Inox Shaman"
+      }
 	}
 	-- Music Note Solo
 	,[212] = {
@@ -57693,6 +57732,14 @@ ScenarioInformation_All = {
 				}
 			}
 		}
+      ,monsterList	= {
+         "Bandit Guard"
+         ,"Bandit Archer"
+         ,"City Guard"
+         ,"City Archer"
+         ,"Stone Golem"
+         ,"Vermling Shaman"
+      }
 	}
 	-- Spike Head Solo
 	,[213] = {
@@ -57707,7 +57754,7 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"D1","C2"}
 						,position		= {-1.51, 1.88, 7.89}
-						,rotation		= {359.99, 90.00, 0.01}
+						,rotation		= {359.99, 270.00, 0.01}
 					}
 					,{
 						adjacentTiles	= {"D1","G1"}
@@ -57750,8 +57797,8 @@ ScenarioInformation_All = {
 								name	= "Tree"
 								,tiles	= {
 									{
-										position	= {0.76, 1.88, 6.56}
-										,rotation	= {0.00, 150.00, 0.00}
+										position	= {1.51, 1.88, 5.25}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
 								}
 							}
@@ -57936,8 +57983,8 @@ ScenarioInformation_All = {
 								name	= "Tree"
 								,tiles	= {
 									{
-										position	= {-10.61, 1.88, 2.62}
-										,rotation	= {0.00, 210.39, 0.00}
+										position	= {-12.12, 1.88, 2.63}
+										,rotation	= {0.00, 90.39, 0.00}
 									}
 								}
 							}
@@ -57970,6 +58017,13 @@ ScenarioInformation_All = {
 				}
 			}
 		}
+      ,monsterList	= {
+         "Hound"
+         ,"Earth Demon"
+         ,"Flame Demon"
+         ,"Giant Viper"
+         ,"Spitting Drake"
+      }
 	}
 	-- Saw Solo
 	,[214] = {
@@ -57983,12 +58037,12 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"A1","G1","A3"}
 						,position		= {1.52, 1.77, -2.62}
-						,rotation		= {0.00, 90.00, 180.01}
+						,rotation		= {0.00, 270.00, 180.01}
 					}
 					,{
 						adjacentTiles	= {"G1","A3","N1"}
 						,position		= {-2.27, 1.77, 6.56}
-						,rotation		= {0.00, 90.00, 180.00}
+						,rotation		= {0.00, 270.00, 180.00}
 					}
 				}
 			}
@@ -58016,8 +58070,8 @@ ScenarioInformation_All = {
 								name	= "Boulder 2"
 								,tiles	= {
 									{
-										position	= {0.00, 1.89, -5.25}
-										,rotation	= {0.00, 329.99, 0.00}
+										position	= {-0.76, 1.89, -3.94}
+										,rotation	= {0.00, 149.99, 0.00}
 									}
 								}
 							}
@@ -58070,12 +58124,12 @@ ScenarioInformation_All = {
 								name	= "Boulder 2"
 								,tiles	= {
 									{
-										position	= {-2.27, 1.88, -1.31}
-										,rotation	= {0.00, 30.00, 0.00}
+										position	= {-1.53, 1.88, 0.00}
+										,rotation	= {0.00, 210.00, 0.00}
 									}
 									,{
-										position	= {0.00, 1.88, 0.00}
-										,rotation	= {0.00, 30.00, 0.00}
+										position	= {0.76, 1.88, 1.32}
+										,rotation	= {0.00, 210.00, 0.00}
 									}
 								}
 							}
@@ -58148,19 +58202,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-3.79, 1.88, 11.81}
-										,rotation	= {0.00, 330.05, 0.00}
+										,rotation	= {0.00, 90.05, 0.00}
 									}
 									,{
 										position	= {-0.76, 1.88, 9.19}
-										,rotation	= {0.00, 330.05, 0.00}
+										,rotation	= {0.00, 90.05, 0.00}
 									}
 									,{
 										position	= {1.52, 1.88, 10.50}
-										,rotation	= {0.00, 330.05, 0.00}
+										,rotation	= {0.00, 90.05, 0.00}
 									}
 									,{
 										position	= {3.03, 1.88, 13.13}
-										,rotation	= {0.00, 330.05, 0.00}
+										,rotation	= {0.00, 90.05, 0.00}
 									}
 								}
 							}
@@ -58181,12 +58235,12 @@ ScenarioInformation_All = {
 										,rotation	= {0.00, 269.72, 0.00}
 									}
 									,{
-										position	= {0.76, 1.89, 11.81}
-										,rotation	= {0.00, 330.00, 0.00}
+										position	= {-0.01, 1.89, 13.12}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
-										position	= {4.55, 1.89, 13.13}
-										,rotation	= {0.00, 29.98, 0.00}
+										position	= {6.07, 1.89, 13.13}
+										,rotation	= {0.00, 269.98, 0.00}
 									}
 								}
 							}
@@ -58276,6 +58330,9 @@ ScenarioInformation_All = {
 				}
 			}
 		}
+      ,monsterList	= {
+         "City Guard"
+      }
 	}
 	-- Triangles Solo
 	,[215] = {
@@ -58289,7 +58346,7 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"H1","C2"}
 						,position		= {0.00, 1.77, 5.25}
-						,rotation		= {0.00, 89.63, 179.85}
+						,rotation		= {0.00, 269.63, 179.85}
 					}
 				}
 			}
@@ -58299,7 +58356,7 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"H1","B2"}
 						,position		= {5.30, 1.77, 3.94}
-						,rotation		= {0.00, 270.00, 180.00}
+						,rotation		= {0.00, 90.00, 180.00}
 					}
 					,{
 						adjacentTiles	= {"H1","B3"}
@@ -58337,7 +58394,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {0.00, 1.88, 2.63}
-										,rotation	= {0.00, 269.96, 0.00}
+										,rotation	= {0.00, 89.96, 0.00}
 									}
 								}
 							}
@@ -58452,11 +58509,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-1.52, 1.88, 7.88}
-										,rotation	= {0.00, 269.96, 0.00}
+										,rotation	= {0.00, 89.96, 0.00}
 									}
 									,{
 										position	= {3.03, 1.88, 7.88}
-										,rotation	= {0.00, 269.96, 0.00}
+										,rotation	= {0.00, 89.96, 0.00}
 									}
 								}
 							}
@@ -58493,6 +58550,12 @@ ScenarioInformation_All = {
 				}
 			}
 		}
+      ,monsterList	= {
+         "Flame Demon"
+         ,"Earth Demon"
+         ,"Frost Demon"
+         ,"Wind Demon"
+      }
 	}
 	-- Two-Minis Solo
 	,[216] = {
@@ -58507,32 +58570,32 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"B4","G2"}
 						,position		= {-5.30, 1.88, -1.31}
-						,rotation		= {0.00, 29.57, 0.00}
+						,rotation		= {0.00, 269.57, 0.00}
 					}
 					,{
 						adjacentTiles	= {"D2","G2"}
 						,position		= {3.79, 1.88, -1.31}
-						,rotation		= {0.02, 29.57, 0.01}
+						,rotation		= {0.02, 269.57, 0.01}
 					}
 					,{
 						adjacentTiles	= {"G2","N1"}
 						,position		= {2.27, 1.88, 3.94}
-						,rotation		= {0.00, 29.57, 0.00}
+						,rotation		= {0.00, 269.57, 0.00}
 					}
 					,{
 						adjacentTiles	= {"G2","N1"}
 						,position		= {-3.79, 1.88, 3.94}
-						,rotation		= {0.00, 29.57, 0.00}
+						,rotation		= {0.00, 269.57, 0.00}
 					}
 					,{
 						adjacentTiles	= {"N1","E1"}
 						,position		= {-0.76, 2.00, 14.44}
-						,rotation		= {0.75, 29.57, 0.43}
+						,rotation		= {0.75, 269.57, 0.43}
 					}
 					,{
 						adjacentTiles	= {"N1","E1"}
 						,position		= {2.27, 2.00, 14.44}
-						,rotation		= {0.74, 29.57, 0.42}
+						,rotation		= {0.74, 269.57, 0.42}
 					}
 				}
 			}
@@ -58653,8 +58716,8 @@ ScenarioInformation_All = {
 								name	= "Boulder 2"
 								,tiles	= {
 									{
-										position	= {-1.51, 1.88, 0.00}
-										,rotation	= {0.00, 89.99, 0.00}
+										position	= {0.01, 1.88, -0.01}
+										,rotation	= {0.00, 269.99, 0.00}
 									}
 									,{
 										position	= {-0.01, 1.88, 2.62}
@@ -58718,8 +58781,8 @@ ScenarioInformation_All = {
 								name	= "Boulder 2"
 								,tiles	= {
 									{
-										position	= {0.00, 1.88, 7.87}
-										,rotation	= {0.00, 330.00, 0.00}
+										position	= {-0.79, 1.88, 9.17}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
 									,{
 										position	= {1.51, 1.88, 13.12}
@@ -58735,8 +58798,8 @@ ScenarioInformation_All = {
 										,rotation	= {0.00, 270.05, 0.00}
 									}
 									,{
-										position	= {0.00, 1.89, 10.50}
-										,rotation	= {0.00, 329.79, 0.00}
+										position	= {-0.74, 1.89, 11.81}
+										,rotation	= {0.00, 89.79, 0.00}
 									}
 								}
 							}
@@ -58830,6 +58893,13 @@ ScenarioInformation_All = {
 				}
 			}
 		}
+      ,monsterList	= {
+         "Hound"
+         ,"Forest Imp"
+         ,"Rending Drake"
+         ,"Vermling Shaman"
+         ,"Cave Bear"
+      }
 	}
 	-- Envelope X Solo
 	,[217] = {
