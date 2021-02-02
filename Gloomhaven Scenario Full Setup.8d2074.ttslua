@@ -89,7 +89,7 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"G1","L1"}
 						,position		= {x=0.875000, y=1.817813, z=0.000000}
-						,rotation		= {x=-0.000242, y=180.000381, z=179.999222}
+						,rotation		= {x=-0.000242, y=0.000381, z=179.999222}
 					}
 				}
 			}
@@ -210,11 +210,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-0.437501, y=1.931061, z=6.819950}
-										,rotation	= {x=-0.000249, y=180.004166, z=-0.000766}
+										,rotation	= {x=-0.000249, y=0.004166, z=-0.000766}
 									}
 									,{
 										position	= {x=-0.437501, y=1.931067, z=5.304405}
-										,rotation	= {x=-0.000251, y=180.004272, z=-0.000765}
+										,rotation	= {x=-0.000251, y=0.004272, z=-0.000765}
 									}
 								}
 							}
@@ -315,10 +315,10 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-8.312503, y=1.930975, z=2.273318}
-										,rotation	= {x=-0.000246, y=180.000046, z=-0.000766}
+										,rotation	= {x=-0.000246, y=0.000046, z=-0.000766}
 										,params		= {
 											buttonTheme		= "Treasure"
-											,buttonLabel	= "7"
+											,buttonLabel	= "07"
 										}
 									}
 								}
@@ -454,7 +454,7 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"A2","M1"}
 						,position		= {x=-3.788599, y=1.818167, z=-2.188229}
-						,rotation		= {x=0.002225, y=330.009888, z=180.008621}
+						,rotation		= {x=0.002225, y=150.009888, z=180.008621}
 					}
 					,{
 						adjacentTiles	= {"A3","M1"}
@@ -464,7 +464,7 @@ ScenarioInformation_All = {
 					,{
 						adjacentTiles	= {"B3","M1"}
 						,position		= {x=-0.006023, y=1.817914, z=6.999433}
-						,rotation		= {x=0.004820, y=270.103668, z=179.986084}
+						,rotation		= {x=0.004820, y=90.103668, z=179.986084}
 					}
 				}
 			}
@@ -474,7 +474,7 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"A1","M1"}
 						,position		= {x=4.552056, y=1.818249, z=1.737166}
-						,rotation		= {x=359.990631, y=270.581482, z=179.998901}
+						,rotation		= {x=359.990631, y=90.581482, z=179.998901}
 					}
 					,{
 						adjacentTiles	= {"A4","M1"}
@@ -900,15 +900,15 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-3.937504, y=1.929686, z=-5.304431}
-										,rotation	= {x=359.984680, y=0.000105, z=0.003182}
+										,rotation	= {x=359.984680, y=180.000105, z=0.003182}
 									}
 									,{
 										position	= {x=3.937514, y=2.047432, z=-0.757829}
-										,rotation	= {x=-0.004983, y=0.000193, z=0.000052}
+										,rotation	= {x=-0.004983, y=180.000193, z=0.000052}
 									}
 									,{
 										position	= {x=-1.312497, y=1.930324, z=3.788898}
-										,rotation	= {x=0.015755, y=0.000192, z=-0.001697}
+										,rotation	= {x=0.015755, y=180.000192, z=-0.001697}
 									}
 								}
 							}
@@ -1120,7 +1120,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=7.875001, y=1.931145, z=6.062172}
-										,rotation	= {x=-0.002595, y=0.012978, z=0.000130}
+										,rotation	= {x=-0.002595, y=180.012978, z=0.000130}
 									}
 								}
 							}
@@ -1247,7 +1247,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-9.187500, y=1.930966, z=2.273318}
-										,rotation	= {x=0.000882, y=0.012979, z=0.001021}
+										,rotation	= {x=0.000882, y=180.012979, z=0.001021}
 									}
 								}
 							}
@@ -1387,15 +1387,15 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-1.312527, y=1.927470, z=8.335502}
-										,rotation	= {x=-0.002614, y=179.999725, z=359.990570}
+										,rotation	= {x=-0.002614, y=-0.999725, z=359.990570}
 									}
 									,{
 										position	= {x=-0.000004, y=1.927651, z=9.093269}
-										,rotation	= {x=-0.002614, y=179.999802, z=359.990570}
+										,rotation	= {x=-0.002614, y=-0.999802, z=359.990570}
 									}
 									,{
 										position	= {x=1.312496, y=1.927902, z=8.335497}
-										,rotation	= {x=-0.002613, y=179.999863, z=359.990570}
+										,rotation	= {x=-0.002613, y=-0.999863, z=359.990570}
 									}
 								}
 							}
@@ -1410,7 +1410,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-1.312526, y=1.927194, z=14.397680}
-										,rotation	= {x=-0.002611, y=180.000687, z=359.990570}
+										,rotation	= {x=-0.002611, y=0.000687, z=359.990570}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "65"
@@ -1500,17 +1500,17 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"C1","G1"}
 						,position		= {x=3.937500, y=1.817858, z=-0.757772}
-						,rotation		= {x=-0.000240, y=179.987610, z=179.999298}
+						,rotation		= {x=-0.000240, y=-0.987610, z=179.999298}
 					}
 					,{
 						adjacentTiles	= {"E1","G1"}
 						,position		= {x=-1.312476, y=1.817743, z=0.757784}
-						,rotation		= {x=-0.000288, y=179.987579, z=179.799591}
+						,rotation		= {x=-0.000288, y=-0.987579, z=179.799591}
 					}
 					,{
 						adjacentTiles	= {"G1","M1"}
 						,position		= {x=3.937504, y=1.818327, z=8.335492}
-						,rotation		= {x=0.004461, y=179.987946, z=179.971954}
+						,rotation		= {x=0.004461, y=-0.987946, z=179.971954}
 					}
 				}
 			}
@@ -1555,11 +1555,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-2.625000, y=1.927985, z=4.546633}
-										,rotation	= {x=-0.000250, y=179.999771, z=-0.000772}
+										,rotation	= {x=-0.000250, y=-0.999771, z=-0.000772}
 									}
 									,{
 										position	= {x=-6.562500, y=1.927949, z=0.757774}
-										,rotation	= {x=-0.000255, y=179.999771, z=-0.000768}
+										,rotation	= {x=-0.000255, y=-0.999771, z=-0.000768}
 									}
 								}
 							}
@@ -1633,7 +1633,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=5.249995, y=1.931166, z=0.000002}
-										,rotation	= {x=-0.000247, y=179.999756, z=-0.000769}
+										,rotation	= {x=-0.000247, y=-0.999756, z=-0.000769}
 									}
 								}
 							}
@@ -1648,7 +1648,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=7.875001, y=1.931214, z=-3.031090}
-										,rotation	= {x=-0.000248, y=180.000656, z=-0.000767}
+										,rotation	= {x=-0.000248, y=0.000656, z=-0.000767}
 										,params		= {
 											buttonTheme = "Treasure"
 											,buttonLabel = "46"
@@ -1809,11 +1809,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=6.562499, y=1.931749, z=8.335479}
-										,rotation	= {x=-0.000254, y=179.999771, z=-0.000763}
+										,rotation	= {x=-0.000254, y=-0.999771, z=-0.000763}
 									}
 									,{
 										position	= {x=11.812501, y=1.931819, z=8.335494}
-										,rotation	= {x=-0.000259, y=179.999771, z=-0.000766}
+										,rotation	= {x=-0.000259, y=-0.999771, z=-0.000766}
 									}
 								}
 							}
@@ -1828,7 +1828,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=9.187500, y=1.931771, z=11.366584}
-										,rotation	= {x=-0.000257, y=180.000656, z=-0.000763}
+										,rotation	= {x=-0.000257, y=0.000656, z=-0.000763}
 										,params		= {
 											buttonTheme = "Treasure"
 											,buttonLabel = "38"
@@ -1928,12 +1928,12 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"K1","M1"}
 						,position		= {x=0.000109, y=1.820477, z=11.374937}
-						,rotation		= {x=359.982086, y=89.972847, z=179.864517}
+						,rotation		= {x=359.982086, y=269.972847, z=179.864517}
 					}
 					,{
 						adjacentTiles	= {"K2","M1"}
 						,position		= {x=0.000018, y=1.819895, z=0.875036}
-						,rotation		= {x=359.990662, y=270.062500, z=179.896866}
+						,rotation		= {x=359.990662, y=90.062500, z=179.896866}
 					}
 				}
 			}
@@ -1993,19 +1993,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-0.757772, y=1.931369, z=10.062551}
-										,rotation	= {x=-0.003137, y=210.000900, z=-0.003094}
+										,rotation	= {x=-0.003137, y=90.000900, z=-0.003094}
 									}
 									,{
 										position	= {x=0.757773, y=1.931653, z=10.062500}
-										,rotation	= {x=0.000101, y=210.000916, z=-0.000844}
+										,rotation	= {x=0.000101, y=90.000916, z=-0.000844}
 									}
 									,{
 										position	= {x=-0.757776, y=1.931678, z=2.187493}
-										,rotation	= {x=0.000101, y=210.000519, z=-0.000845}
+										,rotation	= {x=0.000101, y=90.000519, z=-0.000845}
 									}
 									,{
 										position	= {x=0.757771, y=1.931699, z=2.187500}
-										,rotation	= {x=0.000101, y=209.999985, z=-0.000841}
+										,rotation	= {x=0.000101, y=89.999985, z=-0.000841}
 									}
 								}
 							}
@@ -2079,15 +2079,15 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-3.788857, y=1.933370, z=15.312483}
-										,rotation	= {x=0.003801, y=30.006927, z=0.010810}
+										,rotation	= {x=0.003801, y=90.006927, z=0.010810}
 									}
 									,{
 										position	= {x=-0.757770, y=1.933764, z=15.312497}
-										,rotation	= {x=0.003802, y=30.006954, z=0.010809}
+										,rotation	= {x=0.003802, y=90.006954, z=0.010809}
 									}
 									,{
 										position	= {x=1.515547, y=1.934259, z=13.999997}
-										,rotation	= {x=0.003804, y=30.006971, z=0.010807}
+										,rotation	= {x=0.003804, y=90.006971, z=0.010807}
 									}
 								}
 							}
@@ -2202,15 +2202,15 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-1.515700, y=1.934330, z=-1.749940}
-										,rotation	= {x=359.988220, y=29.997299, z=359.973572}
+										,rotation	= {x=359.988220, y=89.997299, z=359.973572}
 									}
 									,{
 										position	= {x=-0.000001, y=1.934117, z=-1.749998}
-										,rotation	= {x=-0.002525, y=29.997355, z=359.993347}
+										,rotation	= {x=-0.002525, y=89.997355, z=359.993347}
 									}
 									,{
 										position	= {x=-3.031090, y=1.934103, z=-4.374999}
-										,rotation	= {x=-0.002526, y=29.997375, z=359.993347}
+										,rotation	= {x=-0.002526, y=89.997375, z=359.993347}
 									}
 								}
 							}
@@ -2228,7 +2228,7 @@ ScenarioInformation_All = {
 										,rotation	= {x=0.010538, y=90.005432, z=359.978973}
 										,params		= {
 											buttonTheme		= "Treasure"
-											,buttonLabel	= "4"
+											,buttonLabel	= "04"
 										}
 									}
 								}
@@ -2394,11 +2394,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-4.546639, y=1.930999, z=4.375000}
-										,rotation	= {x=-0.000468, y=30.002600, z=0.001072}
+										,rotation	= {x=-0.000468, y=90.002600, z=0.001072}
 									}
 									,{
 										position	= {x=-5.304405, y=1.930986, z=3.062499}
-										,rotation	= {x=-0.000470, y=30.002604, z=0.001071}
+										,rotation	= {x=-0.000470, y=90.002604, z=0.001071}
 									}
 								}
 							}
@@ -2504,7 +2504,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=0.757774, y=1.934198, z=-4.812501}
-										,rotation	= {x=0.001650, y=30.002266, z=0.005726}
+										,rotation	= {x=0.001650, y=90.002266, z=0.005726}
 									}
 								}
 							}
@@ -2519,11 +2519,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-0.000006, y=1.934241, z=-6.125006}
-										,rotation	= {x=-0.001654, y=209.974960, z=-0.005728}
+										,rotation	= {x=-0.001654, y=89.974960, z=-0.005728}
 									}
 									,{
 										position	= {x=0.757773, y=1.934394, z=-7.437502}
-										,rotation	= {x=-0.001655, y=209.974976, z=-0.005729}
+										,rotation	= {x=-0.001655, y=89.974976, z=-0.005729}
 									}
 								}
 							}
@@ -2653,7 +2653,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-5.304399, y=1.934125, z=13.562492}
-										,rotation	= {x=-0.003170, y=30.002613, z=-0.004546}
+										,rotation	= {x=-0.003170, y=90.002613, z=-0.004546}
 									}
 								}
 							}
@@ -2668,11 +2668,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=0.757419, y=1.934335, z=18.812653}
-										,rotation	= {x=0.003168, y=209.975327, z=0.004545}
+										,rotation	= {x=0.003168, y=89.975327, z=0.004545}
 									}
 									,{
 										position	= {x=-0.000001, y=1.934251, z=17.500002}
-										,rotation	= {x=0.003167, y=209.975327, z=0.004540}
+										,rotation	= {x=0.003167, y=89.975327, z=0.004540}
 									}
 								}
 							}
@@ -2802,11 +2802,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=5.304410, y=1.931900, z=8.312510}
-										,rotation	= {x=0.003066, y=30.002245, z=0.000912}
+										,rotation	= {x=0.003066, y=90.002245, z=0.000912}
 									}
 									,{
 										position	= {x=3.031088, y=1.932286, z=1.749998}
-										,rotation	= {x=0.003068, y=30.002228, z=0.000911}
+										,rotation	= {x=0.003068, y=90.002228, z=0.000911}
 									}
 								}
 							}
@@ -3078,11 +3078,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-5.304405, y=1.931643, z=-3.937500}
-										,rotation	= {x=-0.000168, y=30.015732, z=0.000771}
+										,rotation	= {x=-0.000168, y=90.015732, z=0.000771}
 									}
 									,{
 										position	= {x=0.757773, y=1.931711, z=-1.312500}
-										,rotation	= {x=-0.000167, y=30.015694, z=0.000771}
+										,rotation	= {x=-0.000167, y=90.015694, z=0.000771}
 									}
 								}
 							}
@@ -3254,7 +3254,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-7.577722, y=1.930983, z=2.625000}
-										,rotation	= {x=-0.000160, y=30.015724, z=0.000785}
+										,rotation	= {x=-0.000160, y=90.015724, z=0.000785}
 									}
 								}
 							}
@@ -3335,7 +3335,7 @@ ScenarioInformation_All = {
 			,{
 				tile			= "D2"
 				,position		= {x=6.819950, y=1.700487, z=1.312500}
-				,rotation		= {x=0.000540, y=240.016571, z=179.999405}
+				,rotation		= {x=0.000540, y=300.016571, z=179.999405}
 				,overlayTiles	= {
 					--Traps
 					{
@@ -3346,11 +3346,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=5.304405, y=1.931762, z=1.312500}
-										,rotation	= {x=0.000166, y=209.986008, z=-0.000790}
+										,rotation	= {x=0.000166, y=89.986008, z=-0.000790}
 									}
 									,{
 										position	= {x=7.577723, y=1.931798, z=0.000000}
-										,rotation	= {x=0.000167, y=209.985992, z=-0.000786}
+										,rotation	= {x=0.000167, y=89.985992, z=-0.000786}
 									}
 								}
 							}
@@ -3422,7 +3422,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=3.788861, y=1.930698, z=11.812500}
-										,rotation	= {x=-0.000170, y=30.015755, z=0.000787}
+										,rotation	= {x=-0.000170, y=90.015755, z=0.000787}
 									}
 								}
 							}
@@ -3456,11 +3456,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=4.546633, y=1.930691, z=15.750000}
-										,rotation	= {x=0.000165, y=209.986008, z=-0.000791}
+										,rotation	= {x=0.000165, y=89.986008, z=-0.000791}
 									}
 								,{
 									position	= {x=6.062178, y=1.930711, z=15.750000}
-									,rotation	= {x=0.000162, y=209.986008, z=-0.000792}
+									,rotation	= {x=0.000162, y=89.986008, z=-0.000792}
 								}
 								}
 							}
@@ -4081,23 +4081,23 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-4.546630, y=1.930916, z=8.750004}
-										,rotation	= {x=0.001096, y=150.013351, z=0.011016}
+										,rotation	= {x=0.001096, y=90.013351, z=0.011016}
 									}
 									,{
 										position	= {x=-2.273316, y=1.930620, z=7.437509}
-										,rotation	= {x=0.001093, y=150.013748, z=0.011017}
+										,rotation	= {x=0.001093, y=90.013748, z=0.011017}
 									}
 									,{
 										position	= {x=-2.273320, y=1.930829, z=4.812499}
-										,rotation	= {x=0.001098, y=150.000031, z=0.011019}
+										,rotation	= {x=0.001098, y=90.000031, z=0.011019}
 									}
 									,{
 										position	= {x=3.788864, y=1.929553, z=7.437510}
-										,rotation	= {x=0.001099, y=150.000397, z=0.011020}
+										,rotation	= {x=0.001099, y=90.000397, z=0.011020}
 									}
 									,{
 										position	= {x=3.788864, y=1.929970, z=2.187509}
-										,rotation	= {x=0.001098, y=150.000793, z=0.011017}
+										,rotation	= {x=0.001098, y=90.000793, z=0.011017}
 									}
 								}
 							}
@@ -4457,15 +4457,15 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=4.812499, y=1.931138, z=5.304397}
-										,rotation	= {x=-0.000250, y=179.999878, z=-0.000760}
+										,rotation	= {x=-0.000250, y=-0.999878, z=-0.000760}
 									}
 									,{
 										position	= {x=6.125000, y=1.931152, z=6.062186}
-										,rotation	= {x=-0.000247, y=180.000168, z=-0.000763}
+										,rotation	= {x=-0.000247, y=0.000168, z=-0.000763}
 									}
 									,{
 										position	= {x=7.437500, y=1.931172, z=5.304404}
-										,rotation	= {x=-0.000244, y=179.999908, z=-0.000759}
+										,rotation	= {x=-0.000244, y=-0.999908, z=-0.000759}
 									}
 								}
 							}
@@ -4663,7 +4663,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-5.687500, y=1.931050, z=-6.819950}
-										,rotation	= {x=-0.000253, y=180.000656, z=-0.000770}
+										,rotation	= {x=-0.000253, y=0.000656, z=-0.000770}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "11"
@@ -4965,7 +4965,7 @@ ScenarioInformation_All = {
 										,rotation	= {x=-0.000544, y=180.021942, z=0.000771}
 										,params		= {
 											buttonTheme		= "Treasure"
-											,buttonLabel	= "5"
+											,buttonLabel	= "05"
 										}
 									}
 								}
@@ -5457,12 +5457,12 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"D1","H1"}
 						,position		= {x=3.499990, y=1.818494, z=-3.031079}
-						,rotation		= {x=-0.003589, y=180.021164, z=180.000305}
+						,rotation		= {x=-0.003589, y=0.021164, z=180.000305}
 					}
 					,{
 						adjacentTiles	= {"E1","L1","L2"}
 						,position		= {x=-0.437447, y=1.814935, z=14.398153}
-						,rotation		= {x=-0.003453, y=0.037299, z=180.012024}
+						,rotation		= {x=-0.003453, y=180.037299, z=180.012024}
 					}
 				}
 			}
@@ -5472,7 +5472,7 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"H1","L1","L2"}
 						,position		= {x=-5.687591, y=1.817234, z=2.273229}
-						,rotation		= {x=0.064931, y=0.007803, z=180.004990}
+						,rotation		= {x=0.064931, y=180.007803, z=180.004990}
 					}
 				}
 			}
@@ -5615,7 +5615,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=4.812500, y=1.931784, z=-5.304406}
-										,rotation	= {x=-0.000228, y=180.000656, z=-0.000797}
+										,rotation	= {x=-0.000228, y=0.000656, z=-0.000797}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "34"
@@ -6294,7 +6294,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-3.937500, y=1.930988, z=12.882128}
-										,rotation	= {x=-0.000245, y=180.000671, z=-0.000762}
+										,rotation	= {x=-0.000245, y=0.000671, z=-0.000762}
 										,params		 = {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "10"
@@ -6669,7 +6669,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=8.312500, y=1.931132, z=17.428762}
-										,rotation	= {x=-0.000250, y=180.000763, z=-0.000766}
+										,rotation	= {x=-0.000250, y=0.000763, z=-0.000766}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "26"
@@ -7018,7 +7018,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=8.750164, y=1.931209, z=6.062314}
-										,rotation	= {x=-0.000343, y=180.000473, z=-0.001025}
+										,rotation	= {x=-0.000343, y=0.000473, z=-0.001025}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "G"
@@ -7193,11 +7193,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=8.750002, y=1.931440, z=-3.031088}
-										,rotation	= {x=0.005045, y=180.299698, z=0.000925}
+										,rotation	= {x=0.005045, y=0.299698, z=0.000925}
 									}
 									,{
 										position	= {x=10.062500, y=1.931353, z=-3.788860}
-										,rotation	= {x=0.005052, y=180.005600, z=0.000898}
+										,rotation	= {x=0.005052, y=0.005600, z=0.000898}
 									}
 								}
 							}
@@ -7302,11 +7302,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=8.750004, y=1.931243, z=15.155448}
-										,rotation	= {x=-0.005017, y=180.309326, z=0.003496}
+										,rotation	= {x=-0.005017, y=0.309326, z=0.003496}
 									}
 									,{
 										position	= {x=10.062500, y=1.931096, z=15.913215}
-										,rotation	= {x=-0.005001, y=180.014008, z=0.003524}
+										,rotation	= {x=-0.005001, y=0.014008, z=0.003524}
 									}
 								}
 							}
@@ -7628,19 +7628,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-6.562501, y=1.934225, z=5.304389}
-										,rotation	= {x=-0.000251, y=179.999771, z=-0.000781}
+										,rotation	= {x=-0.000251, y=-0.999771, z=-0.000781}
 									}
 									,{
 										position	= {x=-5.250000, y=1.934240, z=6.062178}
-										,rotation	= {x=-0.000251, y=179.999771, z=-0.000776}
+										,rotation	= {x=-0.000251, y=-0.999771, z=-0.000776}
 									}
 									,{
 										position	= {x=-5.250000, y=1.934233, z=7.577722}
-										,rotation	= {x=-0.000246, y=179.999771, z=-0.000778}
+										,rotation	= {x=-0.000246, y=-0.999771, z=-0.000778}
 									}
 									,{
 										position	= {x=-3.937500, y=1.934247, z=8.335494}
-										,rotation	= {x=-0.000253, y=179.999771, z=-0.000780}
+										,rotation	= {x=-0.000253, y=-0.999771, z=-0.000780}
 									}
 								}
 							}
@@ -7655,10 +7655,10 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-6.562500, y=1.934205, z=9.851039}
-										,rotation	= {x=-0.000253, y=180.000656, z=-0.000779}
+										,rotation	= {x=-0.000253, y=0.000656, z=-0.000779}
 										,params		= {
 											buttonTheme		= "Treasure"
-											,buttonLabel	= "1"
+											,buttonLabel	= "01"
 										}
 									}
 								}
@@ -7871,15 +7871,15 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-6.063589, y=1.930707, z=-3.484425}
-										,rotation	= {x=0.005747, y=209.965530, z=359.984650}
+										,rotation	= {x=0.005747, y=89.965530, z=359.984650}
 									}
 									,{
 										position	= {x=-3.030923, y=2.047217, z=-0.875008}
-										,rotation	= {x=359.992584, y=209.968842, z=0.018959}
+										,rotation	= {x=359.992584, y=89.968842, z=0.018959}
 									}
 									,{
 										position	= {x=0.757769, y=1.929681, z=-2.187500}
-										,rotation	= {x=359.992126, y=209.968826, z=0.020540}
+										,rotation	= {x=359.992126, y=89.968826, z=0.020540}
 									}
 								}
 							}
@@ -8717,7 +8717,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-8.749999, y=1.931525, z=-6.062178}
-										,rotation	= {x=0.000746, y=180.772751, z=-0.002374}
+										,rotation	= {x=0.000746, y=0.772751, z=-0.002374}
 									}
 								}
 							}
@@ -8732,7 +8732,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-7.437500, y=1.931627, z=-2.273316}
-										,rotation	= {x=0.000757, y=181.011169, z=-0.002373}
+										,rotation	= {x=0.000757, y=1.011169, z=-0.002373}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "63"
@@ -8995,15 +8995,15 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-2.273320, y=1.931025, z=4.812492}
-										,rotation	= {x=0.001286, y=211.633453, z=0.000116}
+										,rotation	= {x=0.001286, y=91.633453, z=0.000116}
 									}
 									,{
 										position	= {x=-0.757776, y=1.931040, z=4.812493}
-										,rotation	= {x=0.001292, y=209.974487, z=0.000083}
+										,rotation	= {x=0.001292, y=89.974487, z=0.000083}
 									}
 									,{
 										position	= {x=0.757772, y=1.931055, z=4.812500}
-										,rotation	= {x=0.001290, y=209.974472, z=0.000083}
+										,rotation	= {x=0.001290, y=89.974472, z=0.000083}
 									}
 								}
 							}
@@ -9900,7 +9900,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=9.625037, y=1.931640, z=7.577840}
-										,rotation	= {x=0.000720, y=180.000290, z=0.000686}
+										,rotation	= {x=0.000720, y=0.000290, z=0.000686}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "15"
@@ -10464,7 +10464,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=6.562527, y=1.931093, z=8.335580}
-										,rotation	= {x=-0.000734, y=180.002213, z=-0.000640}
+										,rotation	= {x=-0.000734, y=0.002213, z=-0.000640}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "39"
@@ -10472,7 +10472,7 @@ ScenarioInformation_All = {
 									}
 									,{
 										position	= {x=6.562500, y=1.931190, z=0.757772}
-										,rotation	= {x=-0.000733, y=180.002197, z=-0.000640}
+										,rotation	= {x=-0.000733, y=0.002197, z=-0.000640}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "72"
@@ -11029,7 +11029,7 @@ ScenarioInformation_All = {
 								,tiles	={
 									{
 										position	= {x=-0.437500, y=1.931341, z=11.366583}
-										,rotation	= {x=-0.000251, y=179.999893, z=-0.000766}
+										,rotation	= {x=-0.000251, y=-0.999893, z=-0.000766}
 									}
 								}
 							}
@@ -11105,7 +11105,7 @@ ScenarioInformation_All = {
 								,tiles	={
 									{
 										position	= {x=4.812500, y=1.931177, z=-3.788861}
-										,rotation	= {x=-0.000248, y=179.999878, z=-0.000763}
+										,rotation	= {x=-0.000248, y=-0.999878, z=-0.000763}
 									}
 								}
 							}
@@ -11349,11 +11349,11 @@ ScenarioInformation_All = {
 								,tiles	={
 									{
 										position	= {x=-0.437500, y=1.931681, z=2.273318}
-										,rotation	= {x=-0.000252, y=179.999863, z=-0.000766}
+										,rotation	= {x=-0.000252, y=-0.999863, z=-0.000766}
 									}
 									,{
 										position	= {x=-5.687504, y=1.931630, z=-2.273326}
-										,rotation	= {x=-0.000260, y=179.999832, z=-0.000772}
+										,rotation	= {x=-0.000260, y=-0.999832, z=-0.000772}
 									}
 								}
 							}
@@ -11368,7 +11368,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-7.000001, y=1.931616, z=-3.031093}
-										,rotation	= {x=-0.000254, y=180.000687, z=-0.000765}
+										,rotation	= {x=-0.000254, y=0.000687, z=-0.000765}
 										,params	 = {
 											buttonTheme = "Treasure"
 											,buttonLabel = "70"
@@ -11726,19 +11726,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=5.304406, y=1.931166, z=0.437499}
-										,rotation	= {x=-0.000600, y=149.994675, z=-0.000537}
+										,rotation	= {x=-0.000600, y=89.994675, z=-0.000537}
 									}
 									,{
 										position	= {x=4.546633, y=1.931161, z=-0.875004}
-										,rotation	= {x=-0.000601, y=149.994659, z=-0.000537}
+										,rotation	= {x=-0.000601, y=89.994659, z=-0.000537}
 									}
 									,{
 										position	= {x=6.062173, y=1.931181, z=-0.874996}
-										,rotation	= {x=-0.000596, y=149.995071, z=-0.000537}
+										,rotation	= {x=-0.000596, y=89.995071, z=-0.000537}
 									}
 									,{
 										position	= {x=9.093266, y=1.931222, z=-0.875004}
-										,rotation	= {x=-0.000602, y=149.994507, z=-0.000540}
+										,rotation	= {x=-0.000602, y=89.994507, z=-0.000540}
 									}
 								}
 							}
@@ -11866,7 +11866,7 @@ ScenarioInformation_All = {
 				name	= "Stone Door Horizontal"
 				,tiles	= {
 					{
-						adjacentTiles	= {"C1","J1","L1"}
+						adjacentTiles	= {"J1","C1","L1"}
 						,position		= {x=-3.030947, y=1.818235, z=6.125079}
 						,rotation		= {x=359.982422, y=149.959991, z=179.954956}
 					}
@@ -12070,19 +12070,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-7.577997, y=1.930578, z=3.500016}
-										,rotation	= {x=0.004559, y=210.037659, z=0.000475}
+										,rotation	= {x=0.004559, y=90.037659, z=0.000475}
 									}
 									,{
 										position	= {x=-4.546630, y=1.931017, z=3.500009}
-										,rotation	= {x=0.000153, y=210.037643, z=-0.000667}
+										,rotation	= {x=0.000153, y=90.037643, z=-0.000667}
 									}
 									,{
 										position	= {x=-8.334726, y=1.930611, z=-3.042923}
-										,rotation	= {x=0.003209, y=210.184479, z=-0.004184}
+										,rotation	= {x=0.003209, y=90.184479, z=-0.004184}
 									}
 									,{
 										position	= {x=-3.788859, y=1.931026, z=-3.062500}
-										,rotation	= {x=0.003195, y=210.011642, z=-0.004194}
+										,rotation	= {x=0.003195, y=90.011642, z=-0.004194}
 									}
 								}
 							}
@@ -12177,11 +12177,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-0.774614, y=1.931862, z=7.438190}
-										,rotation	= {x=-0.002084, y=30.062408, z=0.002366}
+										,rotation	= {x=-0.002084, y=90.062408, z=0.002366}
 									}
 									,{
 										position	= {x=6.819956, y=1.932244, z=4.812500}
-										,rotation	= {x=-0.002083, y=30.022169, z=0.002372}
+										,rotation	= {x=-0.002083, y=90.022169, z=0.002372}
 									}
 								}
 							}
@@ -12609,7 +12609,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-10.504593, y=1.930973, z=1.533067}
-										,rotation	= {x=0.000142, y=180.029510, z=-0.000745}
+										,rotation	= {x=0.000142, y=0.029510, z=-0.000745}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "32"
@@ -12946,7 +12946,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=10.500367, y=1.931542, z=-4.547137}
-										,rotation	= {x=0.004469, y=179.859650, z=-0.000746}
+										,rotation	= {x=0.004469, y=-0.859650, z=-0.000746}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "41"
@@ -13524,7 +13524,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=0.000000, y=1.931030, z=15.155446}
-										,rotation	= {x=-0.000244, y=180.000732, z=-0.000759}
+										,rotation	= {x=-0.000244, y=0.000732, z=-0.000759}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "G"
@@ -13757,19 +13757,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=5.687561, y=1.930570, z=17.428734}
-										,rotation	= {x=359.993317, y=179.999634, z=-0.004233}
+										,rotation	= {x=359.993317, y=-0.999634, z=-0.004233}
 									}
 									,{
 										position	= {x=3.062500, y=2.067612, z=12.882128}
-										,rotation	= {x=359.993317, y=179.999557, z=-0.004230}
+										,rotation	= {x=359.993317, y=-0.999557, z=-0.004230}
 									}
 									,{
 										position	= {x=4.374985, y=2.067621, z=13.639929}
-										,rotation	= {x=359.993286, y=179.999573, z=-0.004230}
+										,rotation	= {x=359.993286, y=-0.999573, z=-0.004230}
 									}
 									,{
 										position	= {x=5.687500, y=2.067806, z=12.882128}
-										,rotation	= {x=359.993317, y=179.999298, z=-0.004234}
+										,rotation	= {x=359.993317, y=-0.999298, z=-0.004234}
 									}
 								}
 							}
@@ -13866,11 +13866,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=3.062508, y=1.931745, z=5.304394}
-										,rotation	= {x=-0.000096, y=179.999283, z=-0.000685}
+										,rotation	= {x=-0.000096, y=-0.999283, z=-0.000685}
 									}
 									,{
 										position	= {x=3.062499, y=1.931752, z=0.757767}
-										,rotation	= {x=-0.000096, y=179.999237, z=-0.000687}
+										,rotation	= {x=-0.000096, y=-0.999237, z=-0.000687}
 									}
 								}
 							}
@@ -13999,7 +13999,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-0.875001, y=1.931070, z=-4.546633}
-										,rotation	= {x=-0.000483, y=180.000824, z=-0.000480}
+										,rotation	= {x=-0.000483, y=0.000824, z=-0.000480}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "69"
@@ -14091,7 +14091,7 @@ ScenarioInformation_All = {
 				name	= "Wooden Door Horizontal"
 				,tiles	= {
 					{
-						adjacentTiles	= {"A4","G2","L1"}
+						adjacentTiles	= {"A4","L1","G2"}
 						,position		= {x=-6.819949, y=1.817915, z=10.062495}
 						,rotation		= {x=0.003683, y=270.000000, z=179.984055}
 					}
@@ -14148,11 +14148,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=1.515538, y=1.931113, z=0.875005}
-										,rotation	= {x=-0.000594, y=150.021179, z=-0.000538}
+										,rotation	= {x=-0.000594, y=90.021179, z=-0.000538}
 									}
 									,{
 										position	= {x=0.757764, y=1.931109, z=-0.437498}
-										,rotation	= {x=-0.000594, y=150.021332, z=-0.000541}
+										,rotation	= {x=-0.000594, y=90.021332, z=-0.000541}
 									}
 								}
 							}
@@ -14307,15 +14307,15 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-6.819949, y=1.930985, z=4.812498}
-										,rotation	= {x=-0.000602, y=149.999710, z=-0.000537}
+										,rotation	= {x=-0.000602, y=89.999710, z=-0.000537}
 									}
 									,{
 										position	= {x=-5.304405, y=1.931006, z=4.812500}
-										,rotation	= {x=-0.000598, y=149.999817, z=-0.000536}
+										,rotation	= {x=-0.000598, y=89.999817, z=-0.000536}
 									}
 									,{
 										position	= {x=-6.062175, y=1.931001, z=3.499997}
-										,rotation	= {x=-0.000601, y=149.999741, z=-0.000540}
+										,rotation	= {x=-0.000601, y=89.999741, z=-0.000540}
 									}
 								}
 							}
@@ -14324,19 +14324,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-7.577723, y=1.931257, z=8.750000}
-										,rotation	= {x=-0.000595, y=150.029861, z=-0.000542}
+										,rotation	= {x=-0.000595, y=90.029861, z=-0.000542}
 									}
 									,{
 										position	= {x=-6.062250, y=1.931278, z=8.750193}
-										,rotation	= {x=-0.000596, y=150.029846, z=-0.000540}
+										,rotation	= {x=-0.000596, y=90.029846, z=-0.000540}
 									}
 									,{
 										position	= {x=-2.273312, y=1.931334, z=7.437498}
-										,rotation	= {x=-0.000596, y=150.021210, z=-0.000543}
+										,rotation	= {x=-0.000596, y=90.021210, z=-0.000543}
 									}
 									,{
 										position	= {x=-6.062177, y=1.931024, z=-1.750000}
-										,rotation	= {x=-0.000602, y=150.021194, z=-0.000540}
+										,rotation	= {x=-0.000602, y=90.021194, z=-0.000540}
 									}
 								}
 							}
@@ -14466,7 +14466,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=-6.062178, y=1.930954, z=14.000000}
-										,rotation	= {x=-0.000168, y=29.999998, z=0.000790}
+										,rotation	= {x=-0.000168, y=89.999998, z=0.000790}
 									}
 								}
 							}
@@ -14632,11 +14632,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {x=2.273314, y=1.931095, z=7.437500}
-										,rotation	= {x=-0.000173, y=30.000042, z=0.000788}
+										,rotation	= {x=-0.000173, y=90.000042, z=0.000788}
 									}
 									,{
 										position	= {x=9.093268, y=1.931193, z=6.125000}
-										,rotation	= {x=-0.000172, y=30.000154, z=0.000791}
+										,rotation	= {x=-0.000172, y=90.000154, z=0.000791}
 									}
 								}
 							}
@@ -16150,7 +16150,7 @@ ScenarioInformation_All = {
 										,rotation	= {x=-0.000765, y=89.999489, z=0.000252}
 										,params		= {
 											buttonTheme		= "Treasure"
-											,buttonLabel	= "2"
+											,buttonLabel	= "02"
 										}
 									}
 								}
@@ -24802,7 +24802,7 @@ ScenarioInformation_All = {
 										,rotation	= {x=359.990692, y=89.973259, z=-0.004321}
 										,params		= {
 											buttonTheme		= "Treasure"
-											,buttonLabel	= "3"
+											,buttonLabel	= "03"
 										}
 									}
 								}
@@ -28192,7 +28192,7 @@ ScenarioInformation_All = {
 										,rotation	= {x=-0.000895, y=90.009239, z=0.000742}
 										,params		= {
 											buttonTheme		= "Treasure"
-											,buttonLabel	= "9"
+											,buttonLabel	= "09"
 										}
 									}
 								}
@@ -31538,7 +31538,7 @@ ScenarioInformation_All = {
 										,rotation	= {x=-0.005428, y=89.975815, z=-0.000817}
 										,params		= {
 											buttonTheme		= "Treasure"
-											,buttonLabel	= "6"
+											,buttonLabel	= "06"
 										}
 									}
 								}
@@ -39753,7 +39753,7 @@ ScenarioInformation_All = {
 										,rotation	= {x=-0.000769, y=89.999969, z=0.000250}
 										,params		= {
 											buttonTheme		= "Treasure"
-											,buttonLabel	= "8"
+											,buttonLabel	= "08"
 										}
 									}
 								}
