@@ -55230,17 +55230,17 @@ ScenarioInformation_All = {
 							{
 								name	= "Bear Trap"
 								,tiles	= {
-{
+                           {
 										position	= {4.55, 1.88, -2.63}
-										,rotation	= {0.00, 270.00, 180.00}
+										,rotation	= {0.00, 90.00, 180.00}
 									}
 									,{
 										position	= {7.59, 1.88, -2.63}
-										,rotation	= {0.00, 270.00, 180.00}
+										,rotation	= {0.00, 90.00, 180.00}
 									}
 									,{
 										position	= {10.61, 1.88, -2.63}
-										,rotation	= {0.00, 270.00, 180.00}
+										,rotation	= {0.00, 90.00, 180.00}
 									}
 								}
 							}
