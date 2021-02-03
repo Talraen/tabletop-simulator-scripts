@@ -27,7 +27,8 @@ conversionFromNumberToName = {
    "Obstacles",
    "ScenarioAidTokens",
    "Traps",
-   "TreasureChests"
+   "TreasureChests",
+   "Doors"
 }
 
 tilesGUIDsFromBag = {
