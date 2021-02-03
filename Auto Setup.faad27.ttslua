@@ -681,7 +681,7 @@ function FCChallengeStairs(params)
       , NumScenario = 300
    }
 
-   revealRoom(params)
+   Wait.frames(function() revealRoom(params) end, 5)
    scripts.call('cleanMonster')
 end
 
