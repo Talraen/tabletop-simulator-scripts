@@ -36903,12 +36903,12 @@ ScenarioInformation_All = {
 				name	= "Stone Door Vertical"
 				,tiles	= {
 					{
-						adjacentTiles	= {"C1","C1/D1"}
+						adjacentTiles	= {"C1","A1"}
 						,position		= {x=-0.000005, y=1.817782, z=4.375008}
 						,rotation		= {x=-0.000764, y=88.899025, z=180.000259}
 					}
 					,{
-						adjacentTiles	= {"C1/D1","D1"}
+						adjacentTiles	= {"A1","D1"}
 						,position		= {x=3.010820, y=1.818422, z=4.380181}
 						,rotation		= {x=-0.003486, y=269.941833, z=179.999802}
 					}
@@ -37314,7 +37314,9 @@ ScenarioInformation_All = {
 				,rotation		= {x=-0.000767, y=90.006157, z=180.000259}
 			}
 			,{
-				tile			= "C1/D1"
+				tile			= "A1"
+            ,position		= {-8.3, 1.19, 2.2}
+            ,rotation		= {0.00, 0.02, 0.00}
 				,overlayTiles	= {
 					--Corridors
 					{
@@ -37326,9 +37328,6 @@ ScenarioInformation_All = {
 									{
 										position	= {x=1.514485, y=1.818399, z=4.375916}
 										,rotation	= {x=0.034226, y=89.982666, z=179.980637}
-										,params		= {
-											name		= "C1/D1"
-										}
 									}
 								}
 							}
