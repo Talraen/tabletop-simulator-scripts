@@ -43103,8 +43103,8 @@ ScenarioInformation_All = {
 			},
 			{
 				tile			= "I2"
-				,position		= {-3.03, 1.65, 10.50}
-				,rotation		= {0.00, 269.98, 180.00}
+				,position		= {-1.51, 1.65, 10.50}
+				,rotation		= {0.00, 89.98, 180.00}
 				,startTiles		= {
 					name	= "Stone Corridor 1"
 					,tiles	= {
@@ -43134,16 +43134,16 @@ ScenarioInformation_All = {
 								name	= "Dark Pit"
 								,tiles	= {
 									{
-										position		= {-4.54, 1.89, 0.00}
-										,rotation		= {0.00, 89.96, 0.00}
+										position		= {-3.02, 1.89, 0.00}
+										,rotation		= {0.00, 269.96, 0.00}
 										,params			= {
 											buttonTheme		= "Door"
 											,scriptFunction	= "AdjacentTiles =  {'I2','B4'} NumScenario = 96"
 										}
 									}
 									,{
-										position		= {-6.06, 1.88, 7.88}
-										,rotation		= {359.94, 150.01, 0.03}
+										position		= {-5.32, 1.88, 6.56}
+										,rotation		= {359.94, 330.01, 0.03}
 										,params			= {
 											buttonTheme		= "Door"
 											,scriptFunction	= "AdjacentTiles =  {'I2','C1'} NumScenario = 96"
@@ -43194,7 +43194,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-5.30, 1.88, 9.19}
-										,rotation	= {0.00, 30.01, 0.00}
+										,rotation	= {0.00, 330.01, 0.00}
 									}
 								}
 							}
@@ -43202,12 +43202,12 @@ ScenarioInformation_All = {
 								name	= "Boulder 2"
 								,tiles	= {
 									{
-										position	= {-6.06, 1.89, 0.00}
-										,rotation	= {0.00, 29.76, 0.00}
+										position	= {-5.32, 1.89, 1.31}
+										,rotation	= {0.00, 209.76, 0.00}
 									}
 									,{
-										position	= {0.00, 1.89, 2.62}
-										,rotation	= {0.00, 90.00, 0.00}
+										position	= {1.52, 1.89, 2.61}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
 								}
 							}
@@ -43237,7 +43237,7 @@ ScenarioInformation_All = {
 										,rotation	= {0.01, 90.07, 0.00}
 										,params		= {
 											buttonTheme		= "Treasure"
-											,buttonLabel	= "96"
+											,buttonLabel	= "91"
 										}
 									}
 								}
@@ -43251,12 +43251,12 @@ ScenarioInformation_All = {
 								name	= "Wooden Corridor 2"
 								,tiles	= {
 									{
-										position	= {-3.79, 1.89, 6.56}
-										,rotation	= {0.00, 90.04, 0.17}
+										position	= {-2.26, 1.89, 6.57}
+										,rotation	= {0.00, 270.04, 0.17}
 									}
 									,{
-										position	= {-0.76, 1.89, 6.56}
-										,rotation	= {0.00, 89.78, 0.17}
+										position	= {0.76, 1.89, 6.60}
+										,rotation	= {0.00, 269.78, 0.17}
 									}
 								}
 							}
@@ -43398,8 +43398,8 @@ ScenarioInformation_All = {
 								name	= "Dark Pit"
 								,tiles	= {
 									{
-										position	= {-3.03, 1.88, -5.25}
-										,rotation	= {0.00, 89.92, 0.00}
+										position	= {-1.51, 1.88, -5.25}
+										,rotation	= {0.00, 269.92, 0.00}
 									}
 								}
 							}
@@ -43421,7 +43421,7 @@ ScenarioInformation_All = {
 									}
 									,{
 										position	= {-0.76, 1.88, -9.19}
-										,rotation	= {0.00, 89.97, 0.00}
+										,rotation	= {0.00, 149.97, 0.00}
 									}
 								}
 							}
@@ -43492,8 +43492,8 @@ ScenarioInformation_All = {
 								name	= "Dark Pit"
 								,tiles	= {
 									{
-										position	= {-10.60, 1.89, 5.25}
-										,rotation	= {0.00, 150.95, 0.00}
+										position	= {-9.85, 1.89, 3.93}
+										,rotation	= {0.00, 330.95, 0.00}
 									}
 								}
 							}
@@ -43516,19 +43516,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-13.64, 1.89, 5.25}
-										,rotation	= {0.00, 210.00, 0.00}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
 									,{
 										position	= {-12.88, 1.89, 3.93}
-										,rotation	= {0.00, 210.00, 0.00}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
 									,{
 										position	= {-12.12, 1.89, 2.62}
-										,rotation	= {0.00, 210.00, 0.00}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
 									,{
 										position	= {-10.60, 1.89, 2.62}
-										,rotation	= {0.00, 210.00, 0.00}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
 								}
 							}
@@ -43610,19 +43610,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {8.34, 1.88, 1.31}
-										,rotation	= {0.00, 90.00, 0.00}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
 									,{
 										position	= {7.58, 1.88, 2.63}
-										,rotation	= {0.00, 90.00, 0.00}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
 									,{
 										position	= {7.58, 1.88, 5.25}
-										,rotation	= {0.00, 90.00, 0.00}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
 									,{
 										position	= {9.09, 1.88, 5.25}
-										,rotation	= {0.00, 90.00, 0.00}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
 								}
 							}
@@ -43708,7 +43708,7 @@ ScenarioInformation_All = {
 					,{
 						adjacentTiles	= {"N1","L2"}
 						,position		= {-6.82, 1.77, 1.31}
-						,rotation		= {359.88, 90.00, 180.00}
+						,rotation		= {359.88, 270.00, 180.00}
 					}
 				}
 			}
@@ -43751,11 +43751,11 @@ ScenarioInformation_All = {
 								name	= "Wall Section"
 								,tiles	= {
 									{
-										position	= {-4.55, 1.88, 2.62}
+										position	= {-3.78, 1.88, 3.95}
 										,rotation	= {0.00, 89.96, 0.00}
 									}
 									,{
-										position	= {3.03, 1.88, 2.62}
+										position	= {2.27, 1.88, 3.95}
 										,rotation	= {0.00, 270.00, 0.00}
 									}
 									,{
@@ -43772,20 +43772,20 @@ ScenarioInformation_All = {
 								name	= "Dark Pit"
 								,tiles	= {
 									{
-										position	= {-4.55, 1.88, -2.62}
-										,rotation	= {0.00, 329.97, 0.00}
+										position	= {-5.33, 1.88, -1.32}
+										,rotation	= {0.00, 149.97, 0.00}
 									}
 									,{
-										position	= {-5.30, 1.88, 3.94}
-										,rotation	= {0.00, 30.04, 0.00}
+										position	= {-4.54, 1.88, 5.25}
+										,rotation	= {0.00, 210.04, 0.00}
 									}
 									,{
-										position	= {3.80, 1.88, 3.94}
-										,rotation	= {0.00, 329.76, 0.00}
+										position	= {3.01, 1.88, 5.25}
+										,rotation	= {0.00, 149.76, 0.00}
 									}
 									,{
-										position	= {3.03, 1.88, -2.62}
-										,rotation	= {0.00, 29.81, 0.00}
+										position	= {3.78, 1.88, -1.28}
+										,rotation	= {0.00, 209.81, 0.00}
 									}
 								}
 							}
@@ -43799,19 +43799,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-6.06, 1.88, 5.25}
-										,rotation	= {0.00, 30.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {-6.06, 1.88, -2.63}
-										,rotation	= {0.00, 30.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {4.55, 1.88, -2.63}
-										,rotation	= {0.00, 30.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {4.55, 1.88, 5.25}
-										,rotation	= {0.00, 30.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 								}
 							}
@@ -43927,8 +43927,8 @@ ScenarioInformation_All = {
 								name	= "Dark Pit"
 								,tiles	= {
 									{
-										position	= {1.52, 1.88, 7.87}
-										,rotation	= {0.00, 30.01, 0.00}
+										position	= {2.28, 1.88, 9.19}
+										,rotation	= {0.00, 210.01, 0.00}
 									}
 								}
 							}
@@ -44013,8 +44013,8 @@ ScenarioInformation_All = {
 			}
 			,{
 				tile			= "L1"
-				,position		= {8.34, -3.83, 1.31}
-				,rotation		= {0.00, 89.97, 0.00}
+				,position		= {9.86, -3.83, 1.31}
+				,rotation		= {0.00, 269.97, 0.00}
 				,scenarioSections = {
 					{
 						image = "http://cloud-3.steamusercontent.com/ugc/1011563720479314936/8F767D7BED5DE5C80DCBDC4780D111BEF9F9E6ED/"
@@ -44225,8 +44225,8 @@ ScenarioInformation_All = {
 								name	= "Bookcase"
 								,tiles	= {
 									{
-										position	= {-7.58, 1.88, 2.63}
-										,rotation	= {0.00, 269.97, 0.00}
+										position	= {-9.08, 1.88, 2.63}
+										,rotation	= {0.00, 89.97, 0.00}
 									}
 									,{
 										position	= {-7.58, 1.88, 0.00}
@@ -44395,12 +44395,12 @@ ScenarioInformation_All = {
 				name	= "Wooden Door Horizontal"
 				,tiles	= {
 					{
-						adjacentTiles	= {"H3","B1", "B3"}
+						adjacentTiles	= {"H3","B1", "B4"}
 						,position		= {-8.34, 1.77, 3.06}
-						,rotation		= {0.00, 90.00, 180.01}
+						,rotation		= {0.00, 270.00, 180.01}
 					}
 					,{
-						adjacentTiles	= {"H3","B4", "B2"}
+						adjacentTiles	= {"H3","B3", "B2"}
 						,position		= {-12.12, 1.88, -0.88}
 						,rotation		= {0.00, 90.00, 180.01}
 					}
@@ -44648,11 +44648,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-9.11, 1.88, 6.99}
-										,rotation	= {0.00, 88.85, 0.00}
+										,rotation	= {0.00, 268.85, 0.00}
 									}
 									,{
 										position	= {-10.60, 1.88, 7.00}
-										,rotation	= {0.00, 88.96, 0.00}
+										,rotation	= {0.00, 268.96, 0.00}
 									}
 								}
 							}
@@ -44666,16 +44666,19 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-12.12, 1.88, 7.00}
-										,rotation	= {0.00, 210.00, 0.00}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
-								}
-							}
-							,{
-								name	= "Hot Coals 3"
-								,tiles	= {
-									{
-										position	= {-6.06, 1.89, 4.38}
-										,rotation	= {0.00, 330.04, 0.00}
+                           ,{
+                              position	= {-6.82, 1.88, 5.69}
+										,rotation	= {0.00, 150.00, 0.00}
+									}
+                           ,{
+                              position	= {-5.31, 1.88, 5.70}
+										,rotation	= {0.00, 150.00, 0.00}
+									}
+                           ,{
+                              position	= {-6.06, 1.88, 4.37}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
 								}
 							}
@@ -44741,12 +44744,12 @@ ScenarioInformation_All = {
 				}
 			},
 			{
-				tile			= "B3"
+				tile			= "B4"
 				,position		= {-12.88, 1.71, 5.69}
 				,rotation		= {0.00, 270.03, 0.00}
 			},
 			{
-				tile			= "B4"
+				tile			= "B3"
 				,position		= {-11.36, 1.71, -4.82}
 				,rotation		= {0.00, 269.99, 0.00}
 				,scenarioSections = {
@@ -44774,7 +44777,7 @@ ScenarioInformation_All = {
 								}
 							}
 							,{
-								name	= "Shelf"
+								name	= "Bookcase"
 								,tiles	= {
 									{
 										position	= {-18.94, 1.88, -2.19}
@@ -44812,8 +44815,8 @@ ScenarioInformation_All = {
 										,rotation	= {0.00, 270.21, 0.00}
 									}
 									,{
-										position	= {-15.15, 1.88, -3.54}
-										,rotation	= {0.00, 89.89, 0.00}
+										position	= {-13.64, 1.88, -3.49}
+										,rotation	= {0.00, 269.89, 0.00}
 									}
 								}
 							}
@@ -44822,7 +44825,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-14.40, 1.77, -2.19}
-										,rotation	= {0.00, 90.03, 180.00}
+										,rotation	= {0.00, 270.03, 180.00}
 									}
 								}
 							}
@@ -44834,18 +44837,25 @@ ScenarioInformation_All = {
 							{
 								name	= "Hot Coals 1"
 								,tiles	= {
-									{
+                           {
 										position	= {-9.85, 1.88, -4.81}
-										,rotation	= {0.00, 210.00, 0.00}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
-								}
-							}
-							,{
-								name	= "Hot Coals 3"
-								,tiles	= {
-									{
-										position	= {-16.69, 1.89, -3.52}
-										,rotation	= {0.00, 330.18, 0.00}
+                           ,{
+										position	= {-10.60, 1.88, -3.49}
+										,rotation	= {0.00, 150.00, 0.00}
+									}
+                           ,{
+										position	= {-17.43, 1.88, -2.19}
+										,rotation	= {0.00, 150.00, 0.00}
+									}
+                           ,{
+										position	= {-15.93, 1.88, -2.19}
+										,rotation	= {0.00, 150.00, 0.00}
+									}
+                           ,{
+										position	= {-16.64, 1.88, -3.49}
+										,rotation	= {0.00, 150.00, 0.00}
 									}
 								}
 							}
@@ -44936,7 +44946,7 @@ ScenarioInformation_All = {
 		}
 		,monsterList	= {
 			"Ancient Artillery"
-			,"Bandit Arhcer"
+			,"Bandit Archer"
 			,"Bandit Guard"
 			,"Spitting Drake"
 		}
@@ -44966,7 +44976,7 @@ ScenarioInformation_All = {
 						{
 							adjacentTiles	= {"N1","L2", "L1"}
 							,position		= {-1.52, 1.77, 5.25}
-							,rotation		= {0.00, 270.01, 180.00}
+							,rotation		= {0.00, 90.01, 180.00}
 						}
 					}
 				},
@@ -44975,7 +44985,7 @@ ScenarioInformation_All = {
 					{
 						tile			= "N1"
 						,position		= {-7.58, 1.71, 5.25}
-						,rotation		= {0.00, 90.00, 180.00}
+						,rotation		= {0.00, 270.00, 180.00}
 						,scenarioSections = {
 							{
 								image = "http://cloud-3.steamusercontent.com/ugc/1011563720484488386/36B2A0F11163FE6DE274DDEDCC4C961C0164301F/"
@@ -45047,8 +45057,8 @@ ScenarioInformation_All = {
 												,rotation	= {0.00, 270.00, 0.00}
 											}
 											,{
-												position	= {-8.35, 1.88, 3.92}
-												,rotation	= {0.00, 209.82, 0.00}
+												position	= {-9.82, 1.88, 3.92}
+												,rotation	= {0.00, 89.82, 0.00}
 											}
 										}
 									}
@@ -45061,16 +45071,16 @@ ScenarioInformation_All = {
 										name	= "Earth Corridor 2"
 										,tiles	= {
 											{
-												position	= {-8.34, 1.88, 9.19}
-												,rotation	= {0.00, 90.12, 0.00}
+												position	= {-6.81, 1.88, 9.20}
+												,rotation	= {0.00, 270.12, 0.00}
 											}
 											,{
 												position	= {-8.33, 1.88, 6.56}
 												,rotation	= {0.00, 149.88, 0.00}
 											}
 											,{
-												position	= {-10.61, 1.88, 5.25}
-												,rotation	= {0.00, 90.13, 0.00}
+												position	= {-9.09, 1.88, 5.27}
+												,rotation	= {0.00, 270.13, 0.00}
 											}
 											,{
 												position	= {-7.58, 1.88, 2.62}
@@ -45083,19 +45093,19 @@ ScenarioInformation_All = {
 										,tiles	= {
 											{
 												position	= {-9.10, 1.77, 7.88}
-												,rotation	= {0.00, 30.07, 180.00}
+												,rotation	= {0.00, 90.07, 180.00}
 											}
 											,{
 												position	= {-6.06, 1.77, 5.25}
-												,rotation	= {0.00, 29.94, 180.00}
+												,rotation	= {0.00, 89.94, 180.00}
 											}
 											,{
 												position	= {-11.38, 1.77, 3.93}
-												,rotation	= {0.00, 29.93, 180.00}
+												,rotation	= {0.00, 89.93, 180.00}
 											}
 											,{
 												position	= {-9.85, 1.77, 1.31}
-												,rotation	= {0.00, 29.99, 180.00}
+												,rotation	= {0.00, 89.99, 180.00}
 											}
 										}
 									}
@@ -45249,7 +45259,7 @@ ScenarioInformation_All = {
 										name	= "Wall Section"
 										,tiles	= {
 											{
-												position	= {6.06, 1.88, 7.88}
+												position	= {6.06, 2.00, 7.88}
 												,rotation	= {0.02, 90.01, 359.99}
 											}
 											,{
@@ -45261,7 +45271,7 @@ ScenarioInformation_All = {
 												,rotation	= {0.00, 209.90, 0.00}
 											}
 											,{
-												position	= {6.06, 1.88, 2.63}
+												position	= {6.06, 2.00, 2.63}
 												,rotation	= {0.00, 269.98, 0.00}
 											}
 											,{
@@ -45303,8 +45313,16 @@ ScenarioInformation_All = {
 												position	= {6.82, 1.88, 3.94}
 												,rotation	= {359.97, 269.77, 0.00}
 											}
-											,{
+                                 ,{
 												position	= {6.82, 1.88, 1.31}
+												,rotation	= {359.97, 269.85, 0.00}
+											}
+                                 ,{
+												position	= {7.57, 1.88, 7.88}
+												,rotation	= {359.97, 269.85, 0.00}
+											}
+                                 ,{
+												position	= {6.06, 1.88, 2.63}
 												,rotation	= {359.97, 269.85, 0.00}
 											}
 										}
@@ -45489,22 +45507,22 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"F1","B3"}
 						,position		= {-9.19, 1.77, 3.78}
-						,rotation		= {0.01, 0.06, 179.99}
+						,rotation		= {0.01, 180.06, 179.99}
 					}
 					,{
 						adjacentTiles	= {"F1","B3"}
 						,position		= {-9.19, 1.77, 5.30}
-						,rotation		= {0.00, 0.06, 179.99}
+						,rotation		= {0.00, 180.06, 179.99}
 					}
 					,{
 						adjacentTiles	= {"F1","D1"}
 						,position		= {-0.77, 1.77, 14.44}
-						,rotation		= {0.00, 89.97, 179.92}
+						,rotation		= {0.00, 269.97, 179.92}
 					}
 					,{
 						adjacentTiles	= {"F1","D1"}
 						,position		= {0.76, 1.77, 14.44}
-						,rotation		= {0.00, 89.95, 179.92}
+						,rotation		= {0.00, 269.95, 179.92}
 					}
 					,{
 						adjacentTiles	= {"F1","B2"}
@@ -45527,7 +45545,7 @@ ScenarioInformation_All = {
 						,rotation		= {0.00, 90.08, 180.45}
 					}
 					,{
-						adjacentTiles	= {"A1","C1"}
+						adjacentTiles	= {"A1","C2"}
 						,position		= {-3.03, 1.77, 21.00}
 						,rotation		= {0.01, 30.01, 180.02}
                   ,secret        = true
@@ -45695,7 +45713,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-1.53, 1.88, 7.85}
-										,rotation	= {0.00, 30.00, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
 										,params			= {
 											buttonTheme = "PressurePlate"
 											,buttonLabel		= "Clockwise"
@@ -45704,7 +45722,7 @@ ScenarioInformation_All = {
 									}
 									,{
 										position	= {-3.03, 1.88, 5.25}
-										,rotation	= {0.00, 30.00, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
 										,params			= {
 											buttonTheme = "PressurePlate"
 											,buttonLabel		= "Anticlockwise"
@@ -45723,7 +45741,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {0.00, 1.88, 5.25}
-										,rotation	= {0.00, 30.01, 0.00}
+										,rotation	= {0.00, 210.01, 0.00}
 									}
 								}
 							}
@@ -45794,7 +45812,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-11.81, 1.88, 3.79}
-										,rotation	= {0.00, 180.23, 0.00}
+										,rotation	= {0.00, 0.23, 0.00}
 									}
 								}
 							}
@@ -45808,7 +45826,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-11.84, 1.88, 2.26}
-										,rotation	= {0.00, 180.00, 0.00}
+										,rotation	= {0.00, 0.00, 0.00}
 									}
 								}
 							}
@@ -45816,8 +45834,8 @@ ScenarioInformation_All = {
 								name	= "Boulder 2"
 								,tiles	= {
 									{
-										position	= {-13.13, 1.88, 6.05}
-										,rotation	= {0.00, 119.98, 0.00}
+										position	= {-11.79, 1.88, 5.32}
+										,rotation	= {0.00, 299.98, 0.00}
 									}
 								}
 							}
@@ -45926,11 +45944,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-0.76, 1.88, 17.06}
-										,rotation	= {0.00, 210.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {0.00, 1.88, 18.37}
-										,rotation	= {0.00, 209.57, 0.00}
+										,rotation	= {0.00, 89.57, 0.00}
 									}
 								}
 							}
@@ -45944,16 +45962,15 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {2.27, 1.88, 17.06}
-										,rotation	= {0.00, 210.00, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
-								}
-							}
-							,{
-								name	= "Water 2"
-								,tiles	= {
-									{
-										position	= {-2.27, 1.89, 17.06}
-										,rotation	= {0.00, 30.56, 0.00}
+                           ,{
+										position	= {-1.52, 1.88, 18.37}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-2.27, 1.88, 17.06}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
 								}
 							}
@@ -45967,7 +45984,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-1.52, 1.88, 15.75}
-										,rotation	= {0.00, 88.96, 0.00}
+										,rotation	= {0.00, 148.96, 0.00}
 									}
 								}
 							}
@@ -46060,11 +46077,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {10.50, 1.88, 4.55}
-										,rotation	= {0.00, 240.00, 0.00}
+										,rotation	= {0.00, 0.00, 0.00}
 									}
 									,{
 										position	= {10.50, 1.88, 3.03}
-										,rotation	= {0.00, 240.00, 0.00}
+										,rotation	= {0.00, 0.00, 0.00}
 									}
 								}
 							}
@@ -46078,7 +46095,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {11.81, 1.88, 2.27}
-										,rotation	= {0.00, 180.00, 0.00}
+										,rotation	= {0.00, 120.00, 0.00}
 									}
 								}
 							}
@@ -46086,8 +46103,8 @@ ScenarioInformation_All = {
 								name	= "Boulder 2"
 								,tiles	= {
 									{
-										position	= {10.50, 1.88, 6.06}
-										,rotation	= {0.00, 120.30, 0.00}
+										position	= {11.83, 1.88, 5.33}
+										,rotation	= {0.00, 300.30, 0.00}
 									}
 								}
 							}
@@ -46099,7 +46116,7 @@ ScenarioInformation_All = {
 								name	= "Coin 1"
 								,tiles	= {
 									{
-										position	= {10.50, 1.88, 6.06}
+										position	= {14.44, 1.88, 3.79}
 										,rotation	= {0.00, 180.00, 0.00}
 									}
 									,{
@@ -46156,7 +46173,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-0.76, 1.81, -9.19}
-										,rotation	= {0.00, 89.98, 359.15}
+										,rotation	= {0.00, 269.98, 359.15}
 									}
 								}
 							}
@@ -46204,11 +46221,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-4.55, 1.83, -7.87}
-										,rotation	= {0.74, 210.00, 0.43}
+										,rotation	= {0.74, 90.00, 0.43}
 									}
 									,{
 										position	= {2.29, 1.85, -6.53}
-										,rotation	= {0.74, 210.00, 0.43}
+										,rotation	= {0.74, 90.00, 0.43}
 									}
 								}
 							}
@@ -46220,8 +46237,8 @@ ScenarioInformation_All = {
 										,rotation	= {0.74, 210.01, 0.43}
 									}
 									,{
-										position	= {0.00, 1.83, -7.88}
-										,rotation	= {0.74, 149.99, 359.57}
+										position	= {0.75, 1.83, -9.19}
+										,rotation	= {0.74, 329.99, 359.57}
 									}
 								}
 							}
@@ -46282,7 +46299,7 @@ ScenarioInformation_All = {
 				}
 			}
 			,{
-				tile			= "C1"
+				tile			= "C2"
             ,secret        = true
 				,position		= {-6.06, 1.77, 21.00}
 				,rotation		= {0.00, 270.03, 0.00}
@@ -46421,37 +46438,37 @@ ScenarioInformation_All = {
 						{
 							adjacentTiles	= {"J2","J1"}
 							,position		= {9.20, 1.88, 8.33}
-							,rotation		= {0.00, 180.00, 0.00}
+							,rotation		= {0.00, 0.00, 0.00}
 						}
 						,{
 							adjacentTiles	= {"J1","A1"}
 							,position		= {3.94, 1.88, 8.33}
-							,rotation		= {0.00, 180.00, 0.00}
+							,rotation		= {0.00, 0.00, 0.00}
 						}
 						,{
 							adjacentTiles	= {"J1","A1"}
 							,position		= {3.94, 1.88, 9.85}
-							,rotation		= {0.00, 180.00, 0.00}
+							,rotation		= {0.00, 0.00, 0.00}
 						}
 						,{
 							adjacentTiles	= {"J1","A1"}
 							,position		= {3.93, 1.88, 6.82}
-							,rotation		= {0.00, 180.00, 0.00}
+							,rotation		= {0.00, 0.00, 0.00}
 						}
 						,{
 							adjacentTiles	= {"A1","A2"}
 							,position		= {-1.31, 1.88, 9.85}
-							,rotation		= {0.00, 180.00, 0.00}
+							,rotation		= {0.00, 0.00, 0.00}
 						}
 						,{
 							adjacentTiles	= {"A1","A2"}
 							,position		= {-1.32, 1.88, 11.37}
-							,rotation		= {0.00, 180.00, 0.00}
+							,rotation		= {0.00, 0.00, 0.00}
 						}
 						,{
 							adjacentTiles	= {"A1","A2"}
 							,position		= {-2.63, 1.88, 9.10}
-							,rotation		= {0.00, 180.00, 0.00}
+							,rotation		= {0.00, 0.00, 0.00}
 						}
 					}
 				}
@@ -46496,7 +46513,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-6.57, 1.77, -0.74}
-										,rotation	= {0.00, 359.38, 180.00}
+										,rotation	= {0.00, 299.38, 180.00}
 									}
 								}
 							}
@@ -46509,7 +46526,7 @@ ScenarioInformation_All = {
 									}
 									,{
 										position	= {0.00, 1.77, -1.52}
-										,rotation	= {359.95, 0.01, 180.00}
+										,rotation	= {359.95, 120.01, 0.00}
 									}
 								}
 							}
@@ -46519,7 +46536,7 @@ ScenarioInformation_All = {
 									{
 										adjacentTiles	= {"D1","J2"}
 										,position		= {2.63, 1.88, -1.52}
-										,rotation		= {0.23, 0.03, 0.00}
+										,rotation		= {0.23, 180.03, 0.00}
 										,params			= {
 											buttonTheme		= "Door"
 											,scriptFunction	= "AdjacentTiles =  {'D1','J2'} NumScenario = 101"
@@ -46563,11 +46580,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-3.94, 1.88, 2.29}
-										,rotation	= {0.00, 179.98, 0.00}
+										,rotation	= {0.00, 119.98, 0.00}
 									}
 									,{
 										position	= {-1.31, 1.88, -0.76}
-										,rotation	= {0.00, 179.98, 0.00}
+										,rotation	= {0.00, 119.98, 0.00}
 									}
 								}
 							}
@@ -46629,11 +46646,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-10.50, 1.88, 4.55}
-										,rotation	= {0.00, 0.00, 0.00}
+										,rotation	= {0.00, 120.00, 0.00}
 									}
 									,{
 										position	= {2.63, 1.88, 0.00}
-										,rotation	= {0.00, 0.00, 0.00}
+										,rotation	= {0.00, 120.00, 0.00}
 									}
 								}
 							}
@@ -46642,11 +46659,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {1.31, 1.88, 5.30}
-										,rotation	= {0.00, 0.00, 0.00}
+										,rotation	= {0.00, 60.00, 0.00}
 									}
 									,{
 										position	= {1.31, 1.88, -3.79}
-										,rotation	= {0.00, 0.00, 0.00}
+										,rotation	= {0.00, 60.00, 0.00}
 									}
 								}
 							}
@@ -46742,16 +46759,16 @@ ScenarioInformation_All = {
 								name	= "Dark Pit"
 								,tiles	= {
 									{
-										position	= {3.94, 1.88, 0.76}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {3.97, 1.88, 2.27}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 									,{
-										position	= {5.26, 1.88, 1.51}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {5.26, 1.88, 3.03}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 									,{
-										position	= {6.56, 1.88, 2.27}
-										,rotation	= {0.00, 0.00, 0.00}
+										position	= {6.57, 1.88, 3.78}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 									,{
 										position	= {7.87, 1.88, 3.03}
@@ -46780,43 +46797,61 @@ ScenarioInformation_All = {
 										position	= {9.19, 1.88, 3.79}
 										,rotation	= {0.00, 180.00, 0.00}
 									}
-									,{
+                           ,{
+										position	= {9.19, 1.88, 5.31}
+										,rotation	= {0.00, 180.00, 0.00}
+									}
+                           ,{
+										position	= {10.51, 1.88, 6.07}
+										,rotation	= {0.00, 180.00, 0.00}
+									}
+                           ,{
+										position	= {10.50, 1.88, 7.59}
+										,rotation	= {0.00, 180.00, 0.00}
+									}
+                           ,{
+										position	= {11.82, 1.88, 8.33}
+										,rotation	= {0.00, 180.00, 0.00}
+									}
+                           ,{
 										position	= {13.12, 1.88, 6.06}
 										,rotation	= {0.00, 180.00, 0.00}
 									}
-								}
-							}
-							,{
-								name	= "Water 2"
-								,tiles	= {
-									{
-										position	= {9.19, 1.88, 5.30}
-										,rotation	= {0.00, 60.00, 0.00}
+                           ,{
+										position	= {14.46, 1.88, 6.82}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
-									,{
-										position	= {10.50, 1.88, 7.58}
-										,rotation	= {0.00, 60.00, 0.00}
+                           ,{
+										position	= {14.42, 1.88, 8.35}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
-									,{
-										position	= {14.44, 1.88, 6.82}
-										,rotation	= {0.00, 0.00, 0.00}
+                           ,{
+										position	= {13.13, 1.88, 9.10}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
-									,{
+                           ,{
+										position	= {14.43, 1.88, 9.86}
+										,rotation	= {0.00, 180.00, 0.00}
+									}
+                           ,{
+										position	= {13.12, 1.88, 10.61}
+										,rotation	= {0.00, 180.00, 0.00}
+									}
+                           ,{
 										position	= {14.44, 1.88, 11.37}
-										,rotation	= {0.00, 0.00, 0.00}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
-									,{
-										position	= {15.75, 1.88, 13.64}
-										,rotation	= {0.00, 0.00, 0.00}
+                           ,{
+										position	= {14.43, 1.88, 12.89}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
-								}
-							}
-							,{
-								name	= "Water 3"
-								,tiles	= {
-									{
-										position	= {14.44, 1.88, 9.85}
-										,rotation	= {0.00, 240.00, 0.00}
+                           ,{
+										position	= {15.75, 1.88, 13.65}
+										,rotation	= {0.00, 180.00, 0.00}
+									}
+                           ,{
+										position	= {15.75, 1.88, 15.16}
+										,rotation	= {0.00, 180.00, 0.00}
 									}
 								}
 							}
@@ -46847,7 +46882,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {13.12, 1.88, 15.16}
-										,rotation	= {0.00, 180.00, 0.00}
+										,rotation	= {0.00, 0.00, 0.00}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "93"
@@ -46979,7 +47014,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {1.31, 1.88, 8.34}
-										,rotation	= {0.00, 0.00, 0.00}
+										,rotation	= {0.00, 120.00, 0.00}
 									}
 								}
 							}
@@ -47130,12 +47165,12 @@ ScenarioInformation_All = {
 						{
 							adjacentTiles	= {"H3","B1"}
 							,position		= {-3.79, 1.77, 9.19}
-							,rotation		= {0.00, 90.00, 179.91}
+							,rotation		= {0.00, 270.00, 179.91}
 						}
 						,{
 							adjacentTiles	= {"H3","I2"}
 							,position		= {3.79, 1.77, 9.19}
-							,rotation		= {0.00, 90.01, 180.00}
+							,rotation		= {0.00, 270.01, 180.00}
 						}
 						,{
 							adjacentTiles	= {"H3","G2"}
@@ -47150,7 +47185,7 @@ ScenarioInformation_All = {
 						{
 							adjacentTiles	= {"H3","B2"}
 							,position		= {1.54, 1.77, 0.00}
-							,rotation		= {0.00, 270.00, 180.00}
+							,rotation		= {0.00, 90.00, 180.00}
 						}
 						,{
 							adjacentTiles	= {"H3","B3"}
@@ -47203,8 +47238,8 @@ ScenarioInformation_All = {
 								name	= "Man Stone Corridor 2"
 								,tiles	= {
 									{
-										position	= {-1.52, 1.88, 5.25}
-										,rotation	= {0.00, 90.01, 0.07}
+										position	= {0.00, 1.88, 5.25}
+										,rotation	= {0.00, 270.01, 0.07}
 									}
 								}
 							}
@@ -47220,7 +47255,12 @@ ScenarioInformation_All = {
 										position	= {-1.51, 1.88, 2.61}
 										,rotation	= {0.00, 210.40, 0.00}
 									}
-									,{
+                        }
+                     }
+                     ,{
+                        name = "Table"
+                        ,tiles   = {
+									{
 										position	= {0.00, 1.88, -5.25}
 										,rotation	= {0.00, 29.82, 0.00}
 									}
@@ -47291,10 +47331,14 @@ ScenarioInformation_All = {
 						bag	 	= Constant_TypeOverlay_DifficultTerrain
 						,type	= {
 							{
-								name	= "Water 2"
+								name	= "Water 1"
 								,tiles	= {
-									{
+                           {
 										position	= {7.59, 1.88, 15.76}
+										,rotation	= {0.00, 89.74, 0.00}
+									}
+                           ,{
+										position	= {9.09, 1.88, 15.75}
 										,rotation	= {0.00, 89.74, 0.00}
 									}
 								}
@@ -47331,7 +47375,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {8.34, 1.88, 14.44}
-										,rotation	= {0.00, 269.33, 0.00}
+										,rotation	= {0.00, 89.33, 0.00}
 									}
 								}
 							}
@@ -47386,7 +47430,7 @@ ScenarioInformation_All = {
 						bag	 	= Constant_TypeOverlay_Obstacles
 						,type	= {
 							{
-								name	= "Shelf"
+								name	= "Bookcase"
 								,tiles	= {
 									{
 										position	= {-6.82, 1.88, 1.31}
@@ -47466,7 +47510,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {3.79, 1.88, 3.94}
-										,rotation	= {0.00, 330.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 								}
 							}
@@ -47483,8 +47527,8 @@ ScenarioInformation_All = {
 								name	= "Tree"
 								,tiles	= {
 									{
-										position	= {3.80, 1.88, 1.32}
-										,rotation	= {0.00, 150.05, 0.00}
+										position	= {4.54, 1.88, -0.01}
+										,rotation	= {0.00, 270.05, 0.00}
 									}
 								}
 							}
@@ -47512,11 +47556,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-3.79, 1.88, -6.56}
-										,rotation	= {0.00, 30.00, 0.00}
+										,rotation	= {0.00, 330.00, 0.00}
 									}
 									,{
 										position	= {-5.31, 1.88, -6.56}
-										,rotation	= {0.00, 30.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 								}
 							}
@@ -47567,22 +47611,22 @@ ScenarioInformation_All = {
 						{
 							adjacentTiles	= {"L1","C2","D1"}
 							,position		= {-2.62, 1.88, 12.11}
-							,rotation		= {0.02, 180.23, 0.00}
+							,rotation		= {0.02, 240.23, 0.00}
 						}
 						,{
 							adjacentTiles	={"L1","C2","D1"}
 							,position		= {-2.62, 1.94, 10.60}
-							,rotation		= {4.47, 180.23, 0.00}
+							,rotation		= {4.47, 240.23, 0.00}
 						}
 						,{
 							adjacentTiles	= {"D1","M1"}
 							,position		= {1.31, 1.88, 2.28}
-							,rotation		= {0.00, 180.23, 0.00}
+							,rotation		= {0.00, 240.23, 0.00}
 						}
 						,{
 							adjacentTiles	= {"D1","M1"}
 							,position		= {2.63, 1.88, 1.52}
-							,rotation		= {0.00, 179.43, 0.01}
+							,rotation		= {0.00, 239.43, 0.01}
 						}
 					}
 				}
@@ -47640,7 +47684,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-7.87, 1.88, 12.12}
-										,rotation	= {0.00, 0.00, 0.00}
+										,rotation	= {0.00, 60.00, 0.00}
 									}
 								}
 							}
@@ -47673,7 +47717,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {6.56, 1.88, 3.79}
-										,rotation	= {0.00, 180.00, 0.00}
+										,rotation	= {0.00, 0.00, 0.00}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "81"
@@ -47689,22 +47733,25 @@ ScenarioInformation_All = {
 							{
 								name	= "Water 1"
 								,tiles	= {
-									{
+                           {
+										position	= {1.30, 1.88, 5.30}
+										,rotation	= {0.00, 60.00, 0.00}
+									}
+                           ,{
+										position	= {2.62, 1.88, 6.06}
+										,rotation	= {0.00, 60.00, 0.00}
+									}
+                           ,{
+										position	= {3.93, 1.88, 5.30}
+										,rotation	= {0.00, 60.00, 0.00}
+									}
+                           ,{
+										position	= {5.23, 1.88, 6.07}
+										,rotation	= {0.00, 60.00, 0.00}
+									}
+                           ,{
 										position	= {6.56, 1.88, 6.82}
-										,rotation	= {0.00, 180.00, 0.00}
-									}
-								}
-							}
-							,{
-								name	= "Water 2"
-								,tiles	= {
-									{
-										position	= {1.31, 1.88, 5.31}
-										,rotation	= {0.00, 60.08, 0.00}
-									}
-									,{
-										position	= {3.94, 1.88, 5.30}
-										,rotation	= {0.00, 59.86, 0.00}
+										,rotation	= {0.00, 60.00, 0.00}
 									}
 								}
 							}
@@ -47740,8 +47787,8 @@ ScenarioInformation_All = {
 								name	= "Earth Corridor 2"
 								,tiles	= {
 									{
-										position	= {1.31, 1.88, 8.34}
-										,rotation	= {0.00, 60.01, 0.00}
+										position	= {2.62, 1.88, 9.09}
+										,rotation	= {0.00, 240.01, 0.00}
 									}
 								}
 							}
@@ -47769,11 +47816,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {1.31, 1.88, -0.76}
-										,rotation	= {0.00, 0.03, 0.00}
+										,rotation	= {0.00, 60.03, 0.00}
 									}
 									,{
 										position	= {-2.63, 1.88, -4.53}
-										,rotation	= {0.00, 0.03, 0.00}
+										,rotation	= {0.00, 60.03, 0.00}
 									}
 								}
 							}
@@ -47785,8 +47832,8 @@ ScenarioInformation_All = {
 										,rotation	= {0.00, 180.52, 0.00}
 									}
 									,{
-										position	= {-2.63, 1.88, -1.52}
-										,rotation	= {0.00, 59.97, 0.00}
+										position	= {-1.31, 1.88, -0.75}
+										,rotation	= {0.00, 239.97, 0.00}
 									}
 								}
 							}
@@ -47854,7 +47901,7 @@ ScenarioInformation_All = {
 			,{
 				tile			= "D2"
 				,position		= {-2.63, 1.65, 6.06}
-				,rotation		= {0.00, 30.00, 180.00}
+				,rotation		= {0.00, 330.00, 180.00}
 				,startTiles		= {
 					name	= "Stone Corridor 1"
 					,tiles	= {
@@ -47885,11 +47932,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-2.62, 1.77, 10.61}
-										,rotation	= {0.00, 0.00, 180.00}
+										,rotation	= {0.00, 240.00, 180.00}
 									}
 									,{
 										position	= {-2.62, 1.77, 1.52}
-										,rotation	= {0.00, 0.00, 180.00}
+										,rotation	= {0.00, 180.00, 180.00}
 									}
 								}
 							}
@@ -47897,12 +47944,12 @@ ScenarioInformation_All = {
 								name	= "Stone Corridor 2"
 								,tiles	= {
 									{
-										position	= {0.00, 1.89, 9.10}
-										,rotation	= {0.00, 300.00, 0.00}
+										position	= {-1.31, 1.89, 9.85}
+										,rotation	= {0.00, 120.00, 0.00}
 									}
 									,{
-										position	= {0.00, 1.89, 3.03}
-										,rotation	= {0.00, 240.00, 0.00}
+										position	= {-1.31, 1.89, 2.26}
+										,rotation	= {0.00, 60.00, 0.00}
 									}
 								}
 							}
@@ -47989,7 +48036,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-2.63, 1.88, -6.06}
-										,rotation	= {0.00, 180.00, 0.00}
+										,rotation	= {0.00, 0.00, 0.00}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "87"
@@ -48155,7 +48202,7 @@ ScenarioInformation_All = {
 					,{
 						adjacentTiles	= {"L3","B3"}
 						,position		= {6.06, 1.77, 0.00}
-						,rotation		= {0.00, 269.93, 180.00}
+						,rotation		= {0.00, 89.93, 180.00}
 					}
 				}
 			}
@@ -48216,7 +48263,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {1.51, 1.77, 5.25}
-										,rotation	= {0.32, 90.06, 180.00}
+										,rotation	= {0.32, 270.06, 180.00}
 									}
 								}
 							}
@@ -48224,16 +48271,16 @@ ScenarioInformation_All = {
 								name	= "Earth Corridor 2"
 								,tiles	= {
 									{
-										position	= {-3.79, 1.88, 6.57}
-										,rotation	= {359.83, 89.99, 0.00}
+										position	= {-2.29, 1.88, 6.55}
+										,rotation	= {359.83, 269.99, 0.00}
 									}
 									,{
-										position	= {-3.79, 1.88, -1.31}
-										,rotation	= {359.83, 89.99, 0.00}
+										position	= {-2.28, 1.88, -1.31}
+										,rotation	= {359.83, 269.99, 0.00}
 									}
 									,{
-										position	= {0.76, 1.89, 6.56}
-										,rotation	= {359.83, 89.99, 0.00}
+										position	= {2.28, 1.89, 6.57}
+										,rotation	= {359.83, 269.99, 0.00}
 									}
 								}
 							}
@@ -48247,27 +48294,27 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-0.76, 1.88, 6.56}
-										,rotation	= {0.00, 270.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {-0.01, 1.88, 5.24}
-										,rotation	= {0.00, 270.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {-0.76, 1.88, 3.93}
-										,rotation	= {0.00, 270.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {2.27, 1.88, 1.31}
-										,rotation	= {0.00, 270.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {-1.52, 1.88, 0.00}
-										,rotation	= {0.00, 270.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {0.00, 1.88, 0.00}
-										,rotation	= {0.00, 270.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 								}
 							}
@@ -48305,55 +48352,101 @@ ScenarioInformation_All = {
 							{
 								name	= "Water 1"
 								,tiles	= {
-									{
+                           {
 										position	= {8.34, 1.88, 6.56}
-										,rotation	= {0.00, 210.00, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
-								}
-							}
-							,{
-								name	= "Water 2"
-								,tiles	= {
-									{
+                           ,{
+										position	= {7.58, 1.88, 5.24}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {6.84, 1.88, 3.92}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {6.06, 1.88, 5.25}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {4.55, 1.88, 5.25}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {3.79, 1.88, 3.93}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {3.05, 1.88, 2.63}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {2.28, 1.88, 3.93}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {1.52, 1.88, 2.65}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {0.77, 1.88, 3.92}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {0.00, 1.88, 2.62}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-0.75, 1.88, 1.31}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-1.51, 1.88, 2.61}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-2.27, 1.88, 1.31}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-3.04, 1.88, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-3.79, 1.88, 1.31}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-4.55, 1.88, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-5.30, 1.88, 1.31}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-6.04, 1.88, -0.01}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-6.82, 1.88, 1.31}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-7.57, 1.88, 2.63}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
+										position	= {-8.33, 1.88, 1.31}
+										,rotation	= {0.00, 270.00, 0.00}
+									}
+                           ,{
 										position	= {-9.09, 1.88, 2.63}
-										,rotation	= {0.00, 330.01, 0.00}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
-									,{
-										position	= {3.04, 1.96, 2.62}
-										,rotation	= {0.00, 29.66, 354.82}
-									}
-									,{
-										position	= {4.55, 1.88, 5.26}
-										,rotation	= {0.00, 89.82, 0.00}
-									}
-									,{
-										position	= {6.81, 1.88, 3.94}
-										,rotation	= {0.00, 30.01, 0.00}
-									}
-								}
-							}
-							,{
-								name	= "Water 3"
-								,tiles	= {
-									{
-										position	= {-8.34, 1.88, 1.33}
-										,rotation	= {0.00, 30.96, 0.00}
-									}
-									,{
-										position	= {-6.06, 1.88, 0.00}
-										,rotation	= {0.00, 29.80, 0.00}
-									}
-									,{
-										position	= {-3.80, 1.89, 1.31}
-										,rotation	= {359.98, 89.82, 0.00}
-									}
-									,{
-										position	= {0.01, 1.89, 2.63}
-										,rotation	= {0.00, 209.67, 0.00}
-									}
-									,{
-										position	= {0.77, 2.00, 3.94}
-										,rotation	= {3.04, 90.09, 0.02}
+                           ,{
+										position	= {-9.85, 1.88, 3.94}
+										,rotation	= {0.00, 270.00, 0.00}
 									}
 								}
 							}
@@ -48376,11 +48469,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-9.09, 1.88, 0.00}
-										,rotation	= {0.00, 330.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {0.76, 1.88, 1.31}
-										,rotation	= {0.00, 330.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 								}
 							}
@@ -48388,8 +48481,8 @@ ScenarioInformation_All = {
 								name	= "Tree"
 								,tiles	= {
 									{
-										position	= {-3.03, 1.88, 5.25}
-										,rotation	= {359.92, 150.14, 359.85}
+										position	= {-2.30, 1.88, 3.95}
+										,rotation	= {359.92, 270.14, 359.85}
 									}
 								}
 							}
@@ -48846,7 +48939,7 @@ ScenarioInformation_All = {
 			}
 		}
 		,monsterList	= {
-			"Bandit Archer"
+			"Bandit Guard"
 			,"Valrath Tracker"
 			,"Hound"
 			,"Cave Bear"
@@ -48891,7 +48984,7 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"A2","A1"}
 						,position		= {-3.79, 1.77, 3.94}
-						,rotation		= {359.99, 89.99, 180.01}
+						,rotation		= {359.99, 269.99, 180.01}
                   ,secret        = true
 					}
 				}
@@ -48983,8 +49076,16 @@ ScenarioInformation_All = {
 										position	= {4.55, 1.88, 5.25}
 										,rotation	= {0.00, 90.00, 0.00}
 									}
-									,{
+                           ,{
 										position	= {4.52, 1.88, 2.63}
+										,rotation	= {0.00, 90.00, 0.00}
+									}
+                           ,{
+										position	= {1.51, 1.88, 7.88}
+										,rotation	= {0.00, 90.00, 0.00}
+									}
+                           ,{
+										position	= {1.51, 1.88, 0.00}
 										,rotation	= {0.00, 90.00, 0.00}
 									}
 								}
@@ -49052,11 +49153,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-4.55, 1.90, 10.50}
-										,rotation	= {0.00, 29.98, 0.86}
+										,rotation	= {0.00, 89.98, 0.86}
 									}
 									,{
 										position	= {-5.31, 1.90, 9.18}
-										,rotation	= {0.00, 29.98, 0.86}
+										,rotation	= {0.00, 89.98, 0.86}
 									}
 								}
 							}
@@ -49160,7 +49261,7 @@ ScenarioInformation_All = {
 			,{
 				tile			= "D2"
 				,position		= {-6.06, 1.77, -2.63}
-				,rotation		= {0.00, 180.03, 0.00}
+				,rotation		= {0.00, 60.03, 0.00}
 				,scenarioSections = {
 					{
 							image = "http://cloud-3.steamusercontent.com/ugc/1011564389375759489/2AF1C01B8C59E5294E7C07BB024FCC7257F9EF2B/"
@@ -49177,11 +49278,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-5.30, 1.88, -1.31}
-										,rotation	= {0.00, 29.98, 0.86}
+										,rotation	= {0.00, 89.98, 0.86}
 									}
 									,{
 										position	= {-4.55, 1.88, -2.63}
-										,rotation	= {0.00, 29.98, 0.86}
+										,rotation	= {0.00, 89.98, 0.86}
 									}
 								}
 							}
@@ -49195,11 +49296,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-9.09, 1.88, -2.63}
-										,rotation	= {-9.09, 1.88, -2.63}
+                              ,rotation	= {0.00, 330.0, 0.00}
 									}
 									,{
 										position	= {-7.57, 1.88, -5.25}
-										,rotation	= {-9.09, 1.88, -2.63}
+										,rotation	= {0.00, 330.0, 0.00}
 									}
 								}
 							}
@@ -49325,23 +49426,23 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-4.55, 1.89, 5.25}
-										,rotation	= {0.00, 29.98, 0.86}
+										,rotation	= {0.00, 89.98, 0.86}
 									}
 									,{
 										position	= {-5.31, 1.89, 3.94}
-										,rotation	= {0.00, 29.98, 0.86}
+										,rotation	= {0.00, 89.98, 0.86}
 									}
 									,{
 										position	= {-6.83, 1.89, 3.94}
-										,rotation	= {0.00, 29.98, 0.86}
+										,rotation	= {0.00, 89.98, 0.86}
 									}
 									,{
 										position	= {-9.09, 1.89, 5.25}
-										,rotation	= {0.00, 29.98, 0.86}
+										,rotation	= {0.00, 89.98, 0.86}
 									}
 									,{
 										position	= {-9.85, 1.89, 3.94}
-										,rotation	= {0.00, 29.98, 0.86}
+										,rotation	= {0.00, 89.98, 0.86}
 									}
 								}
 							}
@@ -49365,11 +49466,11 @@ ScenarioInformation_All = {
 						bag	 	= Constant_TypeOverlay_TreasureChests
 						,type	= {
 							{
-								name	= "Treasure Chest Vertical"
+								name	= "Treasure Chest Horizontal"
 								,tiles	= {
 									{
 										position	= {-10.61, 1.88, 5.25}
-										,rotation	= {0.00, 269.97, 0.00}
+										,rotation	= {0.00, 90.0, 0.00}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "G"
@@ -49451,7 +49552,7 @@ ScenarioInformation_All = {
 					,{
 						adjacentTiles	= {"A1","L2"}
 						,position		= {-11.37, 1.77, -1.31}
-						,rotation		= {0.01, 270.00, 179.99}
+						,rotation		= {0.01, 90.00, 179.99}
 					}
 				}
 			}
@@ -49491,22 +49592,22 @@ ScenarioInformation_All = {
 					{
 						adjacentTiles	= {"N1","B2"}
 						,position		= {-2.27, 1.77, -1.31}
-						,rotation		= {0.00, 269.99, 180.00}
+						,rotation		= {0.00, 89.99, 180.00}
 					}
 					,{
 						adjacentTiles	= {"N1","B2"}
 						,position		= {2.27, 1.77, -1.31}
-						,rotation		= {0.00, 269.99, 180.00}
+						,rotation		= {0.00, 89.99, 180.00}
 					}
 					,{
 						adjacentTiles	= {"L1","A3"}
 						,position		= {6.82, 1.77, -1.31}
-						,rotation		= {0.00, 269.99, 180.00}
+						,rotation		= {0.00, 89.99, 180.00}
 					}
 					,{
 						adjacentTiles	= {"L1","A3"}
 						,position		= {11.37, 1.77, -1.31}
-						,rotation		= {0.00, 269.99, 180.00}
+						,rotation		= {0.00, 89.99, 180.00}
 					}
 				}
 			}
@@ -49550,12 +49651,12 @@ ScenarioInformation_All = {
 										,rotation	= {0.00, 209.90, 0.00}
 									}
 									,{
-										position	= {-5.31, 1.88, 3.94}
-										,rotation	= {0.00, 89.94, 0.00}
+										position	= {-3.79, 1.88, 3.95}
+										,rotation	= {0.00, 269.94, 0.00}
 									}
 									,{
-										position	= {-4.55, 1.88, 5.25}
-										,rotation	= {0.00, 30.36, 0.00}
+										position	= {-3.79, 1.88, 6.56}
+										,rotation	= {0.00, 210.36, 0.00}
 									}
 									,{
 										position	= {0.00, 1.88, 5.25}
@@ -49566,8 +49667,8 @@ ScenarioInformation_All = {
 										,rotation	= {0.00, 210.21, 0.00}
 									}
 									,{
-										position	= {3.79, 1.90, 6.55}
-										,rotation	= {359.96, 29.93, 0.76}
+										position	= {4.55, 1.90, 7.86}
+										,rotation	= {359.96, 209.93, 0.76}
 									}
 								}
 							}
@@ -49785,11 +49886,11 @@ ScenarioInformation_All = {
 						bag	 	= Constant_TypeOverlay_TreasureChests
 						,type	= {
 							{
-								name	= "Treasure Chest Vertical"
+								name	= "Treasure Chest Horizontal"
 								,tiles	= {
 									{
 										position	= {-13.64, 1.88, 2.63}
-										,rotation	= {0.00, 90.00, 0.00}
+										,rotation	= {0.00, 90.0, 0.00}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "78"
@@ -49821,7 +49922,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {-10.61, 1.88, 2.63}
-										,rotation	= {0.00, 30.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 								}
 							}
@@ -49833,8 +49934,8 @@ ScenarioInformation_All = {
 										,rotation	= {0.00, 329.81, 0.00}
 									}
 									,{
-										position	= {-8.33, 1.88, 6.56}
-										,rotation	= {0.00, 29.85, 0.00}
+										position	= {-7.56, 1.88, 7.88}
+										,rotation	= {0.00, 209.85, 0.00}
 									}
 								}
 							}
@@ -49842,12 +49943,12 @@ ScenarioInformation_All = {
 								name	= "Boulder 3"
 								,tiles	= {
 									{
-										position	= {-9.85, 1.88, 3.94}
-										,rotation	= {0.00, 330.08, 0.00}
+										position	= {-9.10, 1.88, 5.25}
+										,rotation	= {0.00, 210.08, 0.00}
 									}
 									,{
-										position	= {-10.60, 1.88, 0.01}
-										,rotation	= {0.00, 329.99, 0.00}
+										position	= {-9.85, 1.88, 1.33}
+										,rotation	= {0.00, 209.99, 0.00}
 									}
 								}
 							}
@@ -49926,10 +50027,11 @@ ScenarioInformation_All = {
 						bag	 	= Constant_TypeOverlay_TreasureChests
 						,type	= {
 							{
-								name	= "Treasure Chest Vertical"
+								name	= "Treasure Chest Horizontal"
 								,tiles	= {
 									{
 										position	= {12.12, 1.88, 5.25}
+                              ,rotation	= {0.0, 90.0, 0.0}
 										,params		= {
 											buttonTheme		= "Treasure"
 											,buttonLabel	= "90"
@@ -49947,11 +50049,11 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {9.09, 1.88, 5.25}
-										,rotation	= {0.00, 30.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 									,{
 										position	= {12.12, 1.88, 2.63}
-										,rotation	= {0.00, 30.00, 0.00}
+										,rotation	= {0.00, 90.00, 0.00}
 									}
 								}
 							}
@@ -49968,12 +50070,12 @@ ScenarioInformation_All = {
 								name	= "Boulder 3"
 								,tiles	= {
 									{
-										position	= {7.57, 1.88, 2.62}
-										,rotation	= {0.00, 330.07, 0.00}
+										position	= {8.32, 1.88, 3.94}
+										,rotation	= {0.00, 210.07, 0.00}
 									}
 									,{
-										position	= {9.85, 1.88, 6.56}
-										,rotation	= {0.00, 330.03, 0.00}
+										position	= {9.10, 1.88, 7.88}
+										,rotation	= {0.00, 90.03, 0.00}
 									}
 								}
 							}
