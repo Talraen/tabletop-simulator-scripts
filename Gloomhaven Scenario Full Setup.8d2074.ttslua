@@ -3160,7 +3160,6 @@ ScenarioInformation_All = {
 									,[4]	= Constant_LevelMonster_Normal
 								}
 								,position		= {x=-0.000001, y=2.068401, z=0.000027}
-								,rotation		= {x=-0.000243, y=179.990341, z=-0.000734}
 							}
 							,{
 								numCharacters	= {
@@ -3169,7 +3168,6 @@ ScenarioInformation_All = {
 									,[4]	= Constant_LevelMonster_Elite
 								}
 								,position		= {x=-1.515544, y=2.068382, z=0.000001}
-								,rotation		= {x=-0.000229, y=179.990356, z=-0.000742}
 							}
 							,{
 								numCharacters	= {
@@ -3178,7 +3176,6 @@ ScenarioInformation_All = {
 									,[4]	= Constant_LevelMonster_Normal
 								}
 								,position		= {x=-3.016953, y=2.068366, z=-0.011655}
-								,rotation		= {x=-0.000175, y=179.990219, z=-0.000841}
 							}
 						}
 					}
@@ -26579,7 +26576,7 @@ ScenarioInformation_All = {
 					,{
 						adjacentTiles	= {"A3","C1"}
 						,position		= {x=0.757759, y=1.932632, z=17.062414}
-						,rotation		= {x=0.081901, y=270.012817, z=187.603073}
+						,rotation		= {x=0.081901, y=270.012817, z=180.603073}
 					}
 					,{
 						adjacentTiles	= {"A3","D1"}
@@ -47028,7 +47025,7 @@ ScenarioInformation_All = {
 								,tiles	= {
 									{
 										position	= {0.00, 1.88, 9.09}
-										,rotation	= {0.00, 1.88, 9.09}
+										,rotation	= {0.00, 1.88, 0.09}
 										,params			= {
 											buttonTheme		= "Door"
 											,scriptFunction	= "AdjacentTiles =  {'A1','A2'} NumScenario = 101"
@@ -47616,7 +47613,7 @@ ScenarioInformation_All = {
 						,{
 							adjacentTiles	={"L1","C2","D1"}
 							,position		= {-2.62, 1.94, 10.60}
-							,rotation		= {4.47, 240.23, 0.00}
+							,rotation		= {0.47, 240.23, 0.00}
 						}
 						,{
 							adjacentTiles	= {"D1","M1"}
@@ -48185,6 +48182,7 @@ ScenarioInformation_All = {
 				,scale = {2.30, 1.00, 2.30}
 			}
 		}
+		,gridType		= Constant_Grid_Vertical
 		,doorTiles		= {
 			{
 				name	= "Wooden Door Horizontal"
@@ -48217,7 +48215,6 @@ ScenarioInformation_All = {
 				}
 			}
 		}
-		,gridType		= Constant_Grid_Vertical
 		,mapTiles = {
 			{
 				tile			= "L1"
@@ -48962,6 +48959,7 @@ ScenarioInformation_All = {
 				,buttonLabel = "Reveal Conclusion (86)"
 			}
 		}
+		,gridType		= Constant_Grid_Vertical
 		,doorTiles		= {
 			{
 				name	= "Stone Door Horizontal"
@@ -48990,7 +48988,6 @@ ScenarioInformation_All = {
 				}
 			}
 		}
-		,gridType		= Constant_Grid_Vertical
 		,mapTiles = {
 			{
 				tile			= "M1"
@@ -49520,6 +49517,7 @@ ScenarioInformation_All = {
 				,scale = {1.41, 1.00, 1.41}
 			}
 		}
+		,gridType		= Constant_Grid_Vertical
 		,doorTiles		= {
 			{
 				name	= "Stone Door Horizontal"
@@ -49612,7 +49610,6 @@ ScenarioInformation_All = {
 				}
 			}
 		}
-		,gridType		= Constant_Grid_Vertical
 		,mapTiles = {
 			{
 				tile			= "N1"
@@ -57216,6 +57213,7 @@ ScenarioInformation_All = {
 			{image = "http://cloud-3.steamusercontent.com/ugc/1018321821846854203/41BE437AC5A81B65F0006B90A0B1648DDB99EB4B/"}
 			,{image = "http://cloud-3.steamusercontent.com/ugc/878629355914712986/8995CC5884C7B75F688FC83FB814878AFA09A8B6/"}
 		}
+		,gridType		= Constant_Grid_Horizontal
 		,doorTiles		= {
 			{
 				name	= "LIght Fog"
@@ -57238,7 +57236,6 @@ ScenarioInformation_All = {
 				}
 			}
 		}
-		,gridType		= Constant_Grid_Horizontal
 		,mapTiles = {
 			{
 				tile			= "G1"
@@ -57582,6 +57579,7 @@ ScenarioInformation_All = {
 			{image = "http://cloud-3.steamusercontent.com/ugc/878629355914714669/CCD11565F67F894B57CDE9911B8F4A22DD169E55/"}
 			,{image = "http://cloud-3.steamusercontent.com/ugc/1018321821846831659/AAA44099975EA0F09AA33D5D032F7E6780CEFC97/"}
 		}
+		,gridType		= Constant_Grid_Horizontal
 		,doorTiles		= {
 			{
 				name	= "Wooden Door Horizontal"
@@ -57609,7 +57607,6 @@ ScenarioInformation_All = {
 				}
 			}
 		}
-		,gridType		= Constant_Grid_Horizontal
 		,mapTiles = {
 			{
 				tile			= "B1"
@@ -57916,6 +57913,7 @@ ScenarioInformation_All = {
 			{image = "http://cloud-3.steamusercontent.com/ugc/1018321821846968869/D9E0140A30A757A6C6E646965C5416657423705A/"}
 			,{image = "http://cloud-3.steamusercontent.com/ugc/878629355914715311/A512389CEB2B0D287A03CFD94D5C1CC65E2DB930/"}
 		}
+		,gridType		= Constant_Grid_Vertical
 		,doorTiles		= {
 			{
 				name	= "LIght Fog"
@@ -57943,7 +57941,6 @@ ScenarioInformation_All = {
 				}
 			}
 		}
-		,gridType		= Constant_Grid_Vertical
 		,mapTiles = {
 			{
 				tile			= "D1"
@@ -58199,6 +58196,7 @@ ScenarioInformation_All = {
 		scenarioPages	= {
 			{image = "http://cloud-3.steamusercontent.com/ugc/878629355914715606/95A34A6A269A774F7B71CF2C55B388FE1AAB61A3/"}
 		}
+		,gridType		= Constant_Grid_Vertical
 		,doorTiles		= {
 			{
 				name	= "Stone Door Horizontal"
@@ -58216,7 +58214,6 @@ ScenarioInformation_All = {
 				}
 			}
 		}
-		,gridType		= Constant_Grid_Vertical
 		,mapTiles = {
 			{
 				tile			= "A1"
@@ -58508,6 +58505,7 @@ ScenarioInformation_All = {
 		scenarioPages	= {
 			{image = "http://cloud-3.steamusercontent.com/ugc/878629355914715950/E7C99D2236F5F0FD48FD5E043C00158139161832/"}
 		}
+		,gridType		= Constant_Grid_Vertical
 		,doorTiles		= {
 			{
 				name	= "Stone Door Horizontal"
@@ -58535,7 +58533,6 @@ ScenarioInformation_All = {
 				}
 			}
 		}
-		,gridType		= Constant_Grid_Vertical
 		,mapTiles = {
 			{
 				tile			= "H1"
@@ -58732,6 +58729,7 @@ ScenarioInformation_All = {
 			{image = "http://cloud-3.steamusercontent.com/ugc/878629355914716282/AF638200C667B5E28C582B6F2257847FB3776B1E/"}
 			,{image = "http://cloud-3.steamusercontent.com/ugc/878629355914716636/1CEA50443D66C2C94E03B99EC69EFF135C3FC173/"}
 		}
+		,gridType		= Constant_Grid_Vertical
 		,doorTiles		= {
 			{
 				name	= "Dark Fog"
@@ -58769,7 +58767,6 @@ ScenarioInformation_All = {
 				}
 			}
 		}
-		,gridType		= Constant_Grid_Vertical
 		,mapTiles = {
 			{
 				tile			= "D2"
@@ -59075,6 +59072,7 @@ ScenarioInformation_All = {
 		scenarioPages	= {
 			{image = "http://cloud-3.steamusercontent.com/ugc/1018321694635241477/54DD0F07C8ED17B79DB1037F3C8512A85CC1FB4C/"}
 		}
+		,gridType		= Constant_Grid_Horizontal
 		,doorTiles		= {
 			{
 				name	= "Stone Door Vertical"
@@ -59092,7 +59090,6 @@ ScenarioInformation_All = {
 				}
 			}
 		}
-		,gridType		= Constant_Grid_Horizontal
 		,mapTiles = {
 			{
 				tile			= "N1"
@@ -59313,6 +59310,7 @@ ScenarioInformation_All = {
 				,scale = {2.18, 1.00, 2.18}
 			}
 		}
+		,gridType		= Constant_Grid_Horizontal
 		,doorTiles		= {
 			{
 				name	= "LIght Fog"
@@ -59335,7 +59333,6 @@ ScenarioInformation_All = {
 				}
 			}
 		}
-		,gridType		= Constant_Grid_Horizontal
 		,mapTiles = {
 			{
 				tile			= "M1"
