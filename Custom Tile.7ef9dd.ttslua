@@ -45,7 +45,7 @@ function markArea()
     origin = {0.00, 2, 6.5},
     direction = {0, 1, 0},
     type = 3,
-    size = {93, 1, 37},
+    size = {93, 2, 37},
     max_distance = 0,
     debug = false
   })
