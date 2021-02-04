@@ -314,9 +314,10 @@ end
 
 function placeStartTiles(startTable)
    local doorName = startTable.name
+   local startAreaName = "Start Area"
    local doorsBag = getBagFromInfinite(infiniteBagsGUIDs.Corridors)
    getBagContent(doorsBag, "Corridors")
-   local door = checkPosForName(startTable.tiles[1].position, doorName)
+   local door = checkPosForName(startTable.tiles[1].position, startAreaName)
    if not door then
       door = doorsBag.takeObject({position = startTable.tiles[1].position, rotation = startTable.tiles[1].rotation, smooth = false, guid = tilesGUIDsFromBag.Corridors[doorName]})
       Wait.condition(function() door.lock() door.setName("Start Area") end, function() return checkLoaded(door) end)
@@ -327,12 +328,12 @@ function placeStartTiles(startTable)
          if getObjectFromGUID(door) ~= nil then
             door = getObjectFromGUID(door)
          end
-         if not checkPosForName(l.position, doorName) then
+         if not checkPosForName(l.position, startAreaName) then
             local obj = door.clone()
             obj.setPosition(l.position)
             obj.setRotation(l.rotation)
             obj.lock()
-            obj.setName("Start Area")
+            obj.setName(startAreaName)
          end
       end
    end

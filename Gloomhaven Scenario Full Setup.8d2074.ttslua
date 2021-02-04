@@ -15398,7 +15398,7 @@ ScenarioInformation_All = {
 				,position		= {x=-4.546633, y=-3.77555, z=-2.625}
 				,rotation		= {x=0, y=90, z=0}
 				,startTiles		= {
-					name	= "Earth Corridor 1"
+					name	= "Stone Corridor 1"
 					,tiles	= {
 						{
 							position	= {x=-2.273317, y=1.933999, z=-6.5625}
@@ -55568,23 +55568,6 @@ ScenarioInformation_All = {
 				tile			= "B4"
 				,position		= {2.625, 1.71, 6.062178}
 				,rotation		= {0, 180, 180}
-				,startTiles		= {
-					name	= "Earth Corridor 1"
-					,tiles	= {
-						{
-							position	= {0, 2, 6.062178}
-							,rotation	= {0, 0, 0}
-						}
-						,{
-							position	= {-1.3125, 1.88, 6.81995}
-							,rotation	= {0, 0, 0}
-						}
-						,{
-							position	= {-1.3125, 1.88, 5.304406}
-							,rotation	= {0, 0, 0}
-						}
-					}
-				}
 				,overlayTiles	= {
 					{
 						bag	 	= Constant_TypeOverlay_Corridors
@@ -55667,6 +55650,24 @@ ScenarioInformation_All = {
 						}
 					}
 				}
+            ,startTiles		= {
+               name	= "Stone Corridor 1"
+               ,tiles	= {
+                  {
+                     position	= {0, 2, 6.062178}
+                     ,rotation	= {0, 0, 0}
+                  }
+                  ,{
+                     position	= {-1.3125, 1.88, 6.81995}
+                     ,rotation	= {0, 0, 0}
+                  }
+                  ,{
+                     position	= {-1.3125, 1.88, 5.304406}
+                     ,rotation	= {0, 0, 0}
+                  }
+               }
+            }
+
 			}
 		}
 		,monsterList	= {
