@@ -24,8 +24,113 @@ toCheck = {}
 toCheck["Player Curse"] = {51.60, 4.00, 23.65}
 toCheck["Bless"] = {51.60, 4.00, 19.99}
 
-function onLoad()
+function onLoad(save_state)
    megaFreeze() -- Make objects non-interactive
+
+   local tabInfo = getNotebookTabs()
+   local tab = ""
+   for _, t in pairs(tabInfo) do
+      if t.title == "Options" then tab = t.body end
+   end
+   log(save_state)
+   if tab:match("save ui:(%a*)") == "yes" and save_state ~= "" then
+      local loadedData = JSON.decode(save_state)
+      log(loadedData)
+      local xmlChanges = {}
+      if loadedData.UI then
+         if loadedData.UI.SSScenario ~= nil then
+            value = self.UI.setAttribute("SSScenario", "text", loadedData.UI.SSScenario)
+            value = self.UI.setAttribute("SSSlider", "value", loadedData.UI.SSScenario)
+         end
+         if loadedData.UI.HiddenRooms1Image ~= nil and loadedData.UI.HiddenRooms2Image ~= nil then
+            self.UI.setAttribute("HiddenRooms1Image", "image", loadedData.UI.HiddenRooms1Image)
+            self.UI.setAttribute("HiddenRooms2Image", "image", loadedData.UI.HiddenRooms2Image)
+         end
+         if loadedData.UI.typeDropdownScenario ~= nil then
+            self.UI.setAttribute("typeDropdownScenario", "selected", loadedData.UI.typeDropdownScenario)
+            table.insert(xmlChanges, function(xml)
+               local options = getXmlChildren(xml, {"#Spawner", "#ScenarioSpawner", "HorizontalLayout", "#typeDropdownScenario"})
+               if options ~= nil then
+                  for _, option in pairs(options) do
+                     option.attributes.selected = loadedData.UI.typeDropdownScenario:match(option.value) and true or false
+                  end
+               end
+            end)
+         end
+         if loadedData.UI.MSSLevel ~= nil then
+            value = self.UI.setAttribute("MSSLevel", "text", loadedData.UI.MSSLevel)
+            value = self.UI.setAttribute("MSSlider", "value", loadedData.UI.MSSLevel)
+         end
+         if loadedData.UI.isElite ~= nil then
+            self.UI.setAttribute("isElite", "isOn", isElite)
+            self.UI.setAttribute("isEliteImage", "active", isElite)
+            isElite = loadedData.UI.isElite == "true"
+         end
+         if loadedData.UI.typeDropdown ~= nil then
+            self.UI.setAttribute("typeDropdown", "selected", loadedData.UI.typeDropdown)
+            table.insert(xmlChanges, function(xml)
+               local options = getXmlChildren(xml, {"#Spawner", "#MonsterSpawner", "HorizontalLayout", "#typeDropdown"})
+               if options ~= nil then
+                  for _, option in pairs(options) do
+                     option.attributes.selected = loadedData.UI.typeDropdown:match(option.value) and true or false
+                  end
+               end
+            end)
+         end
+         if loadedData.UI.monsterDropdown ~= nil then
+            self.UI.setAttribute("monsterDropdown", "selected", loadedData.UI.monsterDropdown)
+            table.insert(xmlChanges, function(xml)
+               local options = getXmlChildren(xml, {"#Spawner", "#MonsterSpawner", "HorizontalLayout", "#monsterDropdown"})
+               if options ~= nil then
+                  for _, option in pairs(options) do
+                     option.attributes.selected = loadedData.UI.monsterDropdown:match(option.value) and true or false
+                  end
+               end
+            end)
+         end
+         if loadedData.UI.soloMode then
+            -- Other battle UI is not included due to multiplayer
+            showSolo()
+            Global.UI.hide("SoloInterface")
+         end
+      end
+
+      if #xmlChanges > 0 then
+         Wait.frames(function()
+            local xml = self.UI.getXmlTable()
+            for _, func in pairs(xmlChanges) do
+               func(xml)
+            end
+            self.UI.setXmlTable(xml)
+         end, 10)
+      end
+   end
+end
+
+function onSave()
+   local tabInfo = getNotebookTabs()
+   local tab = ""
+   for _, t in pairs(tabInfo) do
+      if t.title == "Options" then tab = t.body end
+   end
+
+   local save_state = {}
+   if tab:match("save ui:(%a*)") == "yes" then
+      save_state = {
+         UI = {
+            SSScenario = self.UI.getAttribute("SSScenario", "text"),
+            HiddenRooms1Image = self.UI.getAttribute("HiddenRooms1Image", "image"),
+            HiddenRooms2Image = self.UI.getAttribute("HiddenRooms2Image", "image"),
+            typeDropdownScenario = self.UI.getAttribute("typeDropdownScenario", "selected"),
+            typeDropdown = self.UI.getAttribute("typeDropdown", "selected"),
+            monsterDropdown = self.UI.getAttribute("monsterDropdown", "selected"),
+            isElite = self.UI.getAttribute("isElite", "isOn"),
+            MSSLevel = self.UI.getAttribute("MSSLevel", "text"),
+            soloMode = shown.soloMode,
+         }
+      }
+   end
+   return JSON.encode(save_state)
 end
 
 function onPlayerConnect(player_id)
@@ -1165,6 +1270,38 @@ function cameraPosition(player, button)
          distance = 25,
       })
    end
+end
+
+function getXmlChildren(xmlTable, elementList)
+   if #elementList == 0 then
+      return xmlTable
+   end
+   local search = elementList[1]
+   local elements = {}
+   for i = 2, #elementList do
+      table.insert(elements, elementList[i])
+   end
+   local searchOnId = false
+   if search:sub(1, 1) == "#" then
+      search = search:sub(2)
+      searchOnId = true
+   end
+   for _, element in ipairs(xmlTable) do
+      local potential = nil
+      if searchOnId then
+         if element.attributes.id == search then
+            potential = getXmlChildren(element.children, elements)
+         end
+      else
+         if element.tag == search then
+            potential = getXmlChildren(element.children, elements)
+         end
+      end
+      if potential ~= nil then
+         return potential
+      end
+   end
+   return nil
 end
 
 -- function showCamForPlayer(params)
