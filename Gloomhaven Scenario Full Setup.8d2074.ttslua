@@ -15337,7 +15337,7 @@ ScenarioInformation_All = {
 									,[3]	= Constant_LevelMonster_Normal
 									,[4]	= Constant_LevelMonster_Normal
 								}
-								,position		= {x=0, y=2.052051, z=0}
+								,position		= {x=0, y=2.052051, z=0.875}
 							}
 						}
 					}
